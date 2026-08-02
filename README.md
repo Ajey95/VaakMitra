@@ -12,3 +12,55 @@ This branch implements only Backend Member 2's local speech-intelligence scope:
 
 See `docs/superpowers/specs/2026-08-02-member2-speech-intelligence-design.md` for the approved design.
 
+## Repository layout
+
+```text
+backend/      Runtime package, contracts, scoring logic, and automated tests
+modeling/     Training boundary, export adapters, quantization, and comparison tools
+benchmarks/   Reproducible latency and memory benchmark runner and reports
+docs/         Architecture, integration contracts, design, and implementation plan
+```
+
+## Development setup
+
+```powershell
+py -3.11 -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install -e '.\backend[dev,model]'
+& .\.venv\Scripts\python.exe -m pytest backend\tests -q
+```
+
+## Quality gates
+
+```powershell
+& .\.venv\Scripts\python.exe -m ruff check backend\src backend\tests modeling benchmarks
+& .\.venv\Scripts\python.exe -m mypy backend\src modeling benchmarks
+& .\.venv\Scripts\python.exe -m build backend
+```
+
+## Model lifecycle commands
+
+All commands run locally. Model and audio artifacts are ignored by Git.
+
+```powershell
+# Export through an approved project adapter implementing (checkpoint_path, output_path) -> None
+& .\.venv\Scripts\python.exe -m modeling.export.export_onnx `
+  --adapter package.module:export_function `
+  --checkpoint modeling\artifacts\teacher.nemo `
+  --output modeling\artifacts\ta-phoneme-ctc-fp32.onnx
+
+# Create a separate dynamic INT8 model
+& .\.venv\Scripts\python.exe -m modeling.quantization.quantize_onnx `
+  --input modeling\artifacts\ta-phoneme-ctc-fp32.onnx `
+  --output modeling\artifacts\ta-phoneme-ctc-int8.onnx
+
+# Benchmark synthetic or separately approved non-sensitive audio
+& .\.venv\Scripts\python.exe -m benchmarks.run_benchmark `
+  --model modeling\artifacts\ta-phoneme-ctc-fp32.onnx `
+  --manifest modeling\artifacts\ta-phoneme-ctc.manifest.json `
+  --audio-npy benchmarks\fixtures\approved_word.npy `
+  --output benchmarks\reports\development-laptop.json
+```
+
+The checked-in phoneme vocabulary and model configuration are contract examples. They are not a
+Tamil-expert-approved production inventory or a clinically validated pronunciation model.
+
