@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from vaakmitra.contracts.alignment import AlignedPhoneme, SyllableDefinition
-from vaakmitra.contracts.scoring import PhonemeScore, SyllableScore
+from vaakmitra.contracts.scoring import PhonemeScore, ScoreStatus, SyllableScore
 from vaakmitra.scoring.confidence import ScoringConfig, classify_score
 
 
@@ -34,6 +34,7 @@ def aggregate_syllables(
             phoneme_scores[index].confidence * weight
             for index, weight in zip(syllable.phoneme_indices, weights, strict=True)
         ) / total_weight
+        status: ScoreStatus
         if any(phoneme_scores[index].status == "unscorable" for index in syllable.phoneme_indices):
             status = "unscorable"
         else:
@@ -48,4 +49,3 @@ def aggregate_syllables(
             )
         )
     return tuple(results)
-
