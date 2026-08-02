@@ -50,7 +50,7 @@ class PhonemeVocabulary:
         return self.tokens[index]
 
     @classmethod
-    def from_json(cls, path: str | Path) -> "PhonemeVocabulary":
+    def from_json(cls, path: str | Path) -> PhonemeVocabulary:
         """Load the contract fields from a UTF-8 JSON vocabulary file."""
 
         raw: Any = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -64,4 +64,3 @@ class PhonemeVocabulary:
         if not isinstance(tokens, list) or not all(isinstance(token, str) for token in tokens):
             raise ValueError("vocabulary tokens must be a list of strings")
         return cls(version=version, tokens=tuple(tokens), blank_token=blank_token)
-

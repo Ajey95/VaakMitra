@@ -1,0 +1,11 @@
+{
+  "scoring_version": "gop-baseline-1.0.0",
+  "min_alignment_confidence": 0.6,
+  "acoustic_weight": 0.6,
+  "alignment_weight": 0.4,
+  "min_confidence": 0.55,
+  "pass_confidence": 0.75,
+  "coach_score": 0.5,
+  "pass_score": 0.8,
+  "calibration_status": "baseline_not_therapist_calibrated"
+}
