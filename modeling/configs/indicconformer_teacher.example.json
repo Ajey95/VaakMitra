@@ -1,0 +1,7 @@
+{
+  "source_model": "ai4bharat/indicconformer_stt_ta_hybrid_ctc_rnnt_large",
+  "role": "teacher_or_baseline_candidate",
+  "required_sample_rate": 16000,
+  "required_output": "reviewed_tamil_phoneme_ctc_head",
+  "production_ready": false
+}

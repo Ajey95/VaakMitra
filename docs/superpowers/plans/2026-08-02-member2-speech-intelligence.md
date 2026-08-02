@@ -449,9 +449,9 @@ Export fails with a documented prerequisite error when no approved source adapte
 
 Run: `.\.venv\Scripts\python.exe -m pytest backend/tests/unit/test_model_tools.py backend/tests/unit/test_benchmark_stats.py -q`
 
-Run: `.\.venv\Scripts\python.exe modeling/quantization/quantize_onnx.py --help`
+Run: `.\.venv\Scripts\python.exe -m modeling.quantization.quantize_onnx --help`
 
-Run: `.\.venv\Scripts\python.exe benchmarks/run_benchmark.py --help`
+Run: `.\.venv\Scripts\python.exe -m benchmarks.run_benchmark --help`
 
 Expected: tests pass and both CLIs exit zero with usage text.
 
