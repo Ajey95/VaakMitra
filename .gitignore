@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Member 2 model and benchmark artifacts must remain local.
+modeling/artifacts/*
+!modeling/artifacts/README.md
+benchmarks/fixtures/private/
+*.onnx
+*.ort
+*.nemo
+*.pt
+*.pth
+*.wav
+*.flac
+*.mp3
+
