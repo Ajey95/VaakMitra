@@ -1,0 +1,6 @@
+{
+  "version": "ta-phonemes-contract-fixture-1.0.0",
+  "blank_token": "<blank>",
+  "tokens": ["<blank>", "a", "m", "a:"],
+  "review_status": "fixture_only_not_tamil_expert_approved"
+}
