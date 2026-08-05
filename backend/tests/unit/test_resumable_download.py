@@ -36,6 +36,24 @@ class _RangeHandler(BaseHTTPRequestHandler):
         del format, args
 
 
+class _ClosingRangeHandler(_RangeHandler):
+    max_response_bytes = 200
+
+    def do_GET(self) -> None:
+        range_header = self.headers.get("Range", "")
+        raw_start, raw_end = range_header.removeprefix("bytes=").split("-", 1)
+        start = int(raw_start)
+        end = min(int(raw_end), len(self.payload) - 1)
+        full_body = self.payload[start : end + 1]
+        self.send_response(206)
+        self.send_header("Content-Length", str(len(full_body)))
+        self.send_header("Content-Range", f"bytes {start}-{end}/{len(self.payload)}")
+        self.end_headers()
+        self.wfile.write(full_body[: self.max_response_bytes])
+        self.wfile.flush()
+        self.close_connection = True
+
+
 def test_build_segments_covers_every_byte_once(tmp_path: Path) -> None:
     segments = build_segments(total_size=10, segment_count=3, work_dir=tmp_path)
 
@@ -126,6 +144,31 @@ def test_curl_transport_reuses_segment_prefixes_and_assembles_exact_file(
         assert output.read_bytes() == payload
         assert all(segment.path.stat().st_size == segment.expected_size for segment in segments)
         assert not tuple(work.glob("*.incoming"))
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+
+def test_curl_transport_merges_partial_responses_and_reconnects(tmp_path: Path) -> None:
+    payload = bytes(range(151)) * 4
+    _ClosingRangeHandler.payload = payload
+    server = ThreadingHTTPServer(("127.0.0.1", 0), _ClosingRangeHandler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        output = download_segmented_with_curl(
+            url=f"http://127.0.0.1:{server.server_port}/corpus.tar.gz",
+            total_size=len(payload),
+            segment_count=2,
+            work_dir=tmp_path / "segments",
+            output_path=tmp_path / "complete.bin",
+            workers=2,
+            curl_executable="curl.exe",
+            retries=2,
+        )
+
+        assert output.read_bytes() == payload
     finally:
         server.shutdown()
         server.server_close()

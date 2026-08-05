@@ -41,40 +41,46 @@ def _download_segment_with_curl(
     retries: int,
 ) -> None:
     segment.path.parent.mkdir(parents=True, exist_ok=True)
-    _merge_incoming(segment)
-    existing = segment.path.stat().st_size if segment.path.exists() else 0
-    if existing > segment.expected_size:
-        raise ValueError(f"download segment is oversized: {segment.index}")
-    if existing == segment.expected_size:
-        return
-    remote_start = segment.start + existing
-    incoming = segment.path.with_suffix(segment.path.suffix + ".incoming")
-    if incoming.exists():
-        raise FileExistsError(f"unexpected curl range artifact: {segment.index}")
-    result = subprocess.run(
-        (
-            curl_executable,
-            "--location",
-            "--fail",
-            "--retry",
-            str(retries),
-            "--retry-all-errors",
-            "--range",
-            f"{remote_start}-{segment.end}",
-            "--output",
-            str(incoming),
-            url,
-        ),
-        check=False,
-    )
-    if result.returncode != 0:
-        raise RuntimeError(f"curl range download failed: {segment.index}")
-    expected_incoming = segment.end - remote_start + 1
-    if not incoming.is_file() or incoming.stat().st_size != expected_incoming:
-        raise ValueError(f"curl did not return the exact requested range: {segment.index}")
-    _merge_incoming(segment)
-    if segment.path.stat().st_size != segment.expected_size:
-        raise ValueError(f"curl segment did not complete: {segment.index}")
+    for attempt in range(retries + 1):
+        _merge_incoming(segment)
+        existing = segment.path.stat().st_size if segment.path.exists() else 0
+        if existing > segment.expected_size:
+            raise ValueError(f"download segment is oversized: {segment.index}")
+        if existing == segment.expected_size:
+            return
+        remote_start = segment.start + existing
+        incoming = segment.path.with_suffix(segment.path.suffix + ".incoming")
+        if incoming.exists():
+            raise FileExistsError(f"unexpected curl range artifact: {segment.index}")
+        result = subprocess.run(
+            (
+                curl_executable,
+                "--location",
+                "--fail",
+                "--speed-limit",
+                "1024",
+                "--speed-time",
+                "30",
+                "--max-time",
+                "180",
+                "--range",
+                f"{remote_start}-{segment.end}",
+                "--output",
+                str(incoming),
+                url,
+            ),
+            check=False,
+        )
+        progress = incoming.stat().st_size if incoming.exists() else 0
+        if progress:
+            _merge_incoming(segment)
+            continue
+        incoming.unlink(missing_ok=True)
+        if attempt == retries:
+            raise RuntimeError(f"curl range download made no progress: {segment.index}")
+        if result.returncode == 0:
+            raise ValueError(f"curl returned no bytes for range: {segment.index}")
+    raise RuntimeError(f"curl segment retry budget exhausted: {segment.index}")
 
 
 def download_segmented_with_curl(
