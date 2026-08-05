@@ -3,6 +3,32 @@
 This review gate separates an engineering candidate from an expert-approved inventory. Software
 can create and validate the packet, but it cannot supply the expert decisions or attestation.
 
+Install the pinned CPU-only transliteration dependency and enable Python UTF-8 mode on Windows:
+
+```powershell
+& .\.venv\Scripts\python.exe -m pip install `
+  --requirement modeling\inventory\requirements-epitran.txt
+$env:PYTHONUTF8 = "1"
+```
+
+After OpenSLR materialization, generate the full private lexicon and bounded public review packet:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.inventory.generate_corpus_review `
+  --records modeling\artifacts\corpora\openslr-127\private\records.jsonl `
+  --extract-root modeling\artifacts\corpora\openslr-127\extracted `
+  --archive-sha256 <LOCALLY_COMPUTED_ARCHIVE_SHA256> `
+  --sources modeling\configs\tamil_phoneme_sources.json `
+  --version ta-openslr127-candidate-1 `
+  --private-lexicon modeling\artifacts\corpora\openslr-127\private\full-lexicon.json `
+  --review-output-dir docs\review\tamil-phoneme-inventory\packet `
+  --max-examples 200 --sample-seed vaakmitra-clinician-review-v1
+```
+
+The full word lexicon stays private. The review directory contains only the digest-bound candidate,
+phone frequencies, bounded isolated-word examples, conflicts/coverage evidence, and a pending
+approval template; it contains no corpus path, transcript, speaker ID, utterance ID, or audio hash.
+
 Generate a digest-bound packet from the candidate inventory:
 
 ```powershell

@@ -79,7 +79,13 @@ class EpitranTamilTransliterator:
         except (ImportError, importlib.metadata.PackageNotFoundError) as error:
             raise RuntimeError("epitran optional dependency is not installed") from error
         code = "tam-Taml-red" if reduced else "tam-Taml"
-        self._engine = epitran.Epitran(code)
+        try:
+            self._engine = epitran.Epitran(code)
+        except UnicodeDecodeError as error:
+            raise RuntimeError(
+                "Epitran/PanPhon requires Python UTF-8 mode on this Windows locale; "
+                "set PYTHONUTF8=1 before starting Python"
+            ) from error
 
     def transliterate(self, text: str) -> str:
         return str(self._engine.transliterate(text))

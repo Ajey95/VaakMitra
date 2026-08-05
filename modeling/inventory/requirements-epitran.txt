@@ -1,0 +1,1 @@
+epitran @ git+https://github.com/dmort27/epitran.git@3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f
