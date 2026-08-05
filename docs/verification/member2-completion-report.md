@@ -12,7 +12,9 @@ the prohibition on clinical, child-validity, or tablet-performance claims.
 The approved Member 2 engineering fallback is implemented end to end: local inference contracts,
 CTC output validation, GOP/confidence scoring, privacy gates, immutable corpus provenance,
 speaker-disjoint proxy preparation, CPU training, ONNX export, INT8 conversion, evaluation,
-benchmarking, and hash-linked release evidence.
+benchmarking, hash-linked release evidence, mocked adjacent-member contract execution, provisional
+IPA inventory generation, research-source preflight, safe teacher-feature packaging, and static
+mobile compatibility auditing.
 
 The result is correctly gated as a `technical_prototype`. It is not an accurate production scorer:
 the bounded adult-proxy model has a test phone-unit error rate of `0.9819819819819819` and exact
@@ -40,11 +42,14 @@ Verified engineering evidence:
 - standard CTC collapse, edit distance, micro/macro phone-unit error rate, exact accuracy, and
   unscorable-rate evaluation;
 - reproducible raw-waveform Conv-BiGRU CTC training and dynamic-sample ONNX export;
-- immutable proxy vocabulary and model manifests.
+- immutable proxy vocabulary and model manifests;
+- deterministic Epitran-backed provisional Tamil IPA/token manifest generation with NFC
+  normalization, duplicate rejection, and explicit non-approval flags.
 
 Acceptance status: training/output path complete. The current 32 units are explicitly
 `unicode_codepoint_proxy_not_expert_phoneme_inventory`, not the final Tamil-expert-approved
-inventory.
+inventory. The Epitran output is a preparation aid and also remains provisional until Tamil-expert
+review.
 
 ### M2.3 GOP and confidence scoring
 
@@ -71,19 +76,22 @@ Verified trained-proxy measurements:
 - GOP delta: unavailable for the real model because no Member 1 validated alignment exists;
 - INT8 cold load: `223.6853 ms` on the development laptop;
 - INT8 inference median/P95: `0.78375 / 2.9517 ms` across 30 measured runs;
-- peak process RSS: `68,829,184` bytes.
+- peak process RSS: `68,829,184` bytes;
+- official static ONNX Runtime mobile audit: NNAPI supports `8/51` nodes as-is in `5` partitions;
+- fixed-shape analysis: NNAPI supports `37/51` nodes in `10` partitions but is still rated `NO`;
+- recorded provider recommendation: `CPUExecutionProvider`.
 
 Acceptance status: export, quantization, comparison, and reproducible laptop benchmark complete.
-Android latency, memory, battery, and thermal acceptance remain unavailable without the actual
-tablet and cannot be inferred from these numbers.
+Static operator compatibility is now recorded, but Android latency, memory, battery, and thermal
+acceptance remain unavailable without the actual tablet and cannot be inferred from these numbers.
 
 ### M2.5 Testing, documentation, and review
 
 Verified repository evidence:
 
-- `128` automated tests pass;
+- `184` automated tests pass;
 - Ruff passes across backend, tests, modeling, and benchmarks;
-- strict mypy passes across `49` source files;
+- strict mypy passes across `61` source files;
 - sdist and wheel build successfully;
 - model card, architecture, contracts, training instructions, manifests, and reports are updated;
 - real audio, speaker-level indices, checkpoints, ONNX weights, waveforms, and probability matrices
@@ -106,6 +114,24 @@ development speakers. The checked-in preparation tool therefore derives new disj
 
 The bounded recorded training run uses 42/8/8 utterances while retaining all 14/4/4 speaker groups.
 
+## Alternative preparation and mocked dependencies
+
+- Test-only Member 1 creates deterministic balanced half-open frame alignments and returns neutral
+  invalid evidence when allocation is impossible.
+- Test-only Member 3 maps validated Member 2 statuses to deterministic actions without persistence,
+  synchronization, or therapy-policy claims.
+- The mocked three-member runner records hashes and contract outcomes without audio, embeddings,
+  transcripts, probability matrices, or child identity.
+- `tamil_research_sources.json` pins IndicVoices and Vistaar revisions. IndicVoices is explicitly
+  adult-only, terms-gated, and unavailable for automatic download; Vistaar remains discovery-only
+  until each underlying dataset licence is reviewed.
+- The pinned IndicConformer teacher configuration states that its ASR head does not provide direct
+  phoneme posteriors. Local feature caches require float32 finite 2-D tensors, model/audio/feature
+  hashes, non-overwrite behavior, and local-only voice-derived storage.
+
+These mechanisms unblock Member 2 engineering while real teammate components and target evidence
+are absent. They do not substitute for those acceptance inputs.
+
 ## Evidence index
 
 - `modeling/manifests/tamil-tts-public-source-audit.json`: licence, revision, hashes, leakage audit,
@@ -116,7 +142,13 @@ The bounded recorded training run uses 42/8/8 utterances while retaining all 14/
 - `benchmarks/reports/proxy-int8-development-laptop.json`: trained-proxy laptop benchmark;
 - `benchmarks/reports/proxy-calibration-status.json`: explicit unavailable alignment/calibration
   evidence;
-- `benchmarks/reports/member2-proxy-trained-evidence.json`: final hash-linked evidence bundle.
+- `benchmarks/reports/member2-proxy-trained-evidence.json`: final hash-linked evidence bundle;
+- `benchmarks/reports/member2-mocked-three-member-evidence.json`: mock-only adjacent-member contract
+  execution;
+- `modeling/configs/tamil_research_sources.json`: pinned fail-closed research-source preflight;
+- `modeling/configs/indicconformer_teacher.json`: pinned research-only teacher boundary;
+- `benchmarks/reports/proxy-int8-mobile-usability.json`: static NNAPI support and CPU-provider
+  recommendation.
 
 ## Remaining external acceptance gates
 
@@ -141,4 +173,3 @@ continue to return `unscorable` or retry rather than a negative pronunciation ju
 & .\.venv\Scripts\python.exe -m build backend
 git diff --check
 ```
-

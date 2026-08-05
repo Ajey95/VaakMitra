@@ -8,6 +8,11 @@ The target units are normalized Unicode IPA code points. They are intentionally 
 `unicode_codepoint_proxy_not_expert_phoneme_inventory`; they are not a Tamil-expert-reviewed
 phoneme inventory and must not be connected to child feedback as an approved scorer.
 
+For the next inventory iteration, `modeling.inventory.generate_inventory` can use Epitran to create
+a deterministic provisional Tamil IPA/token manifest from an approved UTF-8 word list. Its output
+always records `expert_approved=false` and `production_ready=false`; a speech-language/Tamil expert
+must still decide the final phoneme, vowel-length, gemination, and normalization conventions.
+
 Install the matched CPU framework versions:
 
 ```powershell
@@ -50,3 +55,15 @@ The recorded run used 42/8/8 utterances across 14/4/4 disjoint speakers. Its tes
 rate is 0.98198, so it proves the reproducible training/export path but is unsuitable for
 pronunciation scoring. A production model still requires a reviewed inventory, substantially more
 training, child-domain evaluation, therapist calibration, and target-device validation.
+
+## Additional research-only inputs
+
+`modeling/configs/tamil_research_sources.json` records pinned IndicVoices and Vistaar preflight
+metadata. It deliberately disables automatic download for terms-gated or dataset-licence-review
+sources. Adult-only sources may support engineering proxy experiments only, never child or clinical
+claims.
+
+`modeling/configs/indicconformer_teacher.json` pins the Tamil IndicConformer candidate. The
+`modeling.distillation.teacher_features` package can package already-extracted adult Tamil teacher
+features locally with immutable provenance and tamper detection. It does not fetch the gated model,
+retain raw audio, or reinterpret the ASR vocabulary as direct phoneme posteriors.

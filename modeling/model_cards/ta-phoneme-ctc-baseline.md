@@ -17,6 +17,11 @@ baseline candidate. Its existing text-ASR output vocabulary is not the required 
 phoneme inventory. A separately trained/exported phoneme CTC head and documented licence review are
 required before release.
 
+The research configuration pins revision `8c31aa8d04964b8fc87e4eaaee7916f7d2c024da` and records the
+MIT model-card licence. Safe local teacher-feature caching is implemented for distillation
+preparation, but no gated model or dataset is automatically downloaded and no direct phoneme
+posterior capability is claimed.
+
 ## Prohibited uses
 
 - ASD detection, screening, diagnosis, severity prediction, or treatment decisions;
@@ -43,7 +48,10 @@ required before release.
 - benchmark tooling for cold load, model size, peak process RSS, median, and P95 latency.
 - immutable CC0 adult-Tamil source audit and deterministic speaker-disjoint re-splitting;
 - bounded raw-waveform proxy CTC training with pinned CPU dependencies and dynamic ONNX export;
-- real proxy-model FP32/INT8 output comparison and development-laptop benchmark.
+- real proxy-model FP32/INT8 output comparison and development-laptop benchmark;
+- provisional Epitran inventory generation and fail-closed IndicVoices/Vistaar preflight;
+- local-only hash-linked teacher-feature cache validation; and
+- official static ONNX Runtime mobile analysis with an explicit CPU-provider recommendation.
 
 ## Recorded proxy experiment
 
@@ -54,6 +62,7 @@ required before release.
 - maximum posterior delta: `0.00008893385529518127`;
 - INT8 laptop benchmark: 223.6853 ms cold load, 0.78375 ms median, 2.9517 ms P95,
   68,829,184-byte peak process RSS.
+- NNAPI static compatibility: 8/51 nodes across 5 partitions as-is; not recommended.
 
 These numbers validate tooling only. In particular, the error rate rejects this small proxy model
 as a pronunciation-scoring candidate. The INT8 GOP delta is unavailable because Member 1 has not

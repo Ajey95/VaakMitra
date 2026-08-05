@@ -8,7 +8,10 @@ This branch implements only Backend Member 2's local speech-intelligence scope:
 - phoneme-level CTC probability validation;
 - GOP, confidence, and syllable scoring;
 - ONNX model integrity and local inference support;
-- edge export, quantization, benchmark, and model-card tooling.
+- edge export, quantization, benchmark, and model-card tooling;
+- explicit test-only Member 1 alignment and Member 3 action mocks;
+- provisional Tamil IPA, research-source preflight, and teacher-feature preparation; and
+- structured ONNX Runtime mobile-usability auditing.
 
 See `docs/superpowers/specs/2026-08-02-member2-speech-intelligence-design.md` for the approved design.
 
@@ -83,6 +86,14 @@ still produce honest engineering evidence:
 # Exercise Member 2 between explicit test-only Member 1 and Member 3 mocks
 & .\.venv\Scripts\python.exe -m modeling.team_mocks.run_mocked_pipeline `
   --report benchmarks\reports\member2-mocked-three-member-evidence.json
+
+# Generate a provisional Epitran-based inventory from an approved UTF-8 word list
+& .\.venv\Scripts\python.exe -m modeling.inventory.generate_inventory --help
+
+# Audit the current ONNX graph statically for mobile execution-provider compatibility
+& .\.venv\Scripts\python.exe -m modeling.mobile.usability_audit `
+  --model modeling\artifacts\proxy-trained-small-v1\ta-proxy-phone-ctc-int8.onnx `
+  --output benchmarks\reports\proxy-int8-mobile-usability.json
 ```
 
 Recorded aggregate evidence is under `benchmarks/reports/`. Real audio, checkpoints, ONNX weights,
@@ -92,6 +103,16 @@ adult proxy model has a 98.20% phone-unit error rate and therefore must not scor
 The mocked three-member command validates contract plumbing only. Its deterministic alignment and
 action adapters are non-production fixtures; they do not prove forced-alignment accuracy, adaptive
 therapy behavior, persistence, synchronization, clinical validity, or teammate acceptance.
+
+`modeling/configs/tamil_research_sources.json` pins IndicVoices and Vistaar research metadata and
+fails closed on gated access, adult-only claims, and unresolved dataset licensing. The pinned
+IndicConformer configuration and teacher-feature cache package preserve local-only, hash-linked
+feature tensors; they do not download data or claim direct phoneme posterior support.
+
+The checked-in mobile audit is static graph analysis, not a tablet benchmark. The current INT8
+model has only 8 of 51 nodes supported by NNAPI as-is across 5 partitions, so the recorded
+recommendation is `CPUExecutionProvider`. Physical-tablet latency, memory, battery, and thermal
+measurements remain unavailable.
 
 The checked-in phoneme vocabulary and model configuration are contract examples. They are not a
 Tamil-expert-approved production inventory or a clinically validated pronunciation model.
