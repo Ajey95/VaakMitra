@@ -4,10 +4,44 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from pathlib import Path
+from typing import Any
+
+import numpy as np
+import numpy.typing as npt
 
 from modeling.artifacts import ArtifactRecord, describe_artifact
+
+
+class NumpyCalibrationReader:
+    """Finite, in-memory calibration adapter for optional static ONNX INT8."""
+
+    def __init__(self, samples: Sequence[Mapping[str, npt.NDArray[Any]]]) -> None:
+        if not samples:
+            raise ValueError("static calibration requires at least one sample")
+        for sample in samples:
+            if not sample:
+                raise ValueError("calibration samples must contain model inputs")
+            for name, array in sample.items():
+                if not name or any(term in name.casefold() for term in ("path", "transcript")):
+                    raise ValueError("calibration input names must be non-sensitive")
+                if not isinstance(array, np.ndarray) or array.size == 0:
+                    raise TypeError("calibration inputs must be non-empty NumPy arrays")
+                if np.issubdtype(array.dtype, np.floating) and not np.isfinite(array).all():
+                    raise ValueError("calibration inputs must contain only finite values")
+        self._samples = tuple(samples)
+        self._index = 0
+
+    def get_next(self) -> Mapping[str, npt.NDArray[Any]] | None:
+        if self._index >= len(self._samples):
+            return None
+        sample = self._samples[self._index]
+        self._index += 1
+        return sample
+
+    def rewind(self) -> None:
+        self._index = 0
 
 
 def validate_quantization_paths(source_path: str | Path, output_path: str | Path) -> None:

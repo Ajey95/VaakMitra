@@ -5,7 +5,10 @@ import hashlib
 import numpy as np
 import pytest
 from modeling.export.export_onnx import ExportPrerequisiteError, export_with_adapter
-from modeling.quantization.quantize_onnx import validate_quantization_paths
+from modeling.quantization.quantize_onnx import (
+    NumpyCalibrationReader,
+    validate_quantization_paths,
+)
 from modeling.validation.compare_outputs import compare_probability_outputs
 
 from vaakmitra.contracts.alignment import AlignedPhoneme
@@ -96,3 +99,27 @@ def test_export_adapter_returns_digest_for_created_model(tmp_path) -> None:
 
     assert record.size_bytes == len(b"onnx-fixture")
     assert record.sha256 == hashlib.sha256(b"onnx-fixture").hexdigest()
+
+
+def test_static_calibration_reader_validates_and_iterates_finite_float32_inputs() -> None:
+    samples = (
+        {
+            "audio": np.zeros((1, 800), dtype=np.float32),
+            "input_lengths": np.array([800], dtype=np.int64),
+        },
+        {
+            "audio": np.ones((1, 800), dtype=np.float32),
+            "input_lengths": np.array([800], dtype=np.int64),
+        },
+    )
+    reader = NumpyCalibrationReader(samples)
+
+    assert reader.get_next() is samples[0]
+    assert reader.get_next() is samples[1]
+    assert reader.get_next() is None
+    reader.rewind()
+    assert reader.get_next() is samples[0]
+
+    invalid = ({"audio": np.array([[np.nan]], dtype=np.float32)},)
+    with pytest.raises(ValueError, match="finite"):
+        NumpyCalibrationReader(invalid)

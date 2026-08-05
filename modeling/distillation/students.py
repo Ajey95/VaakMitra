@@ -127,7 +127,9 @@ class CompactConformerCtc(_StudentBase):
             batch_first=True,
             norm_first=False,
         )
-        self.encoder = nn.TransformerEncoder(layer, num_layers=encoder_layers)
+        self.encoder = nn.TransformerEncoder(
+            layer, num_layers=encoder_layers, enable_nested_tensor=False
+        )
         self.ctc_head = nn.Linear(hidden_size, vocabulary_size)
 
     def forward(self, audio: torch.Tensor, input_lengths: torch.Tensor) -> StudentOutput:

@@ -5,11 +5,20 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+import re
+import warnings
 from collections.abc import Sequence
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
+import torch
+from torch import nn
+
 from modeling.artifacts import ArtifactRecord, describe_artifact
+from modeling.distillation.students import StudentOutput
+
+_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 
 class ExportAdapter(Protocol):
@@ -18,6 +27,86 @@ class ExportAdapter(Protocol):
 
 class ExportPrerequisiteError(RuntimeError):
     """Raised when an approved checkpoint or export adapter is unavailable."""
+
+
+@dataclass(frozen=True, slots=True)
+class StudentExportMetadata:
+    artifact: ArtifactRecord
+    config_sha256: str
+    vocabulary_sha256: str
+    output_kind: str
+    dynamic_sample_axis: bool
+    direct_text_posteriors_exported: bool
+
+
+class _StudentOnnxWrapper(nn.Module):
+    def __init__(self, model: nn.Module) -> None:
+        super().__init__()
+        self.model = model
+
+    def forward(
+        self, audio: torch.Tensor, input_lengths: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        result = self.model(audio, input_lengths)
+        if not isinstance(result, StudentOutput):
+            raise TypeError("student model must return StudentOutput")
+        return result.logits, result.frame_lengths
+
+
+def export_student_onnx(
+    model: nn.Module,
+    output_path: str | Path,
+    *,
+    example_samples: int,
+    config_sha256: str,
+    vocabulary_sha256: str,
+) -> StudentExportMetadata:
+    """Export dynamic raw-audio phoneme logits and bind model/config/vocabulary hashes."""
+
+    if example_samples < 400:
+        raise ValueError("example_samples must be at least 400")
+    if not _SHA256.fullmatch(config_sha256) or not _SHA256.fullmatch(vocabulary_sha256):
+        raise ValueError("config and vocabulary digests must be lowercase SHA-256")
+    output = Path(output_path)
+    if output.exists():
+        raise ValueError("student ONNX output exists; refusing to overwrite")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    wrapper = _StudentOnnxWrapper(model.cpu().eval())
+    audio = torch.zeros((1, example_samples), dtype=torch.float32)
+    lengths = torch.tensor([example_samples], dtype=torch.long)
+    fastpath_enabled = torch.backends.mha.get_fastpath_enabled()
+    torch.backends.mha.set_fastpath_enabled(False)
+    try:
+        with torch.no_grad(), warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=DeprecationWarning)
+            warnings.filterwarnings("ignore", category=torch.jit.TracerWarning)
+            warnings.filterwarnings("ignore", category=UserWarning)
+            torch.onnx.export(
+                wrapper,
+                (audio, lengths),
+                str(output),
+                input_names=["audio", "input_lengths"],
+                output_names=["phoneme_logits", "frame_lengths"],
+                dynamic_axes={
+                    "audio": {0: "batch", 1: "samples"},
+                    "input_lengths": {0: "batch"},
+                    "phoneme_logits": {0: "batch", 1: "frames"},
+                    "frame_lengths": {0: "batch"},
+                },
+                opset_version=17,
+                do_constant_folding=True,
+                dynamo=False,
+            )
+    finally:
+        torch.backends.mha.set_fastpath_enabled(fastpath_enabled)
+    return StudentExportMetadata(
+        artifact=describe_artifact(output),
+        config_sha256=config_sha256,
+        vocabulary_sha256=vocabulary_sha256,
+        output_kind="phoneme_logits",
+        dynamic_sample_axis=True,
+        direct_text_posteriors_exported=False,
+    )
 
 
 def export_with_adapter(
