@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0",
+  "archive_sha256": "0ec67ad6fc6b5f48aa0f2668722dbdb2642b66c4b49c289c2849ee603f35c8c2",
+  "lexicon_digest": "2e16c7e31ee8293275f952aded04b5a358f5e3dbc3538c8f68333c9279b21dd6",
+  "candidate_digest": "2014432f30b4b41dd1a1c557b8982cef7d5f0f1394e685f769f0054d73e8fba9",
+  "packet_digest": "4d9466d8001307fb3b709cb65ed569070236def1c3b7288fc2b9ac057b4c2695",
+  "conflicts": [
+    {
+      "token": "ai",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "au",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "aɪ",
+      "present_in": [
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "aʊ",
+      "present_in": [
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "b",
+      "present_in": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "c",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "cç",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "d",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "d̠ʒ",
+      "present_in": [
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "d̪",
+      "present_in": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "d͡ʒ",
+      "present_in": [
+        "openslr-127-corpus-observation"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "f",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "h",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "l",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "l̠˞",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "l̪",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "n̪",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "r",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "r̪",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "s",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "t",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "t̠ʃ",
+      "present_in": [
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "t͡ʃ",
+      "present_in": [
+        "openslr-127-corpus-observation"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "w",
+      "present_in": [
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "x",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ð",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ŋ",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɖ",
+      "present_in": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɟ",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɟʝ",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɡ",
+      "present_in": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɨ",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɸ",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɻ",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɽ",
+      "present_in": [
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ɾ",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ʂ",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1788"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ʋ",
+      "present_in": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058"
+      ],
+      "missing_from": [
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ʐ",
+      "present_in": [
+        "phoible-tamil-2611"
+      ],
+      "missing_from": [
+        "openslr-127-corpus-observation",
+        "phoible-tamil-1058",
+        "phoible-tamil-1788"
+      ],
+      "resolution": "extended_pending_review"
+    },
+    {
+      "token": "ஃ",
+      "present_in": [
+        "openslr-127-corpus-observation"
+      ],
+      "missing_from": [
+        "phoible-tamil-1058",
+        "phoible-tamil-1788",
+        "phoible-tamil-2611"
+      ],
+      "resolution": "extended_pending_review"
+    }
+  ],
+  "unknown_word_count": 0,
+  "bounded_pronunciation_example_count": 200,
+  "contains_identifiers": false,
+  "contains_full_transcripts": false,
+  "contains_paths": false,
+  "review_status": "pending_expert_review"
+}

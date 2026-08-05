@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "dataset_id": "openslr-127-iisc-mile-tamil",
+    "revision": "0ec67ad6fc6b5f48aa0f2668722dbdb2642b66c4b49c289c2849ee603f35c8c2",
+    "revision_basis": "archive_sha256",
+    "source_url": "https://openslr.trmal.net/resources/127/mile_tamil_asr_corpus.tar.gz",
+    "license_spdx": "CC-BY-2.0",
+    "population": "adult_tamil_proxy",
+    "local_processing_only": true
+  },
+  "splits": [
+    {
+      "name": "train",
+      "record_count": 70320,
+      "speaker_count": 510,
+      "index_sha256": "62b80f86d901a731a2c87c4b7c8e2a788510fa3f6d36d5ef7fc6041e24ddf90a"
+    },
+    {
+      "name": "validation",
+      "record_count": 9325,
+      "speaker_count": 64,
+      "index_sha256": "f0b8e2d2b95eced7e91bf19c46868d623bc156a63b23c580135e322ba97c4adc"
+    },
+    {
+      "name": "test",
+      "record_count": 9742,
+      "speaker_count": 64,
+      "index_sha256": "a42271fba363e9cdb7b2052da4aa50e0951ab64503b8ca2ffb080a564924f89c"
+    }
+  ],
+  "record_count": 89387,
+  "speaker_count": 638,
+  "evidence_scope": "engineering_proxy",
+  "contains_identifiers": false,
+  "contains_transcripts": false,
+  "contains_paths": false,
+  "corpus_index_sha256": "536c099f9592e0e85c301f2c33c1e817b4745e2ab3c9630a3c947d281e2c8552"
+}

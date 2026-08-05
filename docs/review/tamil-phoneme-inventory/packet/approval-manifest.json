@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "review_status": "pending_expert_review",
+  "candidate_inventory_version": "ta-openslr127-candidate-1",
+  "candidate_digest": "2014432f30b4b41dd1a1c557b8982cef7d5f0f1394e685f769f0054d73e8fba9",
+  "token_reviews": [
+    {
+      "token": "a",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ai",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "au",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "aɪ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "aʊ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "aː",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "b",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "c",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "cç",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "d",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "d̠ʒ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "d̪",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "d͡ʒ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "e",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "eː",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "f",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "h",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "i",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "iː",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "j",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "k",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "l",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "l̠˞",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "l̪",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "m",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "n",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "n̪",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "o",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "oː",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "p",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "r",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "r̪",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "s",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "t",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "t̠ʃ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "t̪",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "t͡ʃ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "u",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "uː",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "w",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "x",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ð",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ŋ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɖ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɟ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɟʝ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɡ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɨ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɭ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɲ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɳ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɸ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɻ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɽ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ɾ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ʂ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ʈ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ʋ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ʐ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "ஃ",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    }
+  ],
+  "allophone_reviews": [],
+  "policies": {
+    "vowel_length": "pending",
+    "gemination": "pending",
+    "allophones": "pending",
+    "unknown_phone": "pending"
+  },
+  "reviewer": null
+}

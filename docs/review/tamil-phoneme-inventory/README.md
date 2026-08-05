@@ -55,8 +55,8 @@ Validate and finalize the completed packet:
 
 ```powershell
 & .\.venv\Scripts\python.exe -m modeling.inventory.build_review_packet finalize `
-  --candidate modeling\artifacts\tamil-phoneme-contract.json `
-  --review modeling\artifacts\tamil-phoneme-review.completed.json `
+  --candidate docs\review\tamil-phoneme-inventory\packet\tamil-phoneme-candidate.json `
+  --review docs\review\tamil-phoneme-inventory\packet\approval-manifest.completed.json `
   --output modeling\artifacts\tamil-phoneme-contract.expert-reviewed.json
 ```
 
@@ -65,3 +65,21 @@ unreviewed allophones, invalid replacements, or absent attestation. A successful
 `expert_approved=true` but intentionally retains `production_ready=false`: child-domain evaluation,
 therapist calibration, trained-model evidence, and physical-device validation remain independent
 promotion gates.
+
+## Materialized OpenSLR 127 packet
+
+The repository packet was generated from all 89,387 training-eligible records after complete
+89,401-record validation and conservative exact-audio duplicate handling. It is bound to archive
+SHA-256 `0ec67ad6fc6b5f48aa0f2668722dbdb2642b66c4b49c289c2849ee603f35c8c2`.
+
+Review these files together:
+
+- `packet/token-review.csv`: 60 candidate phone rows.
+- `packet/pronunciation-review.csv`: 200 deterministic, isolated-word corpus examples.
+- `packet/conflicts-and-coverage.json`: source disagreements, digests, coverage, and privacy flags.
+- `packet/approval-manifest.json`: machine-validated token, policy, and reviewer attestation form.
+
+The checked-in manifest intentionally remains `pending_expert_review`. The reviewer should copy it
+to `approval-manifest.completed.json`, enter every decision and required note, select all four
+policies, and add the UTC reviewer attestation. The original pending template remains immutable
+evidence of what was handed to the reviewer.

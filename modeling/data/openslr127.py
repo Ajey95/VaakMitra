@@ -8,6 +8,7 @@ import unicodedata
 import wave
 from collections import Counter, defaultdict
 from collections.abc import Mapping, Sequence
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
@@ -46,6 +47,18 @@ class MaterializedRecord:
             sample_rate_hz=self.sample_rate_hz,
             duration_ms=self.duration_ms,
         )
+
+
+@dataclass(frozen=True, slots=True)
+class _PendingMaterializedRecord:
+    utterance_id: str
+    speaker_id: str
+    official_split: OfficialSplit
+    audio_path: Path
+    transcript_path: Path
+    normalized_transcript: str
+    transcript_sha256: str
+    duration_ms: int
 
 
 class CorpusMaterializationReport(BaseModel):
@@ -93,6 +106,65 @@ class SpeakerAssignmentResult:
             },
             "contains_identifiers": False,
         }
+
+
+@dataclass(frozen=True, slots=True)
+class AudioDeduplicationResult:
+    """Private eligible records plus aggregate exact-audio duplicate evidence."""
+
+    eligible_records: tuple[MaterializedRecord, ...]
+    duplicate_group_count: int
+    duplicate_record_count: int
+    safe_collapsed_group_count: int
+    cross_speaker_group_count: int
+    conflicting_transcript_group_count: int
+    excluded_record_count: int
+
+
+def deduplicate_audio_records(
+    records: Sequence[MaterializedRecord],
+) -> AudioDeduplicationResult:
+    """Collapse safe duplicates and exclude groups that could leak or mislabel audio."""
+
+    groups: defaultdict[str, list[MaterializedRecord]] = defaultdict(list)
+    for record in records:
+        groups[record.audio_sha256].append(record)
+
+    eligible: list[MaterializedRecord] = []
+    duplicate_groups = 0
+    duplicate_records = 0
+    safe_collapsed = 0
+    cross_speaker = 0
+    conflicting_transcript = 0
+    excluded = 0
+    for group in groups.values():
+        ordered = sorted(group, key=lambda record: record.utterance_id)
+        if len(ordered) == 1:
+            eligible.append(ordered[0])
+            continue
+        duplicate_groups += 1
+        duplicate_records += len(ordered) - 1
+        has_cross_speaker = len({record.speaker_id for record in ordered}) > 1
+        has_conflicting_transcript = (
+            len({record.transcript_sha256 for record in ordered}) > 1
+        )
+        cross_speaker += int(has_cross_speaker)
+        conflicting_transcript += int(has_conflicting_transcript)
+        if has_cross_speaker or has_conflicting_transcript:
+            excluded += len(ordered)
+            continue
+        eligible.append(ordered[0])
+        safe_collapsed += 1
+        excluded += len(ordered) - 1
+    return AudioDeduplicationResult(
+        eligible_records=tuple(sorted(eligible, key=lambda record: record.utterance_id)),
+        duplicate_group_count=duplicate_groups,
+        duplicate_record_count=duplicate_records,
+        safe_collapsed_group_count=safe_collapsed,
+        cross_speaker_group_count=cross_speaker,
+        conflicting_transcript_group_count=conflicting_transcript,
+        excluded_record_count=excluded,
+    )
 
 
 def speaker_from_utterance_id(utterance_id: str) -> str:
@@ -158,12 +230,17 @@ def _file_sha256(path: Path) -> str:
 
 
 def inspect_extracted_corpus(
-    root: Path, *, archive_sha256: str
+    root: Path,
+    *,
+    archive_sha256: str,
+    hash_workers: int = 1,
 ) -> CorpusInspectionResult:
     """Pair and validate the complete extracted corpus without public identifiers."""
 
     if not _SHA256.fullmatch(archive_sha256):
         raise ValueError("archive_sha256 must be a lowercase SHA-256 digest")
+    if hash_workers <= 0:
+        raise ValueError("hash_workers must be positive")
     if not root.is_dir():
         raise ValueError("extracted corpus root must be a directory")
     audio_directories = tuple(
@@ -176,7 +253,7 @@ def inspect_extracted_corpus(
     if not audio_directories:
         raise ValueError("no audio_files directories found")
 
-    records: list[MaterializedRecord] = []
+    pending_records: list[_PendingMaterializedRecord] = []
     rejections: Counter[str] = Counter()
     for audio_directory in audio_directories:
         try:
@@ -209,20 +286,45 @@ def inspect_extracted_corpus(
                 continue
             assert duration_ms is not None
             assert transcript is not None
-            records.append(
-                MaterializedRecord(
+            pending_records.append(
+                _PendingMaterializedRecord(
                     utterance_id=utterance_id,
                     speaker_id=speaker_id,
                     official_split=official_split,
                     audio_path=audio_path,
                     transcript_path=transcript_path,
                     normalized_transcript=transcript,
-                    audio_sha256=_file_sha256(audio_path),
                     transcript_sha256=hashlib.sha256(transcript.encode("utf-8")).hexdigest(),
-                    sample_rate_hz=16_000,
                     duration_ms=duration_ms,
                 )
             )
+    if hash_workers == 1:
+        audio_hashes = tuple(
+            _file_sha256(record.audio_path) for record in pending_records
+        )
+    else:
+        with ThreadPoolExecutor(max_workers=hash_workers) as executor:
+            audio_hashes = tuple(
+                executor.map(
+                    _file_sha256,
+                    (record.audio_path for record in pending_records),
+                )
+            )
+    records = tuple(
+        MaterializedRecord(
+            utterance_id=pending.utterance_id,
+            speaker_id=pending.speaker_id,
+            official_split=pending.official_split,
+            audio_path=pending.audio_path,
+            transcript_path=pending.transcript_path,
+            normalized_transcript=pending.normalized_transcript,
+            audio_sha256=audio_hash,
+            transcript_sha256=pending.transcript_sha256,
+            sample_rate_hz=16_000,
+            duration_ms=pending.duration_ms,
+        )
+        for pending, audio_hash in zip(pending_records, audio_hashes, strict=True)
+    )
     ordered = tuple(sorted(records, key=lambda item: item.utterance_id))
     report = CorpusMaterializationReport(
         archive_sha256=archive_sha256,

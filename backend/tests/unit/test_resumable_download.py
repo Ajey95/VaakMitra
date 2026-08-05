@@ -10,7 +10,10 @@ from modeling.data.resumable_download import (
     build_segments,
     download_segmented,
 )
-from modeling.data.resumable_download_curl import download_segmented_with_curl
+from modeling.data.resumable_download_curl import (
+    download_missing_segment_tails_with_curl,
+    download_segmented_with_curl,
+)
 
 
 class _RangeHandler(BaseHTTPRequestHandler):
@@ -169,6 +172,45 @@ def test_curl_transport_merges_partial_responses_and_reconnects(tmp_path: Path) 
         )
 
         assert output.read_bytes() == payload
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+
+def test_tail_transport_splits_only_missing_suffixes_and_assembles_exact_file(
+    tmp_path: Path,
+) -> None:
+    payload = bytes(range(197)) * 300
+    _RangeHandler.payload = payload
+    server = ThreadingHTTPServer(("127.0.0.1", 0), _RangeHandler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        work = tmp_path / "segments"
+        segments = build_segments(total_size=len(payload), segment_count=3, work_dir=work)
+        work.mkdir(parents=True)
+        prefixes = (311, segments[1].expected_size, 0)
+        for segment, prefix_size in zip(segments, prefixes, strict=True):
+            if prefix_size:
+                segment.path.write_bytes(
+                    payload[segment.start : segment.start + prefix_size]
+                )
+
+        output = download_missing_segment_tails_with_curl(
+            url=f"http://127.0.0.1:{server.server_port}/corpus.tar.gz",
+            total_size=len(payload),
+            segment_count=3,
+            work_dir=work,
+            output_path=tmp_path / "tail-complete.bin",
+            workers=8,
+            tail_chunk_size=1_000,
+            curl_executable="curl.exe",
+        )
+
+        assert output.read_bytes() == payload
+        assert all(segment.path.stat().st_size == segment.expected_size for segment in segments)
+        assert not tuple(work.rglob("*.incoming"))
     finally:
         server.shutdown()
         server.server_close()

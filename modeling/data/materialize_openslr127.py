@@ -17,7 +17,11 @@ from modeling.data.corpus_index import (
     freeze_corpus_index,
     write_frozen_corpus_index,
 )
-from modeling.data.openslr127 import assign_speakers, inspect_extracted_corpus
+from modeling.data.openslr127 import (
+    assign_speakers,
+    deduplicate_audio_records,
+    inspect_extracted_corpus,
+)
 
 _SPLIT_NAMES: tuple[SplitName, ...] = ("train", "validation", "test")
 
@@ -37,8 +41,13 @@ def _refuse_existing_outputs(
     extraction_root: Path,
     private_output_dir: Path,
     public_paths: Sequence[Path],
+    allow_nonempty_extraction: bool = False,
 ) -> None:
-    if extraction_root.exists() and any(extraction_root.iterdir()):
+    if (
+        not allow_nonempty_extraction
+        and extraction_root.exists()
+        and any(extraction_root.iterdir())
+    ):
         raise ValueError("extraction destination must be empty")
     if private_output_dir.exists() and any(private_output_dir.iterdir()):
         raise ValueError("private output directory must be empty")
@@ -64,26 +73,49 @@ def run_materialization(
     source_manifest_path: Path,
     source_url: str,
     retrieved_at: str,
+    reuse_complete_extraction: bool = False,
+    expected_record_count: int | None = None,
+    hash_workers: int = 1,
 ) -> dict[str, Any]:
     """Inspect, safely extract, validate, split, and freeze one archive snapshot."""
 
     if not archive_path.is_file():
         raise ValueError("archive_path must be a complete local file")
+    if expected_record_count is not None and expected_record_count <= 0:
+        raise ValueError("expected_record_count must be positive")
     retrieval_time = _validate_retrieval_time(retrieved_at)
     _refuse_existing_outputs(
         extraction_root=extraction_root,
         private_output_dir=private_output_dir,
         public_paths=(aggregate_report_path, frozen_index_path, source_manifest_path),
+        allow_nonempty_extraction=reuse_complete_extraction,
     )
     archive = inspect_tar_archive(archive_path, extraction_root)
-    extract_validated_archive(archive_path, extraction_root, archive)
+    if reuse_complete_extraction:
+        if not extraction_root.is_dir() or not any(extraction_root.iterdir()):
+            raise ValueError("reused extraction destination must be non-empty")
+    else:
+        extract_validated_archive(archive_path, extraction_root, archive)
     inspection = inspect_extracted_corpus(
-        extraction_root, archive_sha256=archive.archive_sha256
+        extraction_root,
+        archive_sha256=archive.archive_sha256,
+        hash_workers=hash_workers,
     )
     if not inspection.records:
         raise ValueError("corpus contains no accepted records")
+    if expected_record_count is not None:
+        if inspection.report.accepted_count != expected_record_count:
+            raise ValueError(
+                f"expected exactly {expected_record_count} accepted records"
+            )
+        if inspection.report.rejections:
+            raise ValueError("expected zero corpus-record rejections")
+    deduplication = deduplicate_audio_records(inspection.records)
+    training_records = deduplication.eligible_records
+    if not training_records:
+        raise ValueError("corpus contains no leakage-safe training records")
     assignments = assign_speakers(
-        tuple((record.speaker_id, record.official_split) for record in inspection.records)
+        tuple((record.speaker_id, record.official_split) for record in training_records)
     )
     source = CorpusSource.model_validate(
         {
@@ -97,12 +129,12 @@ def run_materialization(
         }
     )
     frozen = freeze_corpus_index(
-        tuple(record.corpus_record() for record in inspection.records),
+        tuple(record.corpus_record() for record in training_records),
         assignments.assignments,
         source,
     )
     split_counts = Counter(
-        assignments.assignments[record.speaker_id] for record in inspection.records
+        assignments.assignments[record.speaker_id] for record in training_records
     )
     aggregate: dict[str, Any] = {
         "schema_version": "1.0",
@@ -118,6 +150,20 @@ def run_materialization(
         "tar_integrity_and_path_safety": "passed",
         "accepted_count": inspection.report.accepted_count,
         "accepted_speaker_count": inspection.report.accepted_speaker_count,
+        "training_eligible_count": len(training_records),
+        "training_eligible_speaker_count": len(
+            {record.speaker_id for record in training_records}
+        ),
+        "exact_audio_duplicate_group_count": deduplication.duplicate_group_count,
+        "exact_audio_duplicate_record_count": deduplication.duplicate_record_count,
+        "safe_duplicate_group_count": deduplication.safe_collapsed_group_count,
+        "cross_speaker_duplicate_group_count": (
+            deduplication.cross_speaker_group_count
+        ),
+        "conflicting_transcript_duplicate_group_count": (
+            deduplication.conflicting_transcript_group_count
+        ),
+        "excluded_duplicate_record_count": deduplication.excluded_record_count,
         "total_duration_ms": inspection.report.total_duration_ms,
         "official_train_count": inspection.report.official_train_count,
         "official_test_count": inspection.report.official_test_count,
@@ -140,7 +186,7 @@ def run_materialization(
     private_output_dir.mkdir(parents=True, exist_ok=True)
     records_path = private_output_dir / "records.jsonl"
     with records_path.open("x", encoding="utf-8", newline="\n") as output:
-        for record in inspection.records:
+        for record in training_records:
             private_row = {
                 **record.corpus_record().model_dump(mode="json"),
                 "official_split": record.official_split,
@@ -171,6 +217,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-manifest", required=True, type=Path)
     parser.add_argument("--source-url", required=True)
     parser.add_argument("--retrieved-at", required=True)
+    parser.add_argument("--reuse-complete-extraction", action="store_true")
+    parser.add_argument("--expected-record-count", type=int)
+    parser.add_argument("--hash-workers", type=int, default=1)
     return parser
 
 
@@ -185,6 +234,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         source_manifest_path=args.source_manifest,
         source_url=args.source_url,
         retrieved_at=args.retrieved_at,
+        reuse_complete_extraction=args.reuse_complete_extraction,
+        expected_record_count=args.expected_record_count,
+        hash_workers=args.hash_workers,
     )
     print(json.dumps(result, ensure_ascii=True, sort_keys=True))
     return 0

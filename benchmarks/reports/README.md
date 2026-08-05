@@ -11,6 +11,15 @@ measurement from detected speech end to visible or audible avatar response.
 
 Key non-production reports:
 
+- `openslr127-corpus-evidence.json` records the verified 13,803,410,250-byte OpenSLR 127
+  archive SHA-256, safe-extraction counts, complete 89,401-record validation, exact-audio
+  duplicate handling, and aggregate speaker-disjoint split evidence. It contains no paths,
+  transcripts, speaker identifiers, utterance identifiers, or audio hashes.
+- `openslr127-frozen-index.json` freezes the deterministic 510/64/64-speaker
+  train/validation/test assignment through per-split index digests. The corresponding private
+  record index and speaker assignments remain under ignored local artifact storage.
+- `openslr127-source-manifest.json` pins the source URL, CC-BY-2.0 license, archive revision,
+  adult-Tamil proxy population, and local-only processing boundary.
 - `member2-mocked-three-member-evidence.json` exercises Member 2 between deterministic test-only
   Member 1 and Member 3 adapters; it is contract evidence, not teammate acceptance.
 - `proxy-int8-mobile-usability.json` records official ONNX Runtime static graph analysis. It is not
