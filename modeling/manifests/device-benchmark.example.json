@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "service": "firebase_test_lab",
+  "service_run_id": "synthetic-example-not-a-service-run",
+  "device_fingerprint": "emulator/example/functional-only",
+  "device_model": "Synthetic Emulator Example",
+  "android_api": 34,
+  "form_factor": "tablet",
+  "is_physical": false,
+  "execution_provider": "CPUExecutionProvider",
+  "repetitions": 30,
+  "cold_load_ms": 120.0,
+  "latency_samples_ms": [
+    100.0, 101.0, 102.0, 103.0, 104.0, 105.0, 106.0, 107.0, 108.0, 109.0,
+    110.0, 111.0, 112.0, 113.0, 114.0, 115.0, 116.0, 117.0, 118.0, 119.0,
+    120.0, 121.0, 122.0, 123.0, 124.0, 125.0, 126.0, 127.0, 128.0, 129.0
+  ],
+  "peak_memory_mb": 80.0,
+  "thermal_status": "unknown_emulator",
+  "model_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "offline_assertion": true,
+  "network_access_detected": false,
+  "fixture_scope": "synthetic_non_sensitive"
+}
