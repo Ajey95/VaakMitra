@@ -17,6 +17,7 @@ def _write_json(path: Path, payload: dict[str, object]) -> Path:
 def _complete_inputs(
     tmp_path: Path,
     *,
+    model_scope: str = "synthetic_fixture_model",
     benchmark_scope: str = "development_laptop",
     corpus_scope: str = "engineering_proxy",
     evaluation_scope: str = "engineering_proxy",
@@ -43,7 +44,7 @@ def _complete_inputs(
         {"evidence_scope": benchmark_scope, "latency": {"p95_ms": 10.0}},
     )
     return (
-        EvidenceInput(kind="model", path=model, evidence_scope="model_artifact"),
+        EvidenceInput(kind="model", path=model, evidence_scope=model_scope),
         EvidenceInput(
             kind="vocabulary", path=vocabulary, evidence_scope="vocabulary_artifact"
         ),
@@ -89,6 +90,7 @@ def test_prototype_bundle_hashes_every_required_input_without_absolute_paths(
     assert str(tmp_path) not in json.dumps(report.as_dict())
     assert "no therapist-labelled target-user evidence" in report.limitations
     assert "no actual target-device benchmark" in report.limitations
+    assert "no trained Tamil phoneme CTC model" in report.limitations
 
 
 def test_release_evidence_rejects_missing_or_duplicate_required_kind(tmp_path: Path) -> None:
@@ -149,10 +151,25 @@ def test_target_device_release_rejects_proxy_calibration(tmp_path: Path) -> None
         )
 
 
+def test_target_device_release_rejects_synthetic_fixture_model(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="approved_tamil_phoneme_model"):
+        assemble_release_evidence(
+            _complete_inputs(
+                tmp_path,
+                benchmark_scope="target_device",
+                corpus_scope="target_user_validation",
+                evaluation_scope="target_user_validation",
+                calibration_scope="therapist_calibrated",
+            ),
+            requested_status="target_device_validated",
+        )
+
+
 def test_target_device_release_accepts_only_complete_external_evidence(tmp_path: Path) -> None:
     report = assemble_release_evidence(
         _complete_inputs(
             tmp_path,
+            model_scope="approved_tamil_phoneme_model",
             benchmark_scope="target_device",
             corpus_scope="target_user_validation",
             evaluation_scope="target_user_validation",
@@ -196,4 +213,3 @@ def test_release_evidence_cli_reads_request_and_writes_report(tmp_path: Path) ->
 
     assert output["release_status"] == "technical_prototype"
     assert len(output["artifacts"]) == 7
-

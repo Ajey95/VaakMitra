@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "population": "adult_tamil_proxy",
+  "evidence_scope": "engineering_proxy",
+  "validation_status": "engineering_proxy_only",
+  "record_count": 1,
+  "scorable_count": 1,
+  "unscorable_count": 0,
+  "unscorable_rate": 0.0,
+  "reference_tokens": 1,
+  "total_errors": 0,
+  "micro_per": 0.0,
+  "macro_per": 0.0,
+  "exact_sequence_accuracy": 1.0
+}

@@ -149,6 +149,16 @@ def assemble_release_evidence(
         and scopes["calibration"] == "therapist_calibrated"
     )
     has_target_device_evidence = scopes["benchmark"] == "target_device"
+    if scopes["model"] not in {
+        "synthetic_fixture_model",
+        "trained_proxy_tamil_phoneme_model",
+        "approved_tamil_phoneme_model",
+    }:
+        raise ValueError("model evidence scope is unsupported")
+    has_trained_tamil_model = scopes["model"] in {
+        "trained_proxy_tamil_phoneme_model",
+        "approved_tamil_phoneme_model",
+    }
 
     if requested_status == "target_device_validated":
         if not has_target_device_evidence:
@@ -162,12 +172,18 @@ def assemble_release_evidence(
             )
         if scopes["calibration"] != "therapist_calibrated":
             raise ValueError("target_device_validated requires therapist_calibrated evidence")
+        if scopes["model"] != "approved_tamil_phoneme_model":
+            raise ValueError(
+                "target_device_validated requires approved_tamil_phoneme_model evidence"
+            )
 
     limitations: list[str] = []
     if not has_target_user_evidence:
         limitations.append("no therapist-labelled target-user evidence")
     if not has_target_device_evidence:
         limitations.append("no actual target-device benchmark")
+    if not has_trained_tamil_model:
+        limitations.append("no trained Tamil phoneme CTC model")
 
     artifact_tuple = tuple(artifacts)
     limitation_tuple = tuple(limitations)

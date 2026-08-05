@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "development_laptop",
+  "model_version": "synthetic-ctc-int8-1.0.0",
+  "vocabulary_version": "synthetic-ctc-vocab-1.0.0",
+  "model_sha256": "1a111cfcbd57d591f4d219e4b8a514131ba39af2c9c680452c306f90b947f5b7",
+  "provider": "CPUExecutionProvider",
+  "model_size_bytes": 998,
+  "cold_load_ms": 1.8232,
+  "peak_rss_bytes": 92917760,
+  "warmup_runs": 5,
+  "measured_runs": 30,
+  "latency": {
+    "minimum_ms": 0.0232,
+    "median_ms": 0.02495,
+    "p95_ms": 0.0636,
+    "maximum_ms": 0.2206
+  },
+  "timestamp_utc": "2026-08-05T07:15:55.467062+00:00"
+}

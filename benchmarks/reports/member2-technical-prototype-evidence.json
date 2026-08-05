@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "release_status": "technical_prototype",
+  "validation_label": "engineering_evidence_only",
+  "artifacts": [
+    {
+      "kind": "benchmark",
+      "filename": "development-laptop-synthetic.json",
+      "size_bytes": 614,
+      "sha256": "7b8fbc9932e725030d8fca0ee7024865f5d9b7c43a885a349948fb6f20a3794a",
+      "evidence_scope": "development_laptop"
+    },
+    {
+      "kind": "calibration",
+      "filename": "synthetic-proxy-calibration.json",
+      "size_bytes": 475,
+      "sha256": "e43576a6696f4476e15f4c46166dc7d048ad01f1606c718c1493eaafb7d1bda8",
+      "evidence_scope": "proxy_not_therapist_calibrated"
+    },
+    {
+      "kind": "comparison",
+      "filename": "synthetic-fp32-vs-int8.json",
+      "size_bytes": 311,
+      "sha256": "b325c54c81b81ce9dc07c9444315759d15e4f3567a35fd2c108b00a3cfea8ae4",
+      "evidence_scope": "quantization_comparison"
+    },
+    {
+      "kind": "corpus",
+      "filename": "tamil-proxy-corpus.example.json",
+      "size_bytes": 1019,
+      "sha256": "503ad1dcf1738bdbf4505273f1b1d98bcd40bd1931abbd866ba2a98308db54bf",
+      "evidence_scope": "engineering_proxy"
+    },
+    {
+      "kind": "evaluation",
+      "filename": "synthetic-ctc-evaluation.json",
+      "size_bytes": 385,
+      "sha256": "940e95d30af3e8f60ec170866e8a4ced7a2d27eb8825498af0521b2ce5ca4ede",
+      "evidence_scope": "engineering_proxy"
+    },
+    {
+      "kind": "model",
+      "filename": "synthetic-ctc-int8.onnx",
+      "size_bytes": 998,
+      "sha256": "1a111cfcbd57d591f4d219e4b8a514131ba39af2c9c680452c306f90b947f5b7",
+      "evidence_scope": "synthetic_fixture_model"
+    },
+    {
+      "kind": "vocabulary",
+      "filename": "synthetic-ctc-vocabulary.json",
+      "size_bytes": 203,
+      "sha256": "cb07899b09cb9567ef97f6bc98e9073193b4e2277e32ba6f345e4b53bd9bc467",
+      "evidence_scope": "vocabulary_artifact"
+    }
+  ],
+  "limitations": [
+    "no therapist-labelled target-user evidence",
+    "no actual target-device benchmark",
+    "no trained Tamil phoneme CTC model"
+  ],
+  "evidence_digest": "fc765488425958ed4bd2759b34075a61e76293b608c12f241d72b73c4b2c6d42"
+}
