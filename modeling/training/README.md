@@ -113,7 +113,21 @@ object with resumable byte ranges:
 
 Use fewer workers if the mirror throttles concurrent ranges. A stopped command resumes each fixed
 segment from its existing byte count; it assembles the final archive only after every segment has
-the exact expected size. Then run the single safe materialization transaction:
+the exact expected size. If the mirror holds Python HTTP reads open without advancing, the
+curl-backed transport safely reuses the same segment prefixes:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.data.resumable_download_curl `
+  --url https://openslr.trmal.net/resources/127/mile_tamil_asr_corpus.tar.gz `
+  --total-size 13803410250 --segment-count 16 --workers 4 `
+  --work-dir modeling\artifacts\corpora\openslr-127\segments `
+  --output modeling\artifacts\corpora\openslr-127\mile_tamil_asr_corpus.tar.gz `
+  --curl curl.exe
+```
+
+Each curl response is an exact absolute range written to a separate `.incoming` file; size is
+validated before it is appended to the preserved segment. Then run the single safe materialization
+transaction:
 
 ```powershell
 $retrievedAt = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")

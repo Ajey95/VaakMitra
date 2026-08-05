@@ -10,6 +10,7 @@ from modeling.data.resumable_download import (
     build_segments,
     download_segmented,
 )
+from modeling.data.resumable_download_curl import download_segmented_with_curl
 
 
 class _RangeHandler(BaseHTTPRequestHandler):
@@ -96,3 +97,36 @@ def test_assembly_rejects_missing_wrong_sized_or_existing_output(tmp_path: Path)
     output.write_bytes(b"existing")
     with pytest.raises(FileExistsError):
         assemble_segments(segments, output, expected_size=6)
+
+
+def test_curl_transport_reuses_segment_prefixes_and_assembles_exact_file(
+    tmp_path: Path,
+) -> None:
+    payload = bytes(range(199)) * 200
+    _RangeHandler.payload = payload
+    server = ThreadingHTTPServer(("127.0.0.1", 0), _RangeHandler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        work = tmp_path / "curl-segments"
+        segments = build_segments(total_size=len(payload), segment_count=3, work_dir=work)
+        work.mkdir(parents=True)
+        segments[0].path.write_bytes(payload[:311])
+
+        output = download_segmented_with_curl(
+            url=f"http://127.0.0.1:{server.server_port}/corpus.tar.gz",
+            total_size=len(payload),
+            segment_count=3,
+            work_dir=work,
+            output_path=tmp_path / "curl-complete.bin",
+            workers=2,
+            curl_executable="curl.exe",
+        )
+
+        assert output.read_bytes() == payload
+        assert all(segment.path.stat().st_size == segment.expected_size for segment in segments)
+        assert not tuple(work.glob("*.incoming"))
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
