@@ -194,6 +194,15 @@ def test_release_evidence_digest_is_independent_of_input_order(tmp_path: Path) -
     assert first.evidence_digest == second.evidence_digest
 
 
+def test_proxy_trained_model_retains_adult_proxy_limitation(tmp_path: Path) -> None:
+    report = assemble_release_evidence(
+        _complete_inputs(tmp_path, model_scope="trained_proxy_tamil_phoneme_model"),
+        requested_status="technical_prototype",
+    )
+
+    assert "model trained only on adult proxy data" in report.limitations
+
+
 def test_release_evidence_cli_reads_request_and_writes_report(tmp_path: Path) -> None:
     inputs = _complete_inputs(tmp_path)
     request_path = tmp_path / "request.json"

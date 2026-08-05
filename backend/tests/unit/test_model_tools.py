@@ -48,6 +48,7 @@ def test_compare_outputs_reports_probability_and_gop_delta() -> None:
     assert report.max_probability_delta == pytest.approx(0.02)
     assert report.mean_probability_delta == pytest.approx(0.013333333333333334)
     assert report.max_gop_delta > 0.0
+    assert report.aligned_segment_count == 1
 
 
 def test_compare_outputs_requires_identical_shapes() -> None:

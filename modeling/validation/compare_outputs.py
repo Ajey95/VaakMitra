@@ -17,6 +17,7 @@ class OutputComparisonReport:
     max_probability_delta: float
     mean_probability_delta: float
     max_gop_delta: float
+    aligned_segment_count: int
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -60,5 +61,5 @@ def compare_probability_outputs(
         max_probability_delta=float(probability_delta.max()),
         mean_probability_delta=float(probability_delta.mean()),
         max_gop_delta=max(gop_deltas, default=0.0),
+        aligned_segment_count=len(aligned_phonemes),
     )
-

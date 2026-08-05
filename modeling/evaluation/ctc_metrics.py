@@ -5,10 +5,11 @@ from __future__ import annotations
 import math
 from collections.abc import Sequence
 from dataclasses import asdict, dataclass
-from typing import Any
+from typing import Any, TypeVar
 
 _PROXY_POPULATIONS = frozenset({"adult_tamil_proxy", "general_child_proxy"})
 _TARGET_POPULATION = "target_user_child"
+_Token = TypeVar("_Token")
 
 
 @dataclass(frozen=True, slots=True)
@@ -72,7 +73,7 @@ def collapse_ctc_tokens(tokens: Sequence[str], blank_token: str) -> tuple[str, .
     return tuple(collapsed)
 
 
-def edit_distance(reference: Sequence[str], hypothesis: Sequence[str]) -> int:
+def edit_distance(reference: Sequence[_Token], hypothesis: Sequence[_Token]) -> int:
     """Return token-level Levenshtein distance using bounded working memory."""
 
     previous = list(range(len(hypothesis) + 1))
@@ -161,4 +162,3 @@ def evaluate_records(records: Sequence[EvaluationRecord]) -> CtcEvaluationReport
         macro_per=macro_per,
         exact_sequence_accuracy=exact_accuracy,
     )
-

@@ -184,6 +184,8 @@ def assemble_release_evidence(
         limitations.append("no actual target-device benchmark")
     if not has_trained_tamil_model:
         limitations.append("no trained Tamil phoneme CTC model")
+    elif scopes["model"] == "trained_proxy_tamil_phoneme_model":
+        limitations.append("model trained only on adult proxy data")
 
     artifact_tuple = tuple(artifacts)
     limitation_tuple = tuple(limitations)
