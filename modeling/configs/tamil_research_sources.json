@@ -34,6 +34,23 @@
       "allowed_evidence_claims": [
         "dataset_discovery"
       ]
+    },
+    {
+      "source_id": "openslr-127-iisc-mile-tamil",
+      "organization": "IISc-MILE via OpenSLR",
+      "canonical_url": "https://www.openslr.org/127/",
+      "language": "ta",
+      "license_spdx": "CC-BY-2.0",
+      "revision": "ca39e92d6793c6d1f92129ec1c5ea4dd371c8d0a3ee8e7174d5a180a402095e1",
+      "target_age_scope": "adult_only",
+      "transcript_scope": "read_speech_utf8_transcripts_archive_sha256_required_before_indexing",
+      "streaming_supported": false,
+      "requires_user_terms_acceptance": false,
+      "automatic_download_allowed": false,
+      "dataset_license_review_required": false,
+      "allowed_evidence_claims": [
+        "engineering_proxy"
+      ]
     }
   ]
 }

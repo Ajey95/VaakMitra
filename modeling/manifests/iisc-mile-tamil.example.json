@@ -1,0 +1,9 @@
+{
+  "dataset_id": "openslr-127-iisc-mile-tamil-local-archive",
+  "revision": "ca39e92d6793c6d1f92129ec1c5ea4dd371c8d0a3ee8e7174d5a180a402095e1",
+  "revision_basis": "source_snapshot_sha256",
+  "source_url": "https://www.openslr.org/127/",
+  "license_spdx": "CC-BY-2.0",
+  "population": "adult_tamil_proxy",
+  "local_processing_only": true
+}

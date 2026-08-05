@@ -19,7 +19,7 @@ class ResearchSource(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     APPROVED_LICENSES: ClassVar[frozenset[str]] = frozenset(
-        {"Apache-2.0", "CC-BY-4.0", "CC0-1.0", "MIT"}
+        {"Apache-2.0", "CC-BY-2.0", "CC-BY-4.0", "CC0-1.0", "MIT"}
     )
 
     source_id: str = Field(min_length=1)

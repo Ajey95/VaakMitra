@@ -37,8 +37,9 @@ def test_catalog_contains_pinned_fail_closed_research_sources() -> None:
     assert {source.source_id for source in catalog.sources} == {
         "ai4bharat-indicvoices",
         "ai4bharat-vistaar",
+        "openslr-127-iisc-mile-tamil",
     }
-    assert all(len(source.revision) == 40 for source in catalog.sources)
+    assert all(len(source.revision) in {40, 64} for source in catalog.sources)
     assert all(str(source.canonical_url).startswith("https://") for source in catalog.sources)
 
 
@@ -59,6 +60,16 @@ def test_vistaar_requires_dataset_specific_license_review() -> None:
     assert source.dataset_license_review_required is True
     assert source.automatic_download_allowed is False
     assert "dataset_discovery" in source.allowed_evidence_claims
+
+
+def test_iisc_mile_is_adult_cc_by_2_and_requires_local_archive_digest() -> None:
+    source = load_source_catalog(CONFIG_PATH).by_id("openslr-127-iisc-mile-tamil")
+
+    assert source.license_spdx == "CC-BY-2.0"
+    assert source.target_age_scope == "adult_only"
+    assert source.automatic_download_allowed is False
+    assert source.streaming_supported is False
+    assert source.allowed_evidence_claims == ("engineering_proxy",)
 
 
 @pytest.mark.parametrize(
