@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "static_mobile_compatibility_audit",
+  "checker": "onnxruntime.tools.check_onnx_model_mobile_usability",
+  "model_filename": "ta-proxy-phone-ctc-int8.onnx",
+  "model_sha256": "9beacee05ea0b9ad7884943f51e3f144ff95e347f1ed67b902db20c38e065ed2",
+  "model_size_bytes": 48679,
+  "nnapi": {
+    "supported_nodes": 8,
+    "total_nodes": 51,
+    "partition_count": 5,
+    "partition_sizes": [
+      1,
+      1,
+      1,
+      4,
+      1
+    ],
+    "unsupported_operator_node_count": 14,
+    "unsupported_operators": [
+      "ai.onnx:ConstantOfShape",
+      "ai.onnx:ConvInteger",
+      "ai.onnx:DynamicQuantizeLinear",
+      "ai.onnx:Erf",
+      "ai.onnx:GRU",
+      "ai.onnx:MatMulInteger",
+      "ai.onnx:Shape"
+    ],
+    "dynamic_shape_node_count": 42,
+    "suitable_as_is": false,
+    "fixed_shape_supported_nodes": 37,
+    "fixed_shape_partition_count": 10,
+    "fixed_shape_partition_sizes": [
+      1,
+      5,
+      3,
+      5,
+      3,
+      5,
+      4,
+      4,
+      3,
+      4
+    ],
+    "suitable_with_fixed_shapes": false
+  },
+  "recommended_execution_provider": "CPUExecutionProvider",
+  "physical_device_measured": false,
+  "limitations": [
+    "static_graph_analysis_only",
+    "no_physical_tablet_latency_memory_battery_or_thermal_measurement"
+  ]
+}

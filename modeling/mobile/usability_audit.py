@@ -2,10 +2,18 @@
 
 from __future__ import annotations
 
+import argparse
+import json
 import re
+import subprocess
+import sys
+from collections.abc import Sequence
+from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
+
+from modeling.artifacts import describe_artifact
 
 
 class NNAPISupport(BaseModel):
@@ -169,3 +177,84 @@ def parse_mobile_checker_output(
         nnapi=nnapi,
         recommended_execution_provider="CPUExecutionProvider",
     )
+
+
+def _run_checker(model_path: Path) -> str:
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "onnxruntime.tools.check_onnx_model_mobile_usability",
+            str(model_path),
+        ],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    if completed.returncode != 0:
+        raise RuntimeError("mobile_usability_checker_failed")
+    return "\n".join(part for part in (completed.stdout, completed.stderr) if part)
+
+
+def audit_mobile_usability(model_path: Path) -> MobileUsabilityReport:
+    """Run the official static checker and bind output to one local model digest."""
+
+    try:
+        artifact = describe_artifact(model_path)
+    except ValueError as error:
+        raise ValueError("model must be a non-empty file") from error
+    checker_output = _run_checker(model_path)
+    return parse_mobile_checker_output(
+        checker_output,
+        artifact.sha256,
+        artifact.size_bytes,
+        model_filename=model_path.name,
+    )
+
+
+def write_mobile_usability_report(path: Path, report: MobileUsabilityReport) -> None:
+    """Persist UTF-8 structured evidence without overwriting an earlier audit."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    created = False
+    try:
+        with path.open("x", encoding="utf-8", newline="\n") as report_file:
+            created = True
+            json.dump(report.model_dump(mode="json"), report_file, indent=2, ensure_ascii=False)
+            report_file.write("\n")
+    except Exception:
+        if created and path.exists():
+            path.unlink()
+        raise
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Audit static ONNX mobile usability; this is not a device benchmark."
+    )
+    parser.add_argument("--model", type=Path, required=True)
+    parser.add_argument("--output", type=Path, required=True)
+    return parser
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    report = audit_mobile_usability(args.model)
+    write_mobile_usability_report(args.output, report)
+    print(
+        json.dumps(
+            {
+                "status": "ok",
+                "evidence_scope": report.evidence_scope,
+                "recommended_execution_provider": report.recommended_execution_provider,
+            },
+            ensure_ascii=True,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
