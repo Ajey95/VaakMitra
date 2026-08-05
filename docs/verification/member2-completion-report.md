@@ -89,9 +89,9 @@ acceptance remain unavailable without the actual tablet and cannot be inferred f
 
 Verified repository evidence:
 
-- `184` automated tests pass;
+- `289` automated tests pass;
 - Ruff passes across backend, tests, modeling, and benchmarks;
-- strict mypy passes across `61` source files;
+- strict mypy passes across `86` source files;
 - sdist and wheel build successfully;
 - model card, architecture, contracts, training instructions, manifests, and reports are updated;
 - real audio, speaker-level indices, checkpoints, ONNX weights, waveforms, and probability matrices
@@ -122,7 +122,8 @@ The bounded recorded training run uses 42/8/8 utterances while retaining all 14/
   synchronization, or therapy-policy claims.
 - The mocked three-member runner records hashes and contract outcomes without audio, embeddings,
   transcripts, probability matrices, or child identity.
-- `tamil_research_sources.json` pins IndicVoices and Vistaar revisions. IndicVoices is explicitly
+- `tamil_research_sources.json` pins IndicVoices, Vistaar, and IISc-MILE/OpenSLR 127 revisions.
+  IndicVoices is explicitly
   adult-only, terms-gated, and unavailable for automatic download; Vistaar remains discovery-only
   until each underlying dataset licence is reviewed.
 - The pinned IndicConformer teacher configuration states that its ASR head does not provide direct
@@ -149,6 +150,47 @@ are absent. They do not substitute for those acceptance inputs.
 - `modeling/configs/indicconformer_teacher.json`: pinned research-only teacher boundary;
 - `benchmarks/reports/proxy-int8-mobile-usability.json`: static NNAPI support and CPU-provider
   recommendation.
+
+## Dual-track CPU completion addendum
+
+The approved 2026-08-05 dual-track design is implemented for every component that can be executed
+without a CUDA training job:
+
+- PHOIBLE Tamil inventories 1058/1788/2611 and pinned Epitran provenance merge into a stable
+  candidate vocabulary with core/extended units, conflicts, explicit allophones, and fail-closed
+  unknown coverage;
+- IISc-MILE/OpenSLR 127 is recorded as CC-BY-2.0 adult Tamil data, while corpus freezing requires
+  a locally verified archive SHA-256 and rejects speaker, utterance, or audio-digest leakage;
+- full-reference preflight returns stable access, dependency, storage, and CUDA blocker codes
+  without reading or printing credentials;
+- the new phoneme CTC head, validated batch/loss, staged head/top-block/full-encoder freeze policy,
+  gradient checks, and deterministic CPU smoke are executable;
+- compact Conformer and Conv-BiGRU students return logits and hidden states under one interface;
+- student training implements phoneme CTC, masked representation, relational, and optional sequence
+  consistency losses while rejecting text-posterior KL;
+- controlled-confusion calibration covers substitution, vowel length, gemination, insertion,
+  deletion, and transposition with FAR, FRR, AUROC, Brier, ECE, bootstrap, and grouped thresholds;
+- 11 seeded child-like transformations report robustness only, never child-domain accuracy;
+- both student fixtures export to dynamic FP32 ONNX, run in ONNX Runtime, and quantize to dynamic
+  INT8; the Conformer path disables two non-exportable PyTorch fast paths during export;
+- promotion evidence is always `pass`, `fail`, or `not_measured` for quality, calibration,
+  robustness, export, size, quantization, GOP, and physical-device gates; and
+- Android benchmark ingestion validates physical/emulator identity, model digest, provider, at
+  least 30 repetitions, cold load, median/P95, memory, thermal state, and offline network denial.
+
+Recorded CPU evidence:
+
+- full fixture smoke: loss `2.242722 -> 2.059839`, 148 total / 36 trainable parameters, no teacher
+  checkpoint, no CUDA;
+- Conformer student smoke: 2,636 parameters / 10,544 FP32 bytes, loss `2.122995` for the one-step
+  shape/gradient smoke;
+- Conv-BiGRU student smoke: 1,964 parameters / 7,856 FP32 bytes, loss `1.602397` for the one-step
+  shape/gradient smoke;
+- comparison: no reference or edge model selected because adult-Tamil quality, calibration,
+  real-teacher distillation, INT8 PER/GOP, and physical-device results are not measured.
+
+This makes the non-GPU implementation code-complete and tested. It does not make either model
+training-complete or clinically validated.
 
 ## Remaining external acceptance gates
 

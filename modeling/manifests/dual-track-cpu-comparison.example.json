@@ -1,0 +1,83 @@
+[
+  {
+    "model_id": "indicconformer-full-cpu-smoke",
+    "role": "full_reference",
+    "adult_tamil_per": null,
+    "model_size_bytes": null,
+    "exportable": false,
+    "promotion": {
+      "model_id": "indicconformer-full-cpu-smoke",
+      "track": "full_reference",
+      "gates": [
+        {"name": "adult_tamil_per", "status": "not_measured", "observed": null, "requirement": "<= 0.2"},
+        {"name": "significant_baseline_improvement", "status": "not_measured", "observed": null, "requirement": "true"},
+        {"name": "controlled_confusion_auroc", "status": "not_measured", "observed": null, "requirement": ">= 0.9"},
+        {"name": "proxy_false_accept_rate", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "expected_calibration_error", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "robustness_safe", "status": "not_measured", "observed": null, "requirement": "true"}
+      ],
+      "promoted": false,
+      "evidence_scope": "engineering_proxy"
+    }
+  },
+  {
+    "model_id": "conformer-cpu-smoke",
+    "role": "student",
+    "adult_tamil_per": null,
+    "model_size_bytes": 10544,
+    "exportable": true,
+    "promotion": {
+      "model_id": "conformer-cpu-smoke",
+      "track": "student",
+      "gates": [
+        {"name": "adult_tamil_per", "status": "not_measured", "observed": null, "requirement": "<= 0.2"},
+        {"name": "significant_baseline_improvement", "status": "not_measured", "observed": null, "requirement": "true"},
+        {"name": "controlled_confusion_auroc", "status": "not_measured", "observed": null, "requirement": ">= 0.9"},
+        {"name": "proxy_false_accept_rate", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "expected_calibration_error", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "robustness_safe", "status": "not_measured", "observed": null, "requirement": "true"},
+        {"name": "export_succeeded", "status": "pass", "observed": true, "requirement": "true"},
+        {"name": "compressed_size_bytes", "status": "pass", "observed": 10544, "requirement": "<= 50000000"},
+        {"name": "int8_per_delta", "status": "not_measured", "observed": null, "requirement": "<= 0.01"},
+        {"name": "median_absolute_gop_delta", "status": "not_measured", "observed": null, "requirement": "<= 0.03"},
+        {"name": "physical_android_p95_ms", "status": "not_measured", "observed": null, "requirement": "physical device <= 500.0 ms"}
+      ],
+      "promoted": false,
+      "evidence_scope": "engineering_proxy"
+    }
+  },
+  {
+    "model_id": "conv-bigru-cpu-smoke",
+    "role": "student",
+    "adult_tamil_per": null,
+    "model_size_bytes": 7856,
+    "exportable": true,
+    "promotion": {
+      "model_id": "conv-bigru-cpu-smoke",
+      "track": "student",
+      "gates": [
+        {"name": "adult_tamil_per", "status": "not_measured", "observed": null, "requirement": "<= 0.2"},
+        {"name": "significant_baseline_improvement", "status": "not_measured", "observed": null, "requirement": "true"},
+        {"name": "controlled_confusion_auroc", "status": "not_measured", "observed": null, "requirement": ">= 0.9"},
+        {"name": "proxy_false_accept_rate", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "expected_calibration_error", "status": "not_measured", "observed": null, "requirement": "<= 0.05"},
+        {"name": "robustness_safe", "status": "not_measured", "observed": null, "requirement": "true"},
+        {"name": "export_succeeded", "status": "pass", "observed": true, "requirement": "true"},
+        {"name": "compressed_size_bytes", "status": "pass", "observed": 7856, "requirement": "<= 50000000"},
+        {"name": "int8_per_delta", "status": "not_measured", "observed": null, "requirement": "<= 0.01"},
+        {"name": "median_absolute_gop_delta", "status": "not_measured", "observed": null, "requirement": "<= 0.03"},
+        {"name": "physical_android_p95_ms", "status": "not_measured", "observed": null, "requirement": "physical device <= 500.0 ms"}
+      ],
+      "promoted": false,
+      "evidence_scope": "engineering_proxy"
+    }
+  },
+  {
+    "model_id": "tiny-proxy-historical",
+    "role": "historical_proxy",
+    "adult_tamil_per": 0.9819819819819819,
+    "model_size_bytes": 48679,
+    "exportable": true,
+    "promotion": null
+  }
+]

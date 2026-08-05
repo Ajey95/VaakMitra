@@ -78,3 +78,30 @@ provided validated alignment for this fixture.
 - subgroup and target-user results.
 
 These fields remain unavailable rather than being populated with synthetic claims.
+
+## Dual-track strengthening evidence
+
+The full phoneme-head wrapper, finite CTC loss, staged freeze policy, pinned configuration, and
+deterministic CPU smoke are implemented. The CPU smoke uses a 148-parameter fixture encoder; it
+does not load or train IndicConformer. A real checkpoint and adult-Tamil metrics remain GPU-job
+outputs.
+
+Additional implemented evidence includes:
+
+- three-source PHOIBLE Tamil consensus with pinned Epitran provenance and conflict reporting;
+- leakage-proof speaker/utterance/audio-digest corpus indexing for IISc-MILE/OpenSLR 127;
+- compact Conformer and Conv-BiGRU students with representation and relational distillation;
+- dynamic FP32 and INT8 ONNX execution for both student fixtures;
+- controlled-confusion calibration with AUROC, Brier, ECE, FAR, FRR, bootstrap, and grouped
+  thresholds;
+- an 11-condition child-like transformation matrix explicitly labelled non-child evidence;
+- pass/fail/not-measured promotion gates; and
+- physical Android benchmark ingestion with emulator rejection.
+
+## Current dual-track decision
+
+No model is promoted. The full reference has no gated checkpoint, CUDA training run, adult-Tamil
+PER, or calibrated confusion metrics. The two student fixtures prove architecture, loss, export,
+INT8, and runtime compatibility, but are not teacher-distilled checkpoints and have no adult-Tamil
+quality or physical-device evidence. `dual-track-cpu-comparison.json` records every absent value as
+`not_measured`.

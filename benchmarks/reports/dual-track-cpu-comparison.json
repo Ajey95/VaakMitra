@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "candidates": [
+    {
+      "model_id": "conformer-cpu-smoke",
+      "role": "student",
+      "adult_tamil_per": null,
+      "model_size_bytes": 10544,
+      "exportable": true,
+      "promotion_status": "not_promoted",
+      "passed_gates": 2,
+      "failed_gates": 0,
+      "not_measured_gates": 9
+    },
+    {
+      "model_id": "conv-bigru-cpu-smoke",
+      "role": "student",
+      "adult_tamil_per": null,
+      "model_size_bytes": 7856,
+      "exportable": true,
+      "promotion_status": "not_promoted",
+      "passed_gates": 2,
+      "failed_gates": 0,
+      "not_measured_gates": 9
+    },
+    {
+      "model_id": "indicconformer-full-cpu-smoke",
+      "role": "full_reference",
+      "adult_tamil_per": null,
+      "model_size_bytes": null,
+      "exportable": false,
+      "promotion_status": "not_promoted",
+      "passed_gates": 0,
+      "failed_gates": 0,
+      "not_measured_gates": 6
+    },
+    {
+      "model_id": "tiny-proxy-historical",
+      "role": "historical_proxy",
+      "adult_tamil_per": 0.9819819819819819,
+      "model_size_bytes": 48679,
+      "exportable": true,
+      "promotion_status": "not_applicable",
+      "passed_gates": 0,
+      "failed_gates": 0,
+      "not_measured_gates": 0
+    }
+  ],
+  "reference_model_id": null,
+  "selected_edge_model_id": null,
+  "edge_selection_status": "no_student_passed_all_gates",
+  "outstanding_work": [
+    "missing promoted full-reference GPU evidence",
+    "no student passed every edge promotion gate",
+    "missing physical Android benchmark",
+    "missing therapist-labelled child validation"
+  ],
+  "evidence_scope": "engineering_proxy",
+  "clinical_validity_claimed": false,
+  "comparison_sha256": "76b015e7d77685e857aa0d76046c6e9b22f373358346307a75877b0490d9ce09"
+}

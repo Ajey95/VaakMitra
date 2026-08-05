@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "seed": 23,
+  "steps": 1,
+  "candidates": [
+    {
+      "architecture": "conformer",
+      "parameter_count": 2636,
+      "fp32_size_bytes": 10544,
+      "initial_loss": 2.122994899749756,
+      "final_loss": 2.122994899749756
+    },
+    {
+      "architecture": "conv_bigru",
+      "parameter_count": 1964,
+      "fp32_size_bytes": 7856,
+      "initial_loss": 1.6023973226547241,
+      "final_loss": 1.6023973226547241
+    }
+  ],
+  "evidence_scope": "distillation_smoke_only",
+  "teacher_checkpoint_loaded": false,
+  "cuda_training_completed": false,
+  "production_ready": false,
+  "report_sha256": "7ec5d16321d54f9cfefed806804b1bd2c5af347d45e4e817db91acf9f96e74f4"
+}

@@ -37,6 +37,39 @@ The two calls prevent Member 2 from retaining or recomputing audio while Member 
 probability matrix. Neither `AcousticOutput` nor its probability matrix belongs in persistence or
 sync payloads.
 
+## Dual-track model lifecycle
+
+Both strategies feed the same `AcousticOutput` contract:
+
+```text
+PHOIBLE + Epitran candidate vocabulary
+             +
+speaker/audio-disjoint adult Tamil corpus
+             |
+             v
+Strategy 2: IndicConformer encoder + new phoneme CTC head
+             |
+             +---- accuracy/reference ceiling
+             |
+             v
+teacher hidden representations (local, hash-bound)
+             |
+             v
+Strategy 1: compact Conformer and Conv-BiGRU students
+             |
+             v
+FP32 ONNX -> INT8 -> parity -> operator audit -> physical Android report
+```
+
+The teacher's text decoder is bypassed. Distillation operates on hidden acoustic representations
+plus transcript-derived phoneme CTC targets; text-token posteriors are not compared with phoneme
+posteriors. Every model is evaluated through the same adult-PER, controlled-confusion, calibration,
+transformation, quantization, and edge gates.
+
+On a CPU-only host, the pipeline validates data, shapes, freeze stages, losses, student training,
+export, quantization, runtime, and reports. Real full-teacher training and complete-corpus
+teacher-feature/student training remain CUDA jobs.
+
 ## Runtime contract
 
 `OnnxAcousticModelRuntime` verifies the packaged file against the manifest SHA-256 before creating

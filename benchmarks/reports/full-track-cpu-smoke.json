@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "seed": 17,
+  "steps": 3,
+  "initial_loss": 2.2427220344543457,
+  "final_loss": 2.0598392486572266,
+  "parameter_count": 148,
+  "trainable_parameter_count": 36,
+  "evidence_scope": "fixture_encoder_shapes_only",
+  "upstream_checkpoint_loaded": false,
+  "cuda_training_completed": false,
+  "production_ready": false,
+  "report_sha256": "636a7b3ddceacf368db08aad30c72905c2543ef9a161a6a05857f8ed8e2449a2"
+}

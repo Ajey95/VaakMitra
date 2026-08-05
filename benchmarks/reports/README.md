@@ -15,3 +15,9 @@ Key non-production reports:
   Member 1 and Member 3 adapters; it is contract evidence, not teammate acceptance.
 - `proxy-int8-mobile-usability.json` records official ONNX Runtime static graph analysis. It is not
   latency, memory, battery, thermal, emulator, or physical-device evidence.
+- `full-track-cpu-smoke.json` records fixture-encoder phoneme-head shape/loss evidence; no gated
+  teacher checkpoint was loaded.
+- `student-track-cpu-smoke.json` records compact Conformer and Conv-BiGRU distillation-loss smoke;
+  no real teacher features were used.
+- `dual-track-cpu-comparison.json` records the explicit no-promotion decision and preserves missing
+  GPU, accuracy, calibration, quantization, and physical-device gates as `not_measured`.

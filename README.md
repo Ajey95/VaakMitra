@@ -104,7 +104,8 @@ The mocked three-member command validates contract plumbing only. Its determinis
 action adapters are non-production fixtures; they do not prove forced-alignment accuracy, adaptive
 therapy behavior, persistence, synchronization, clinical validity, or teammate acceptance.
 
-`modeling/configs/tamil_research_sources.json` pins IndicVoices and Vistaar research metadata and
+`modeling/configs/tamil_research_sources.json` pins IndicVoices, Vistaar, and IISc-MILE/OpenSLR 127
+research metadata and
 fails closed on gated access, adult-only claims, and unresolved dataset licensing. The pinned
 IndicConformer configuration and teacher-feature cache package preserve local-only, hash-linked
 feature tensors; they do not download data or claim direct phoneme posterior support.
@@ -116,3 +117,25 @@ measurements remain unavailable.
 
 The checked-in phoneme vocabulary and model configuration are contract examples. They are not a
 Tamil-expert-approved production inventory or a clinically validated pronunciation model.
+
+## Dual-track CPU implementation
+
+Everything that does not require a real CUDA training job is implemented and executable locally.
+Strategy 1 is the distilled edge student; Strategy 2 is the full IndicConformer reference. Run the
+credential-safe environment gate and deterministic CPU smokes with:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.teacher.run_preflight `
+  --config modeling\configs\indicconformer_teacher.json --mode cpu_smoke
+& .\.venv\Scripts\python.exe -m modeling.training.smoke_full_track `
+  --output benchmarks\reports\full-track-cpu-smoke.json
+& .\.venv\Scripts\python.exe -m modeling.training.smoke_student_track `
+  --output benchmarks\reports\student-track-cpu-smoke.json
+& .\.venv\Scripts\python.exe -m modeling.release.compare_dual_tracks `
+  --input modeling\manifests\dual-track-cpu-comparison.example.json `
+  --output benchmarks\reports\dual-track-cpu-comparison.json
+```
+
+The recorded comparison intentionally selects no model: adult-Tamil quality/calibration metrics,
+the real teacher checkpoint, CUDA training, INT8 PER/GOP evidence, and physical Android timing are
+not measured. Missing evidence is represented as `not_measured`, never as a pass.

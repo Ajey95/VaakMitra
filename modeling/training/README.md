@@ -58,12 +58,106 @@ training, child-domain evaluation, therapist calibration, and target-device vali
 
 ## Additional research-only inputs
 
-`modeling/configs/tamil_research_sources.json` records pinned IndicVoices and Vistaar preflight
-metadata. It deliberately disables automatic download for terms-gated or dataset-licence-review
-sources. Adult-only sources may support engineering proxy experiments only, never child or clinical
-claims.
+`modeling/configs/tamil_research_sources.json` records pinned IndicVoices, Vistaar, and
+IISc-MILE/OpenSLR 127 preflight metadata. It deliberately disables automatic download for gated,
+large, or dataset-licence-review sources. Adult-only sources may support engineering proxy
+experiments only, never child or clinical claims.
 
 `modeling/configs/indicconformer_teacher.json` pins the Tamil IndicConformer candidate. The
 `modeling.distillation.teacher_features` package can package already-extracted adult Tamil teacher
 features locally with immutable provenance and tamper detection. It does not fetch the gated model,
 retain raw audio, or reinterpret the ASR vocabulary as direct phoneme posteriors.
+
+## Dual-track strengthening workflow
+
+Both strategies share one provisional inventory, corpus, split, metric, robustness, and promotion
+contract. Member 1 remains the owner of the production pronunciation dictionary and forced
+alignment.
+
+### 1. Candidate Tamil inventory
+
+`tamil_phoneme_sources.json` pins PHOIBLE Tamil inventories 1058, 1788, and 2611 plus the upstream
+Epitran revision. Generate a word-list inventory and merge it with the published sources:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.inventory.generate_inventory `
+  --words modeling\artifacts\exercise-words.txt `
+  --output modeling\artifacts\tamil-phoneme-contract.json `
+  --version ta-candidate-1 `
+  --consensus-sources modeling\configs\tamil_phoneme_sources.json `
+  --transliterator-revision 3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f
+```
+
+The output records core/extended units, per-phone provenance, disagreements, unknown coverage,
+and explicit allophone mappings. It remains `expert_approved=false` and
+`production_ready=false`.
+
+### 2. IISc-MILE corpus freeze
+
+OpenSLR 127 is recorded as an adult Tamil, CC-BY-2.0 source. The 13 GB archive is not silently
+downloaded. After acquiring it locally, compute its SHA-256, generate private JSONL records with
+only utterance/speaker identifiers and audio/transcript digests, and freeze aggregate split
+evidence:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.data.build_corpus_index `
+  --records modeling\artifacts\iisc-mile\records.jsonl `
+  --assignments modeling\artifacts\iisc-mile\speaker-splits.json `
+  --source modeling\artifacts\iisc-mile\verified-source.json `
+  --output modeling\artifacts\iisc-mile\frozen-corpus-index.json
+```
+
+The source file must use `revision_basis="archive_sha256"`. Speaker, utterance, or audio-digest
+overlap fails before training. The aggregate output contains no path, transcript, utterance ID, or
+speaker ID.
+
+### 3. Strategy 2: full reference
+
+```powershell
+# Works on this CPU host and does not load the gated model.
+& .\.venv\Scripts\python.exe -m modeling.teacher.run_preflight `
+  --config modeling\configs\indicconformer_teacher.json --mode cpu_smoke
+
+# This remains blocked until access, NeMo, and CUDA genuinely exist.
+& .\.venv\Scripts\python.exe -m modeling.teacher.run_preflight `
+  --config modeling\configs\indicconformer_teacher.json --mode full_train `
+  --access-authorized
+
+& .\.venv\Scripts\python.exe -m modeling.training.smoke_full_track `
+  --seed 17 --steps 3 --output benchmarks\reports\full-track-cpu-smoke.json
+```
+
+The implementation attaches a new phoneme CTC head, supports head-only, trailing-block, and
+full-encoder stages, and advances to full unfreezing only after a predeclared validation-PER
+improvement. Actual IndicConformer fine-tuning remains the GPU-dependent implementation item.
+
+### 4. Strategy 1: distilled edge students
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.training.smoke_student_track `
+  --seed 23 --steps 1 --output benchmarks\reports\student-track-cpu-smoke.json
+```
+
+The compact Conformer and Conv-BiGRU return phoneme logits plus pre-head representations. Training
+combines supervised phoneme CTC, masked teacher representation loss, relational frame similarity,
+and optional sequence consistency. Text-posterior KL is absent from the accepted configuration.
+Both candidates export with dynamic audio axes and execute as FP32 and dynamic INT8 ONNX models.
+
+### 5. Calibration, robustness, and device evidence
+
+Controlled target corruptions cover substitution, short/long vowels, gemination, insertion,
+deletion, and transposition. Proxy calibration reports FAR, FRR, AUROC, Brier, ECE, bootstrap
+intervals, and phone/class thresholds. `robustness_matrix.json` adds deterministic transformation
+stress only; it never claims child-domain measurement.
+
+Physical or emulator Android JSON is reduced with:
+
+```powershell
+& .\.venv\Scripts\python.exe -m modeling.mobile.parse_device_report `
+  --input modeling\artifacts\android\raw-benchmark.json `
+  --expected-model-sha256 <64-lowercase-hex> `
+  --output benchmarks\reports\android-device-benchmark.json
+```
+
+Only a physical report with at least 30 runs, offline/network-denial evidence, a matching model
+hash, and P95 at or below 500 ms can pass the device gate.
