@@ -1,0 +1,11 @@
+{
+  "model_id": "ai4bharat/indicconformer_stt_ta_hybrid_ctc_rnnt_large",
+  "revision": "8c31aa8d04964b8fc87e4eaaee7916f7d2c024da",
+  "license_spdx": "MIT",
+  "sample_rate_hz": 16000,
+  "frame_shift_ms": 10.0,
+  "source_scope": "adult_tamil_teacher",
+  "storage_policy": "local_only_voice_derived",
+  "direct_phoneme_posteriors_supported": false,
+  "production_ready": false
+}
