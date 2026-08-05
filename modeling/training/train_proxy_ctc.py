@@ -12,7 +12,7 @@ from collections.abc import Callable, Sequence
 from dataclasses import asdict, dataclass
 from itertools import pairwise
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import torch
 import torchaudio  # type: ignore[import-untyped]
@@ -121,7 +121,10 @@ def export_proxy_onnx(
     example = torch.zeros((1, example_samples), dtype=torch.float32)
     with torch.no_grad(), warnings.catch_warnings():
         warnings.filterwarnings("ignore", category=DeprecationWarning)
-        warnings.filterwarnings("ignore", category=torch.jit.TracerWarning)
+        tracer_warning = cast(
+            type[Warning], torch.jit.TracerWarning  # type: ignore[attr-defined]
+        )
+        warnings.filterwarnings("ignore", category=tracer_warning)
         warnings.filterwarnings(
             "ignore",
             message="Exporting a model to ONNX with a batch_size other than 1.*",
@@ -232,7 +235,7 @@ def _train_epoch(
         )
         if not torch.isfinite(loss):
             raise RuntimeError("proxy CTC training produced a non-finite loss")
-        loss.backward()
+        torch.autograd.backward(loss)
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
         optimizer.step()
         total_loss += float(loss.detach().item())

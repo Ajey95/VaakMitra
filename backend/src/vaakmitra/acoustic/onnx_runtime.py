@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import numpy as np
 
@@ -110,4 +110,7 @@ class OnnxAcousticModelRuntime:
 def _log_softmax(logits: np.ndarray) -> np.ndarray:
     maximum = np.max(logits, axis=1, keepdims=True)
     shifted = logits - maximum
-    return shifted - np.log(np.exp(shifted).sum(axis=1, keepdims=True))
+    return cast(
+        np.ndarray,
+        shifted - np.log(np.exp(shifted).sum(axis=1, keepdims=True)),
+    )

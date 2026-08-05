@@ -14,6 +14,7 @@ from modeling.distillation.teacher_features import (
 from pydantic import ValidationError
 
 CONFIG_PATH = Path("modeling/configs/indicconformer_teacher.json")
+EXAMPLE_CONFIG_PATH = Path("modeling/configs/indicconformer_teacher.example.json")
 
 
 def _features() -> np.ndarray:
@@ -39,6 +40,13 @@ def test_pinned_teacher_config_is_research_only() -> None:
     assert config.source_scope == "adult_tamil_teacher"
     assert config.direct_phoneme_posteriors_supported is False
     assert config.production_ready is False
+
+
+def test_example_teacher_config_matches_runtime_schema() -> None:
+    example = load_teacher_config(EXAMPLE_CONFIG_PATH)
+    pinned = load_teacher_config(CONFIG_PATH)
+
+    assert example == pinned
 
 
 def test_cache_round_trip_preserves_features_and_safe_manifest(tmp_path: Path) -> None:

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import cast
 
 import torch
 from torch import nn
@@ -78,7 +79,8 @@ class _WaveFrontend(nn.Module):
         return second.clamp_min(0).to(dtype=torch.long)
 
     def forward(self, audio: torch.Tensor) -> torch.Tensor:
-        return self.layers(audio.unsqueeze(1)).transpose(1, 2)
+        features = cast(torch.Tensor, self.layers(audio.unsqueeze(1)))
+        return features.transpose(1, 2)
 
 
 class _StudentBase(nn.Module):

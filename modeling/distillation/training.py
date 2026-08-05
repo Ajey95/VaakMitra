@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import cast
+
 import torch
 from torch import nn
 
@@ -27,15 +29,18 @@ def distillation_training_step(
     raw_output = model(batch.audio, batch.input_lengths)
     if not isinstance(raw_output, StudentOutput):
         raise TypeError("student model must return StudentOutput")
-    losses = criterion(
-        logits=raw_output.logits,
-        student_hidden=raw_output.hidden,
-        teacher_hidden=teacher_hidden,
-        frame_lengths=raw_output.frame_lengths,
-        padded_targets=batch.padded_targets,
-        target_lengths=batch.target_lengths,
+    losses = cast(
+        DistillationLosses,
+        criterion(
+            logits=raw_output.logits,
+            student_hidden=raw_output.hidden,
+            teacher_hidden=teacher_hidden,
+            frame_lengths=raw_output.frame_lengths,
+            padded_targets=batch.padded_targets,
+            target_lengths=batch.target_lengths,
+        ),
     )
-    losses.total.backward()
+    torch.autograd.backward(losses.total)
     parameters = (*model.parameters(), *criterion.parameters())
     for parameter in parameters:
         if parameter.grad is not None and not torch.isfinite(parameter.grad).all():

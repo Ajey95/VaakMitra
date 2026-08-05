@@ -89,7 +89,7 @@ acceptance remain unavailable without the actual tablet and cannot be inferred f
 
 Verified repository evidence:
 
-- `289` automated tests pass;
+- `290` automated tests pass;
 - Ruff passes across backend, tests, modeling, and benchmarks;
 - strict mypy passes across `86` source files;
 - sdist and wheel build successfully;

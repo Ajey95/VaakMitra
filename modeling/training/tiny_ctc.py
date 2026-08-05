@@ -5,6 +5,7 @@ from __future__ import annotations
 import collections
 from collections.abc import Sequence
 from dataclasses import dataclass
+from typing import cast
 
 import torch
 from torch import nn
@@ -81,5 +82,4 @@ class TinyWaveCtc(nn.Module):
             raise ValueError("audio must have shape [batch, samples] with at least 400 samples")
         features = self.frontend(audio.unsqueeze(1)).transpose(1, 2)
         encoded, _ = self.encoder(features)
-        return self.ctc_head(encoded)
-
+        return cast(torch.Tensor, self.ctc_head(encoded))

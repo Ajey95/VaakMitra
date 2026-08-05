@@ -10,7 +10,7 @@ import warnings
 from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Protocol
+from typing import Protocol, cast
 
 import torch
 from torch import nn
@@ -79,7 +79,10 @@ def export_student_onnx(
     try:
         with torch.no_grad(), warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=DeprecationWarning)
-            warnings.filterwarnings("ignore", category=torch.jit.TracerWarning)
+            tracer_warning = cast(
+                type[Warning], torch.jit.TracerWarning  # type: ignore[attr-defined]
+            )
+            warnings.filterwarnings("ignore", category=tracer_warning)
             warnings.filterwarnings("ignore", category=UserWarning)
             torch.onnx.export(
                 wrapper,
@@ -147,7 +150,7 @@ def load_export_adapter(specification: str) -> ExportAdapter:
         raise ExportPrerequisiteError("unable to load export adapter") from error
     if not callable(candidate):
         raise ExportPrerequisiteError("export adapter must be callable")
-    return candidate
+    return cast(ExportAdapter, candidate)
 
 
 def build_parser() -> argparse.ArgumentParser:
