@@ -70,8 +70,12 @@ transcripts, direct child identity, and diagnostic language are rejected from sa
 
 ## Evidence limitations
 
-Synthetic ONNX tests prove loading, integrity, tensor, and deterministic scoring behavior. They do
-not prove Tamil phoneme accuracy, therapist correlation, target-child validity, Android latency,
-memory, battery, or thermal behavior. Those claims require the approved model, frozen datasets,
-therapist-labelled calibration set, and target device.
+Synthetic ONNX tests prove loading, integrity, tensor, and deterministic scoring behavior. A
+separate CC0 adult-Tamil proxy run proves speaker-disjoint data preparation, CPU training, dynamic
+ONNX export, INT8 conversion, and laptop benchmarking. Its 0.98198 test phone-unit error rate makes
+it unsuitable for pronunciation scoring.
 
+Neither evidence path proves expert inventory correctness, forced-alignment boundary accuracy,
+therapist correlation, target-child validity, Android latency, memory, battery, or thermal behavior.
+Those claims require Member 1 alignment integration, a reviewed Tamil inventory, substantially
+better model evidence, therapist-labelled target-user data, and the actual target device.

@@ -20,8 +20,8 @@
     {
       "kind": "comparison",
       "filename": "synthetic-fp32-vs-int8.json",
-      "size_bytes": 311,
-      "sha256": "b325c54c81b81ce9dc07c9444315759d15e4f3567a35fd2c108b00a3cfea8ae4",
+      "size_bytes": 340,
+      "sha256": "d06ce64c8ed8f855a219558c855abde8b16b15c6c6369f83bb843294c94383f5",
       "evidence_scope": "quantization_comparison"
     },
     {
@@ -58,5 +58,5 @@
     "no actual target-device benchmark",
     "no trained Tamil phoneme CTC model"
   ],
-  "evidence_digest": "fc765488425958ed4bd2759b34075a61e76293b608c12f241d72b73c4b2c6d42"
+  "evidence_digest": "9934a56eb54ad97d4c95e01ab49e7b196bc8bfa1e961547eb1f7bab8bf5b96fd"
 }

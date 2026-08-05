@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "development_laptop",
+  "model_version": "ta-proxy-phone-ctc-int8-0.1.0",
+  "vocabulary_version": "ta-proxy-phone-units-0.1.0",
+  "model_sha256": "9beacee05ea0b9ad7884943f51e3f144ff95e347f1ed67b902db20c38e065ed2",
+  "dataset_revision": "1d6a78e02c6c21d8da30eb57dd4dc02b4ed765f5",
+  "corpus_manifest_digest": "501c9c35a76f215576d37e7082d2328e409068ccc051424101eca4920aa429b3",
+  "provider": "CPUExecutionProvider",
+  "warmup_runs": 5,
+  "measured_runs": 30,
+  "fixture_policy": "licensed_adult_proxy_audio_local_only",
+  "validation_status": "technical_prototype_not_child_or_therapist_validated"
+}

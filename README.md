@@ -61,6 +61,29 @@ All commands run locally. Model and audio artifacts are ignored by Git.
   --output benchmarks\reports\development-laptop.json
 ```
 
+## Proxy-data fallback
+
+When therapist-labelled child recordings and the target tablet are unavailable, the repository can
+still produce honest engineering evidence:
+
+```powershell
+# Install the pinned CPU training stack
+& .\.venv\Scripts\python.exe -m pip install `
+  --requirement modeling\training\requirements-cpu.txt
+
+# Validate and re-split the CC0 adult-Tamil manifests without speaker leakage
+& .\.venv\Scripts\python.exe -m modeling.data.prepare_tamil_tts_proxy --help
+
+# Train/export the bounded adult proxy experiment
+& .\.venv\Scripts\python.exe -m modeling.training.train_proxy_ctc --help
+
+# Reproduce the fully synthetic FP32/INT8/runtime/benchmark evidence chain
+& .\.venv\Scripts\python.exe -m modeling.fixtures.run_prototype_flow --help
+```
+
+Recorded aggregate evidence is under `benchmarks/reports/`. Real audio, checkpoints, ONNX weights,
+waveform arrays, speaker-level indices, and probability matrices remain ignored by Git. The current
+adult proxy model has a 98.20% phone-unit error rate and therefore must not score child speech.
+
 The checked-in phoneme vocabulary and model configuration are contract examples. They are not a
 Tamil-expert-approved production inventory or a clinically validated pronunciation model.
-

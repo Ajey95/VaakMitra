@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "engineering_proxy",
+  "model_evidence_scope": "trained_proxy_tamil_phoneme_model",
+  "population": "adult_tamil_proxy",
+  "calibration_status": "not_therapist_calibrated",
+  "dataset_revision": "1d6a78e02c6c21d8da30eb57dd4dc02b4ed765f5",
+  "corpus_manifest_digest": "501c9c35a76f215576d37e7082d2328e409068ccc051424101eca4920aa429b3",
+  "training_config": {
+    "epochs": 2,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "channels": 16,
+    "hidden_size": 24,
+    "max_duration_seconds": 8.0,
+    "max_train_records_per_speaker": 3,
+    "max_eval_records_per_speaker": 2,
+    "cpu_threads": 8,
+    "seed": 20260805
+  },
+  "torch_version": "2.11.0+cpu",
+  "torchaudio_version": "2.11.0+cpu",
+  "device": "cpu",
+  "architecture": "raw-waveform-conv-bigru-ctc",
+  "parameter_count": 16112,
+  "vocabulary_size": 32,
+  "unit_type": "unicode_codepoint_proxy_not_expert_phoneme_inventory",
+  "split_counts": {
+    "train": 42,
+    "validation": 8,
+    "test": 8
+  },
+  "split_speaker_counts": {
+    "train": 14,
+    "validation": 4,
+    "test": 4
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_ctc_loss": 13.64883804321289,
+      "validation_phone_unit_error_rate": 0.9815789473684211
+    },
+    {
+      "epoch": 2,
+      "train_ctc_loss": 12.91109917380593,
+      "validation_phone_unit_error_rate": 0.9789473684210527
+    }
+  ],
+  "validation": {
+    "record_count": 8,
+    "reference_units": 380,
+    "total_errors": 372,
+    "phone_unit_error_rate": 0.9789473684210527,
+    "exact_sequence_accuracy": 0.0
+  },
+  "test": {
+    "record_count": 8,
+    "reference_units": 555,
+    "total_errors": 545,
+    "phone_unit_error_rate": 0.9819819819819819,
+    "exact_sequence_accuracy": 0.0
+  },
+  "onnx_sha256": "17cd210733a7de954ba79e166140fbb2385b6a57021d64a57111d9e84d3becc5",
+  "onnx_size_bytes": 70757,
+  "limitations": [
+    "adult proxy speech only",
+    "small bounded subset",
+    "proxy Unicode units are not a Tamil-expert-approved phoneme inventory",
+    "no therapist calibration or target-user validation",
+    "no target-tablet measurements"
+  ]
+}

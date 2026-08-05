@@ -1,0 +1,11 @@
+{
+  "max_probability_delta": 8.893385529518127e-05,
+  "mean_probability_delta": 1.8456126781529747e-05,
+  "max_gop_delta": 0.0,
+  "aligned_segment_count": 0,
+  "fp32_size_bytes": 70757,
+  "int8_size_bytes": 48679,
+  "size_ratio_int8_to_fp32": 0.6879743346948005,
+  "evidence_scope": "adult_proxy_quantization_comparison",
+  "gop_comparison_status": "unavailable_without_member1_alignment"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "development_laptop",
+  "model_version": "ta-proxy-phone-ctc-int8-0.1.0",
+  "vocabulary_version": "ta-proxy-phone-units-0.1.0",
+  "model_sha256": "9beacee05ea0b9ad7884943f51e3f144ff95e347f1ed67b902db20c38e065ed2",
+  "provider": "CPUExecutionProvider",
+  "model_size_bytes": 48679,
+  "cold_load_ms": 223.6853,
+  "peak_rss_bytes": 68829184,
+  "warmup_runs": 5,
+  "measured_runs": 30,
+  "latency": {
+    "minimum_ms": 0.7552,
+    "median_ms": 0.78375,
+    "p95_ms": 2.9517,
+    "maximum_ms": 39.4775
+  },
+  "timestamp_utc": "2026-08-05T08:05:52.908169+00:00"
+}

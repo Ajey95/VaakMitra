@@ -2,6 +2,7 @@
   "max_probability_delta": 0.0005365908145904541,
   "mean_probability_delta": 0.0003577669558580965,
   "max_gop_delta": 3.295776699296926e-05,
+  "aligned_segment_count": 1,
   "fp32_size_bytes": 381,
   "int8_size_bytes": 998,
   "size_ratio_int8_to_fp32": 2.6194225721784776,

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "release_status": "technical_prototype",
+  "validation_label": "engineering_evidence_only",
+  "artifacts": [
+    {
+      "kind": "benchmark",
+      "filename": "proxy-int8-development-laptop.json",
+      "size_bytes": 625,
+      "sha256": "92e51f15194748f231d32dab3c913d390bd5871cbea209358847f09d8a586af2",
+      "evidence_scope": "development_laptop"
+    },
+    {
+      "kind": "calibration",
+      "filename": "proxy-calibration-status.json",
+      "size_bytes": 444,
+      "sha256": "579fc5f21a4c69f44d7cbf9ca9e345fd840f3f53caf330057468aed559352513",
+      "evidence_scope": "proxy_not_therapist_calibrated"
+    },
+    {
+      "kind": "comparison",
+      "filename": "proxy-fp32-vs-int8.json",
+      "size_bytes": 391,
+      "sha256": "588542b0abe848ae12678fed4757ac86f3e644009346e49b9d238eea8715a21d",
+      "evidence_scope": "quantization_comparison"
+    },
+    {
+      "kind": "corpus",
+      "filename": "corpus.manifest.json",
+      "size_bytes": 1584,
+      "sha256": "9c022875ecb33ca47b917ab0f7f40c291499215a3cb00f17257436a786085e8c",
+      "evidence_scope": "engineering_proxy"
+    },
+    {
+      "kind": "evaluation",
+      "filename": "proxy-training-adult-tamil.json",
+      "size_bytes": 2187,
+      "sha256": "80e1ce473fa5dd19718dae76278ffdf16919faadfd92d2cf594ab66758ba492a",
+      "evidence_scope": "engineering_proxy"
+    },
+    {
+      "kind": "model",
+      "filename": "ta-proxy-phone-ctc-int8.onnx",
+      "size_bytes": 48679,
+      "sha256": "9beacee05ea0b9ad7884943f51e3f144ff95e347f1ed67b902db20c38e065ed2",
+      "evidence_scope": "trained_proxy_tamil_phoneme_model"
+    },
+    {
+      "kind": "vocabulary",
+      "filename": "ta-proxy-phone-vocabulary.json",
+      "size_bytes": 591,
+      "sha256": "283b2e330805706a8e2614f216061947dd5af53292262b2c0e6e093f5d4326f9",
+      "evidence_scope": "vocabulary_artifact"
+    }
+  ],
+  "limitations": [
+    "no therapist-labelled target-user evidence",
+    "no actual target-device benchmark",
+    "model trained only on adult proxy data"
+  ],
+  "evidence_digest": "5916aef7722c400eb91fd85215a3c1bf571cf7a77ca5f644871547e29d41d636"
+}

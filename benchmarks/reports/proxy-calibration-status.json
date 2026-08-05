@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "engineering_proxy",
+  "calibration_status": "proxy_not_therapist_calibrated",
+  "model_version": "ta-proxy-phone-ctc-int8-0.1.0",
+  "status": "unavailable_without_member1_validated_alignment_and_proxy_gop_scores",
+  "threshold_source": "baseline_configuration_only",
+  "limitations": [
+    "no therapist-labelled target-user ratings",
+    "no Member 1 aligned adult-proxy GOP evaluation"
+  ]
+}
