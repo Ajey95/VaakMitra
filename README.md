@@ -79,11 +79,19 @@ still produce honest engineering evidence:
 
 # Reproduce the fully synthetic FP32/INT8/runtime/benchmark evidence chain
 & .\.venv\Scripts\python.exe -m modeling.fixtures.run_prototype_flow --help
+
+# Exercise Member 2 between explicit test-only Member 1 and Member 3 mocks
+& .\.venv\Scripts\python.exe -m modeling.team_mocks.run_mocked_pipeline `
+  --report benchmarks\reports\member2-mocked-three-member-evidence.json
 ```
 
 Recorded aggregate evidence is under `benchmarks/reports/`. Real audio, checkpoints, ONNX weights,
 waveform arrays, speaker-level indices, and probability matrices remain ignored by Git. The current
 adult proxy model has a 98.20% phone-unit error rate and therefore must not score child speech.
+
+The mocked three-member command validates contract plumbing only. Its deterministic alignment and
+action adapters are non-production fixtures; they do not prove forced-alignment accuracy, adaptive
+therapy behavior, persistence, synchronization, clinical validity, or teammate acceptance.
 
 The checked-in phoneme vocabulary and model configuration are contract examples. They are not a
 Tamil-expert-approved production inventory or a clinically validated pronunciation model.

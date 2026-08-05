@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "evidence_scope": "mocked_three_member_pipeline",
+  "release_status": "technical_prototype",
+  "production_eligible": false,
+  "clinical_validity": false,
+  "attempt_id": "ATT-MOCK-TEAM-1",
+  "member1": {
+    "dependency": "member1",
+    "implementation": "deterministic_mock",
+    "evidence_scope": "mock_dependency_integration",
+    "production_eligible": false,
+    "clinical_validity": false,
+    "alignment": {
+      "status": "valid",
+      "confidence": 0.9,
+      "phonemes": [
+        {
+          "phoneme": "a",
+          "start_frame": 0,
+          "end_frame": 2,
+          "start_ms": 0.0,
+          "end_ms": 40.0,
+          "confidence": 0.9
+        },
+        {
+          "phoneme": "m",
+          "start_frame": 2,
+          "end_frame": 4,
+          "start_ms": 40.0,
+          "end_ms": 80.0,
+          "confidence": 0.9
+        }
+      ],
+      "reason": null
+    }
+  },
+  "member2": {
+    "attempt_id": "ATT-MOCK-TEAM-1",
+    "status": "ok",
+    "model_version": "mock-flow-model-1.0.0",
+    "vocabulary_version": "mock-flow-vocab-1.0.0",
+    "scoring_version": "mock-flow-gop-1.0.0",
+    "phoneme_scores": [
+      {
+        "phoneme": "a",
+        "gop": 0.9252018645460148,
+        "confidence": 0.8702422374552179,
+        "status": "pass",
+        "start_ms": 0.0,
+        "end_ms": 40.0,
+        "reason": null
+      },
+      {
+        "phoneme": "m",
+        "gop": 0.9252018645460148,
+        "confidence": 0.8702422374552179,
+        "status": "pass",
+        "start_ms": 40.0,
+        "end_ms": 80.0,
+        "reason": null
+      }
+    ],
+    "syllable_scores": [
+      {
+        "syllable": "அம்",
+        "score": 0.9252018645460148,
+        "confidence": 0.8702422374552179,
+        "status": "pass",
+        "phoneme_indices": [
+          0,
+          1
+        ]
+      }
+    ],
+    "overall_confidence": 0.8702422374552179,
+    "reason": null
+  },
+  "member3": {
+    "dependency": "member3",
+    "implementation": "deterministic_mock",
+    "evidence_scope": "mock_dependency_integration",
+    "production_eligible": false,
+    "clinical_validity": false,
+    "response_intent": "CELEBRATE_AND_CONTINUE",
+    "weak_unit": null
+  },
+  "limitations": [
+    "member1 alignment is deterministic mock evidence",
+    "member3 action is deterministic mock evidence",
+    "no therapist-labelled target-user validation",
+    "no physical target-device benchmark"
+  ],
+  "evidence_digest": "6ac69e8e612fd3f4adaac077d146ee03bdea68d09ddf7005e86602887ae62227"
+}
