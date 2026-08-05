@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "model_id": "ai4bharat/indicconformer_stt_ta_hybrid_ctc_rnnt_large",
+  "model_revision": "8c31aa8d04964b8fc87e4eaaee7916f7d2c024da",
+  "phoneme_inventory": "modeling/artifacts/tamil-phoneme-contract.json",
+  "blank_index": 0,
+  "sample_rate_hz": 16000,
+  "stages": [
+    {"name": "head_only", "encoder_learning_rate": 0.0, "head_learning_rate": 0.001},
+    {"name": "top_encoder_blocks", "top_block_count": 4, "encoder_learning_rate": 0.00001, "head_learning_rate": 0.0001},
+    {"name": "full_encoder", "encoder_learning_rate": 0.000001, "head_learning_rate": 0.00005, "requires_validation_improvement": true}
+  ],
+  "mixed_precision": "bf16-mixed",
+  "gradient_clip_norm": 1.0,
+  "resume_safe_checkpoints": true,
+  "production_ready": false
+}
