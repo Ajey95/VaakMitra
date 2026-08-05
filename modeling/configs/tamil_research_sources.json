@@ -1,0 +1,39 @@
+{
+  "catalog_version": "2026-08-05",
+  "sources": [
+    {
+      "source_id": "ai4bharat-indicvoices",
+      "organization": "AI4Bharat",
+      "canonical_url": "https://huggingface.co/datasets/ai4bharat/IndicVoices",
+      "language": "ta",
+      "license_spdx": "CC-BY-4.0",
+      "revision": "c96f9088f138cf89d419da7e8e643e1f05c00a87",
+      "target_age_scope": "adult_only",
+      "transcript_scope": "read_and_extempore_speech_transcripts",
+      "streaming_supported": true,
+      "requires_user_terms_acceptance": true,
+      "automatic_download_allowed": false,
+      "dataset_license_review_required": false,
+      "allowed_evidence_claims": [
+        "engineering_proxy"
+      ]
+    },
+    {
+      "source_id": "ai4bharat-vistaar",
+      "organization": "AI4Bharat",
+      "canonical_url": "https://github.com/AI4Bharat/vistaar",
+      "language": "ta",
+      "license_spdx": "MIT",
+      "revision": "21dce3406fddf0e18984165e735d23db38760dd3",
+      "target_age_scope": "mixed_or_unknown",
+      "transcript_scope": "dataset_index_and_model_benchmark_metadata",
+      "streaming_supported": false,
+      "requires_user_terms_acceptance": false,
+      "automatic_download_allowed": false,
+      "dataset_license_review_required": true,
+      "allowed_evidence_claims": [
+        "dataset_discovery"
+      ]
+    }
+  ]
+}
