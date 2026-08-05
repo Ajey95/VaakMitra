@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "vaakmitra/synthetic-tamil-proxy-manifest-example",
+  "revision": "0000000000000000000000000000000000000000",
+  "source_url": "https://example.invalid/vaakmitra/synthetic-tamil-proxy-manifest-example",
+  "license_spdx": "CC0-1.0",
+  "population": "adult_tamil_proxy",
+  "label_origin": "rule_based_proxy",
+  "evidence_scope": "engineering_proxy",
+  "local_processing_only": true,
+  "splits": [
+    {
+      "name": "train",
+      "speakers": ["synthetic-train"],
+      "record_count": 1,
+      "index_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "name": "validation",
+      "speakers": ["synthetic-validation"],
+      "record_count": 1,
+      "index_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "name": "test",
+      "speakers": ["synthetic-test"],
+      "record_count": 1,
+      "index_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  ]
+}
