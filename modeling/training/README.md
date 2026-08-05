@@ -92,6 +92,10 @@ The output records core/extended units, per-phone provenance, disagreements, unk
 and explicit allophone mappings. It remains `expert_approved=false` and
 `production_ready=false`.
 
+Create the clinician/linguist packet and finalize it only after every decision and the expert
+attestation are present. The full instructions are in
+`docs/review/tamil-phoneme-inventory/README.md`.
+
 ### 2. IISc-MILE corpus freeze
 
 OpenSLR 127 is recorded as an adult Tamil, CC-BY-2.0 source. The 13 GB archive is not silently

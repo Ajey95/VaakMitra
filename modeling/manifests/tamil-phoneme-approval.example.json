@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "review_status": "pending_expert_review",
+  "candidate_inventory_version": "ta-candidate-example-1",
+  "candidate_digest": "86093baabd6a8b34662c873578f917faad8bab201a5a6831f7ba58547cf70098",
+  "token_reviews": [
+    {
+      "token": "a",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "a\u02d0",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    },
+    {
+      "token": "m",
+      "decision": "pending",
+      "replacement_token": null,
+      "notes": ""
+    }
+  ],
+  "allophone_reviews": [],
+  "policies": {
+    "vowel_length": "pending",
+    "gemination": "pending",
+    "allophones": "pending",
+    "unknown_phone": "pending"
+  },
+  "reviewer": null
+}
