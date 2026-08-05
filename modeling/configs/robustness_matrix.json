@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "sample_rate_hz": 16000,
+  "evidence_scope": "transformation_robustness_only",
+  "child_domain_accuracy_measured": false,
+  "transforms": [
+    {"transform_id": "rate-slow", "kind": "rate", "severity": "moderate", "value": 0.90},
+    {"transform_id": "rate-fast", "kind": "rate", "severity": "moderate", "value": 1.10},
+    {"transform_id": "pitch-formant-up", "kind": "pitch_formant", "severity": "moderate", "value": 1.08},
+    {"transform_id": "vtln-up", "kind": "vtln", "severity": "moderate", "value": 1.05},
+    {"transform_id": "pause-long", "kind": "pause", "severity": "moderate", "value": 0.20},
+    {"transform_id": "repeat-short", "kind": "repetition", "severity": "moderate", "value": 0.10},
+    {"transform_id": "noise-15db", "kind": "noise", "severity": "moderate", "value": 15.0},
+    {"transform_id": "low-gain", "kind": "gain", "severity": "moderate", "value": 0.40},
+    {"transform_id": "hard-clip", "kind": "clipping", "severity": "severe", "value": 0.03},
+    {"transform_id": "phone-band", "kind": "bandwidth", "severity": "moderate", "value": 3500.0},
+    {"transform_id": "resample-8khz", "kind": "resampling", "severity": "moderate", "value": 8000.0}
+  ]
+}
