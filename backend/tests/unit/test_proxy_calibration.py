@@ -5,8 +5,10 @@ import json
 import pytest
 from modeling.calibration.calibrate_jsonl import main
 from modeling.calibration.proxy_calibration import (
+    GroupedCalibrationExample,
     ProxyCalibrationExample,
     calibrate_proxy_thresholds,
+    fit_grouped_thresholds,
 )
 
 
@@ -86,6 +88,26 @@ def test_calibration_reports_unscorable_rate_and_expected_calibration_error() ->
     assert report.unscorable_count == 1
     assert report.unscorable_rate == pytest.approx(1 / 3)
     assert report.expected_calibration_error == pytest.approx(0.1)
+    assert report.brier_score == pytest.approx(0.01)
+    assert report.auroc == pytest.approx(1.0)
+    assert report.false_reject_rate == pytest.approx(0.0)
+    assert report.auroc_ci_low <= report.auroc <= report.auroc_ci_high
+
+
+def test_calibration_reports_hand_derived_auc_brier_and_false_reject_rate() -> None:
+    report = calibrate_proxy_thresholds(
+        _examples((0.9, True), (0.4, True), (0.6, False), (0.1, False)),
+        candidate_thresholds=(0.5, 0.7),
+        max_false_accept_rate=0.0,
+        bootstrap_samples=50,
+        bootstrap_seed=9,
+    )
+
+    assert report.pass_threshold == pytest.approx(0.7)
+    assert report.auroc == pytest.approx(0.75)
+    assert report.brier_score == pytest.approx(0.185)
+    assert report.false_rejects == 1
+    assert report.false_reject_rate == pytest.approx(0.5)
 
 
 def test_calibration_requires_positive_and_negative_scorable_examples() -> None:
@@ -95,6 +117,28 @@ def test_calibration_requires_positive_and_negative_scorable_examples() -> None:
             candidate_thresholds=(0.5,),
             max_false_accept_rate=0.0,
         )
+
+
+def test_grouped_thresholds_use_phone_support_then_phonological_class_fallback() -> None:
+    observations = (
+        GroupedCalibrationExample("m1", "m", "nasal", 0.9, True),
+        GroupedCalibrationExample("m2", "m", "nasal", 0.8, True),
+        GroupedCalibrationExample("m3", "m", "nasal", 0.2, False),
+        GroupedCalibrationExample("m4", "m", "nasal", 0.1, False),
+        GroupedCalibrationExample("n1", "n", "nasal", 0.85, True),
+        GroupedCalibrationExample("n2", "n", "nasal", 0.15, False),
+    )
+
+    report = fit_grouped_thresholds(
+        observations,
+        candidate_thresholds=(0.5, 0.75),
+        max_false_accept_rate=0.0,
+        minimum_phone_examples=4,
+    )
+
+    assert report.phone_thresholds == {"m": pytest.approx(0.5)}
+    assert report.class_thresholds == {"nasal": pytest.approx(0.5)}
+    assert report.fallback_by_phone == {"n": "nasal"}
 
 
 def test_calibration_jsonl_cli_writes_aggregate_proxy_report(tmp_path) -> None:
@@ -145,4 +189,3 @@ def test_calibration_cli_rejects_therapist_calibrated_claim(tmp_path) -> None:
                 "therapist_calibrated",
             ]
         )
-
