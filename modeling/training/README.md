@@ -95,21 +95,41 @@ and explicit allophone mappings. It remains `expert_approved=false` and
 ### 2. IISc-MILE corpus freeze
 
 OpenSLR 127 is recorded as an adult Tamil, CC-BY-2.0 source. The 13 GB archive is not silently
-downloaded. After acquiring it locally, compute its SHA-256, generate private JSONL records with
-only utterance/speaker identifiers and audio/transcript digests, and freeze aggregate split
-evidence:
+downloaded. The publisher does not provide a SHA-256 value, so the materializer records the exact
+locally computed archive SHA-256 and explicitly labels its provenance. Download the fixed remote
+object with resumable byte ranges:
 
 ```powershell
-& .\.venv\Scripts\python.exe -m modeling.data.build_corpus_index `
-  --records modeling\artifacts\iisc-mile\records.jsonl `
-  --assignments modeling\artifacts\iisc-mile\speaker-splits.json `
-  --source modeling\artifacts\iisc-mile\verified-source.json `
-  --output modeling\artifacts\iisc-mile\frozen-corpus-index.json
+& .\.venv\Scripts\python.exe -m modeling.data.resumable_download `
+  --url https://openslr.trmal.net/resources/127/mile_tamil_asr_corpus.tar.gz `
+  --total-size 13803410250 --segment-count 16 --workers 4 `
+  --work-dir modeling\artifacts\corpora\openslr-127\segments `
+  --output modeling\artifacts\corpora\openslr-127\mile_tamil_asr_corpus.tar.gz
 ```
 
-The source file must use `revision_basis="archive_sha256"`. Speaker, utterance, or audio-digest
-overlap fails before training. The aggregate output contains no path, transcript, utterance ID, or
-speaker ID.
+Use fewer workers if the mirror throttles concurrent ranges. A stopped command resumes each fixed
+segment from its existing byte count; it assembles the final archive only after every segment has
+the exact expected size. Then run the single safe materialization transaction:
+
+```powershell
+$retrievedAt = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+& .\.venv\Scripts\python.exe -m modeling.data.materialize_openslr127 `
+  --archive modeling\artifacts\corpora\openslr-127\mile_tamil_asr_corpus.tar.gz `
+  --extract-root modeling\artifacts\corpora\openslr-127\extracted `
+  --private-output-dir modeling\artifacts\corpora\openslr-127\private `
+  --aggregate-report benchmarks\reports\openslr127-corpus-evidence.json `
+  --frozen-index benchmarks\reports\openslr127-frozen-index.json `
+  --source-manifest benchmarks\reports\openslr127-source-manifest.json `
+  --source-url https://openslr.trmal.net/resources/127/mile_tamil_asr_corpus.tar.gz `
+  --retrieved-at $retrievedAt
+```
+
+Before extraction, archive paths, member types, duplicate destinations, and the full archive digest
+are validated. Every accepted item must be Tamil NFC text plus mono 16 kHz, 16-bit PCM WAV audio.
+Official test speakers are preserved when they are disjoint; otherwise all speakers are
+deterministically re-split. Speaker, utterance, or audio-digest overlap fails before training. The
+aggregate output contains no path, transcript, utterance ID, speaker ID, or audio digest. Raw data
+and private indices remain under the ignored `modeling/artifacts/` boundary.
 
 ### 3. Strategy 2: full reference
 

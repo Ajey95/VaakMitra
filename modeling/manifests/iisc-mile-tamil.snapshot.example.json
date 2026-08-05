@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "openslr-127-iisc-mile-tamil",
+  "source_url": "https://openslr.trmal.net/resources/127/mile_tamil_asr_corpus.tar.gz",
+  "landing_page": "https://www.openslr.org/127/",
+  "license_spdx": "CC-BY-2.0",
+  "population": "adult_tamil_proxy",
+  "expected_archive_size_bytes": 13803410250,
+  "remote_etag": "\"336bf534a-5e2b7e67be13b\"",
+  "remote_last_modified": "Fri, 01 Jul 2022 05:45:57 GMT",
+  "archive_sha256": "REPLACE_WITH_LOCALLY_COMPUTED_SHA256_AFTER_DOWNLOAD",
+  "archive_checksum_provenance": "locally_computed_not_publisher_supplied",
+  "retrieved_at": "REPLACE_WITH_UTC_ISO_8601",
+  "local_processing_only": true,
+  "expert_or_clinical_evidence": false
+}
