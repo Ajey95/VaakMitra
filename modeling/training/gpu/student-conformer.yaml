@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "architecture": "compact_conformer",
+  "seed": 23,
+  "sample_rate_hz": 16000,
+  "blank_index": 0,
+  "reviewed_inventory_sha256": "REQUIRED_64_HEX",
+  "frozen_corpus_index_sha256": "REQUIRED_64_HEX",
+  "teacher_feature_manifest_sha256": "REQUIRED_64_HEX",
+  "model": {
+    "frontend_channels": 48,
+    "hidden_size": 128,
+    "encoder_layers": 4,
+    "attention_heads": 4,
+    "dropout": 0.1
+  },
+  "objectives": {
+    "supervised_phoneme_ctc": {"weight": 1.0},
+    "masked_smooth_l1": {"weight": 0.5},
+    "relational_frame_similarity": {"weight": 0.2},
+    "sequence_consistency": {"weight": 0.1},
+    "text_posterior_kl": {"enabled": false, "prohibited": true}
+  },
+  "optimization": {
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "precision": {"primary": "bf16-mixed", "fallback": "16-mixed"}
+  },
+  "edge_gates": {
+    "maximum_quantized_bytes": 50000000,
+    "maximum_physical_tablet_p95_ms": 500,
+    "physical_device_required_for_pass": true
+  },
+  "selection": {
+    "metric": "adult_proxy_test_per",
+    "maximum_relative_teacher_per_degradation": 0.10,
+    "tie_breakers": ["quantized_bytes", "physical_tablet_p95_ms"]
+  },
+  "checkpoints": {"resume_safe": true, "save_top_k": 3, "save_last": true},
+  "production_ready": false
+}

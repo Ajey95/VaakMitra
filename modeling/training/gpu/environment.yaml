@@ -1,0 +1,19 @@
+{
+  "name": "vaakmitra-indicconformer-gpu",
+  "channels": ["pytorch", "nvidia", "conda-forge"],
+  "dependencies": [
+    "python=3.10.12",
+    "pytorch=2.2.0",
+    "torchaudio=2.2.0",
+    "pytorch-cuda=12.1",
+    "ffmpeg",
+    "libsndfile",
+    "pip"
+  ],
+  "ai4bharat_nemo": {
+    "repository": "https://github.com/AI4Bharat/NeMo.git",
+    "revision": "8dce88cf8e94963e2033c3137f7b9993b51db88a",
+    "install_extra": "asr"
+  },
+  "notes": "JSON syntax is intentional: this file is valid YAML and can be validated without a YAML runtime."
+}

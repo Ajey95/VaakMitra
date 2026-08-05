@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "teacher": {
+    "model_id": "ai4bharat/indicconformer_stt_ta_hybrid_ctc_rnnt_large",
+    "revision": "8c31aa8d04964b8fc87e4eaaee7916f7d2c024da"
+  },
+  "required_inputs": {
+    "reviewed_inventory_path": "REQUIRED_PATH",
+    "reviewed_inventory_sha256": "REQUIRED_64_HEX",
+    "archive_sha256": "REQUIRED_64_HEX",
+    "frozen_corpus_index_path": "REQUIRED_PATH",
+    "frozen_corpus_index_sha256": "REQUIRED_64_HEX"
+  },
+  "sample_rate_hz": 16000,
+  "blank_index": 0,
+  "seed": 17,
+  "stages": [
+    {
+      "name": "head_only",
+      "encoder_learning_rate": 0.0,
+      "head_learning_rate": 0.001
+    },
+    {
+      "name": "top_encoder_blocks",
+      "top_block_count": 4,
+      "encoder_learning_rate": 0.00001,
+      "head_learning_rate": 0.0001
+    },
+    {
+      "name": "full_encoder",
+      "encoder_learning_rate": 0.000001,
+      "head_learning_rate": 0.00005,
+      "requires_validation_improvement": true
+    }
+  ],
+  "precision": {"primary": "bf16-mixed", "fallback": "16-mixed"},
+  "gradient_clip_norm": 1.0,
+  "checkpoints": {
+    "resume_safe": true,
+    "save_top_k": 3,
+    "monitor": "validation_per",
+    "mode": "min",
+    "save_last": true,
+    "every_n_epochs": 1
+  },
+  "promotion": {
+    "metric": "validation_per",
+    "minimum_absolute_improvement": 0.005,
+    "full_unfreeze_is_optional": true,
+    "adult_proxy_only": true
+  },
+  "evaluation": {
+    "primary": "phoneme_error_rate",
+    "also_report": ["substitution_rate", "deletion_rate", "insertion_rate"],
+    "speaker_disjoint_only": true
+  },
+  "production_ready": false
+}
