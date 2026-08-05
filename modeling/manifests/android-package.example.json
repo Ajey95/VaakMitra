@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "release_status": "technical_prototype",
+  "runtime": "onnxruntime-mobile",
+  "model_format": "onnx",
+  "required_execution_provider": "CPUExecutionProvider",
+  "model_artifact_external": true,
+  "integrity_check": "sha256-before-session-load",
+  "required_assets": [
+    "phoneme-ctc-model.onnx",
+    "model-manifest.json",
+    "phoneme-vocabulary.json"
+  ],
+  "required_mobile_checks": [
+    "offline-startup",
+    "operator-compatibility",
+    "model-and-vocabulary-version-match",
+    "tampered-model-rejection"
+  ],
+  "unavailable_without_target_tablet": [
+    "cold-start-acceptance",
+    "median-and-p95-latency",
+    "peak-memory",
+    "battery",
+    "thermal-throttling"
+  ]
+}
