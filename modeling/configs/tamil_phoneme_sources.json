@@ -1,0 +1,52 @@
+{
+  "catalog_version": "2026-08-05",
+  "source_url": "https://github.com/phoible/dev/blob/9cfbaa67713722a2726a439202562efe8f305b9f/data/phoible.csv",
+  "license_spdx": "CC-BY-SA-3.0",
+  "sources": [
+    {
+      "source_id": "phoible-tamil-1058",
+      "revision": "9cfbaa67713722a2726a439202562efe8f305b9f",
+      "source_scope": "published_inventory",
+      "segments": [
+        "a", "aː", "aɪ", "aʊ", "b", "d̪", "d̠ʒ", "ɖ", "e", "eː", "ɡ",
+        "i", "iː", "j", "k", "l", "ɭ", "m", "n", "ɲ", "ɳ", "o", "oː",
+        "p", "ɻ", "ɾ", "s", "ʈ", "t̪", "t̠ʃ", "u", "uː", "ʋ"
+      ]
+    },
+    {
+      "source_id": "phoible-tamil-1788",
+      "revision": "9cfbaa67713722a2726a439202562efe8f305b9f",
+      "source_scope": "published_inventory",
+      "segments": [
+        "a", "aː", "b", "cç", "d", "d̪", "ð", "ɖ", "e", "eː", "f", "ɡ",
+        "h", "i", "ɨ", "iː", "j", "ɟʝ", "k", "l", "ɭ", "l̠˞", "m", "n",
+        "ɲ", "ɳ", "n̪", "ŋ", "o", "oː", "p", "ɸ", "ɽ", "ɾ", "s", "ʂ",
+        "t", "ʈ", "t̪", "u", "uː", "w", "x"
+      ]
+    },
+    {
+      "source_id": "phoible-tamil-2611",
+      "revision": "9cfbaa67713722a2726a439202562efe8f305b9f",
+      "source_scope": "published_inventory",
+      "segments": [
+        "a", "aː", "ai", "au", "b", "c", "d̪", "ɖ", "e", "eː", "ɡ", "h",
+        "i", "iː", "j", "ɟ", "k", "ɭ", "l̪", "m", "n", "ɲ", "ɳ", "n̪",
+        "ŋ", "o", "oː", "p", "r", "r̪", "ʈ", "t̪", "u", "uː", "w", "ʐ"
+      ]
+    }
+  ],
+  "transliterators": [
+    {
+      "source_id": "epitran-tam-Taml",
+      "revision": "3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f",
+      "source_url": "https://github.com/dmort27/epitran/tree/3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f/epitran/data",
+      "license_spdx": "MIT"
+    },
+    {
+      "source_id": "epitran-tam-Taml-red",
+      "revision": "3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f",
+      "source_url": "https://github.com/dmort27/epitran/tree/3ed96fd7d10f6f5eec75ba1deb10700fcaafe43f/epitran/data",
+      "license_spdx": "MIT"
+    }
+  ]
+}

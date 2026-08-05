@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "inventory_version": "ta-candidate-example-1",
+  "blank_token": "<blank>",
+  "tokens": ["<blank>", "a", "aː", "m"],
+  "core_tokens": ["a", "aː"],
+  "extended_tokens": ["m"],
+  "sources": [
+    {
+      "source_id": "published-example-a",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_scope": "published_inventory",
+      "segments": ["a", "aː", "m"]
+    },
+    {
+      "source_id": "published-example-b",
+      "revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "source_scope": "published_inventory",
+      "segments": ["a", "aː"]
+    }
+  ],
+  "token_provenance": [
+    {
+      "token": "a",
+      "source_ids": ["published-example-a", "published-example-b"],
+      "observed_in_training_text": true
+    },
+    {
+      "token": "aː",
+      "source_ids": ["published-example-a", "published-example-b"],
+      "observed_in_training_text": true
+    },
+    {
+      "token": "m",
+      "source_ids": ["published-example-a"],
+      "observed_in_training_text": true
+    }
+  ],
+  "allophones": [],
+  "conflicts": [
+    {
+      "token": "m",
+      "present_in": ["published-example-a"],
+      "missing_from": ["published-example-b"],
+      "resolution": "extended_pending_review"
+    }
+  ],
+  "expert_approved": false,
+  "production_ready": false,
+  "evidence_scope": "provisional_research_inventory"
+}
