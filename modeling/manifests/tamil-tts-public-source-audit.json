@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "asishbala/tamil-tts-dataset",
+  "revision": "1d6a78e02c6c21d8da30eb57dd4dc02b4ed765f5",
+  "source_url": "https://huggingface.co/datasets/asishbala/tamil-tts-dataset",
+  "license_spdx": "CC0-1.0",
+  "evidence_scope": "engineering_proxy",
+  "source_splits": {
+    "train": {
+      "csv_sha256": "0680926964e79385e497b0d01caec2cc64ee97128710b265cf54d4d9ac93845c",
+      "record_count": 36662,
+      "speaker_count": 18
+    },
+    "validation": {
+      "csv_sha256": "ddb27be5503b94a414009be20983bcde8b1f33b14d906881acc32bf3a346714f",
+      "record_count": 1944,
+      "speaker_count": 18
+    },
+    "test": {
+      "csv_sha256": "806834a7f2d4bbae6b660b860f5ad0034d52184f7b4d8e356b20de2124947c47",
+      "record_count": 7762,
+      "speaker_count": 4
+    }
+  },
+  "source_train_validation_speaker_overlap": 18,
+  "source_test_development_speaker_overlap": 0,
+  "split_seed": "vaakmitra-member2-v1",
+  "validation_speaker_fraction": 0.2,
+  "derived_speaker_disjoint": true,
+  "derived_splits": {
+    "train": {
+      "record_count": 26666,
+      "speaker_count": 14,
+      "index_sha256": "0a6d42e246cc545559c8798dc0e93cc12e19b99819370daf0b038952d05c97cc"
+    },
+    "validation": {
+      "record_count": 11940,
+      "speaker_count": 4,
+      "index_sha256": "0f25bf55e3d8255b2052e9a33be4a7fd9ac030aadd0922540578ec32e54f9b14"
+    },
+    "test": {
+      "record_count": 7762,
+      "speaker_count": 4,
+      "index_sha256": "1d516b20ca5485d81537c9e8db10981c5fd712e80f3223f8088509ac7cfd4ad7"
+    }
+  },
+  "limitations": [
+    "adult speech is not target-user child speech",
+    "dataset phonemes are not therapist pronunciation ratings"
+  ]
+}
