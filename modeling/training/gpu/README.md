@@ -129,3 +129,21 @@ then stop. If CUDA OOM occurs, lower batch size before changing the architecture
 does not clear its validation gate, keep the top-block checkpoint and do not force full unfreezing.
 Adult Tamil PER is engineering evidence only; it cannot establish child/ASD accuracy, therapist
 calibration, or clinical readiness.
+
+## 6. Google Colab notebook
+
+`notebooks/VaakMitra_GPU_Training_Colab.ipynb` is the Colab implementation of both GPU tracks. It
+uses the pinned model, NeMo revision, staged learning rates, speaker-disjoint corpus evidence, and
+student objectives from these configuration files. Expensive phases checkpoint to Google Drive
+and resume after a Colab disconnect.
+
+Before running it, upload the locally generated private metadata bundle
+`modeling/artifacts/colab/vaakmitra-colab-private-metadata.zip` to
+`MyDrive/VaakMitraGPU/inputs/`. Either upload the verified OpenSLR archive to the same directory or
+allow the notebook to resume-download it from the frozen source URL. Accept the gated Hugging Face
+model conditions and store the access token only in Colab Secrets as `HF_TOKEN`.
+
+The notebook writes aggregate reference metrics, the private teacher-feature manifest, both
+student reports, FP32/INT8 ONNX candidates, artifact hashes, and `vaakmitra-gpu-results.zip` under
+`MyDrive/VaakMitraGPU/runs/`. Without an expert-reviewed inventory, every output is labelled
+provisional and must be retrained after clinician review.
