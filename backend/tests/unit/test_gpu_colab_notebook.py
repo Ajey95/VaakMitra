@@ -109,3 +109,17 @@ def test_colab_notebook_has_ordered_resume_safe_executable_phases() -> None:
     assert "insertions" in code
     assert "quantize_dynamic" in code
     assert "physical_device_required" in code
+
+
+def test_colab_environment_restart_is_condacolab_state_driven() -> None:
+    notebook = _load_notebook()
+    environment = next(
+        cell for cell in notebook["cells"] if cell["id"] == "environment"
+    )
+    code = "".join(environment["source"])
+
+    assert "condacolab.check()" in code
+    assert "conda_ready = False" in code
+    assert "if conda_ready:" in code
+    assert "raise SystemExit" not in code
+    assert "sys.version_info[:2] != (3, 10)" not in code
