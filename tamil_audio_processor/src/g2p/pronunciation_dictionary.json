@@ -1,0 +1,19 @@
+{
+  "version": "ta-dict-1.0.0",
+  "words": {
+    "அம்மா": {
+      "phonemes": ["a", "m", "m", "a:"],
+      "syllables": [
+        {"text": "அம்", "phonemes": ["a", "m"]},
+        {"text": "மா", "phonemes": ["m", "a:"]}
+      ]
+    },
+    "அப்பா": {
+      "phonemes": ["a", "p", "p", "a:"],
+      "syllables": [
+        {"text": "அப்", "phonemes": ["a", "p"]},
+        {"text": "பா", "phonemes": ["p", "a:"]}
+      ]
+    }
+  }
+}
