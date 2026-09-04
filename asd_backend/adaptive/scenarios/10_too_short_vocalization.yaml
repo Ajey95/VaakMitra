@@ -1,0 +1,20 @@
+# Scenario: too short vocalization — invalid, no judgement
+description: "Child uttered a very short sound (too_short) — neutral retry, no pronunciation judgement"
+
+scoring: null
+
+state:
+  session_id: "SES-0020"
+  exercise_id: "TA_APPA_01"
+  target_word: "அப்பா"
+  attempt_count: 0
+  consecutive_retries: 0
+  session_attempt_count: 1
+  no_response_count: 0
+  capture_status: "too_short"
+
+expected:
+  result: "retry"
+  response_intent: "ENCOURAGE_RETRY"
+  avatar_state: "NEUTRAL"
+  weak_unit: null

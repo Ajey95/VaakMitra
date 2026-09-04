@@ -1,0 +1,33 @@
+# Scenario: max retries for exercise reached
+description: "Child has attempted exercise 3 times (max) — move to next or break"
+
+scoring:
+  attempt_id: "ATT-00080"
+  model_version: "ta-phoneme-ctc-1.0.0"
+  overall_confidence: 0.78
+  phoneme_scores:
+    - {phoneme: "a",  gop: 0.65, confidence: 0.70, status: "coach"}
+    - {phoneme: "m",  gop: 0.60, confidence: 0.72, status: "coach"}
+    - {phoneme: "m",  gop: 0.55, confidence: 0.68, status: "retry"}
+    - {phoneme: "a:", gop: 0.50, confidence: 0.65, status: "retry"}
+  syllable_scores:
+    - {syllable: "அம்", score: 0.62, status: "coach"}
+    - {syllable: "மா",  score: 0.52, status: "retry"}
+
+state:
+  session_id: "SES-0016"
+  exercise_id: "TA_AMMA_01"
+  target_word: "அம்மா"
+  attempt_count: 3   # equals max_retries_per_exercise (3)
+  consecutive_retries: 3
+  session_attempt_count: 10
+  no_response_count: 0
+  capture_status: "valid"
+  next_exercise_id: "TA_APPA_01"
+
+expected:
+  result: "break"
+  response_intent: "OFFER_BREAK"
+  avatar_state: "NEUTRAL"
+  weak_unit: null
+  attempts_remaining: 0

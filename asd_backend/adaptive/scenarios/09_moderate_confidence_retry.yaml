@@ -1,0 +1,31 @@
+# Scenario: moderate confidence with one failing syllable — general retry
+description: "One syllable fails but overall confidence is moderate — general retry (not targeted coaching)"
+
+scoring:
+  attempt_id: "ATT-00090"
+  model_version: "ta-phoneme-ctc-1.0.0"
+  overall_confidence: 0.65   # above low_confidence but below overall_pass_confidence (0.80)
+  phoneme_scores:
+    - {phoneme: "a",  gop: 0.80, confidence: 0.75, status: "pass"}
+    - {phoneme: "m",  gop: 0.65, confidence: 0.68, status: "coach"}
+    - {phoneme: "m",  gop: 0.55, confidence: 0.60, status: "retry"}
+    - {phoneme: "a:", gop: 0.45, confidence: 0.58, status: "retry"}
+  syllable_scores:
+    - {syllable: "அம்", score: 0.72, status: "coach"}   # slightly below pass
+    - {syllable: "மா",  score: 0.50, status: "retry"}
+
+state:
+  session_id: "SES-0019"
+  exercise_id: "TA_AMMA_01"
+  target_word: "அம்மா"
+  attempt_count: 1
+  consecutive_retries: 1
+  session_attempt_count: 4
+  no_response_count: 0
+  capture_status: "valid"
+
+expected:
+  result: "retry"
+  response_intent: "ENCOURAGE_RETRY"
+  avatar_state: "COACH"
+  weak_unit: "மா"   # identified but confidence too low for targeted coaching

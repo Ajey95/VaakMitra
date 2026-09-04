@@ -1,0 +1,20 @@
+# Scenario: repeated no-response — switch to louder prompt
+description: "Child has not responded 2 times — switch to louder prompt intent"
+
+scoring: null
+
+state:
+  session_id: "SES-0015"
+  exercise_id: "TA_AMMA_01"
+  target_word: "அம்மா"
+  attempt_count: 2
+  consecutive_retries: 0
+  session_attempt_count: 3
+  no_response_count: 2   # >= max_no_response_before_prompt (2)
+  capture_status: "timeout"
+
+expected:
+  result: "no_response"
+  response_intent: "PROMPT_LOUDER"
+  avatar_state: "WAIT"
+  weak_unit: null

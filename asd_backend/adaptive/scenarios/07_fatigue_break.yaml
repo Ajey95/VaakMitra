@@ -1,0 +1,32 @@
+# Scenario: fatigue break — session attempt limit reached
+description: "Child has made 30 attempts in this session — fatigue break"
+
+scoring:
+  attempt_id: "ATT-00200"
+  model_version: "ta-phoneme-ctc-1.0.0"
+  overall_confidence: 0.81
+  phoneme_scores:
+    - {phoneme: "a",  gop: 0.79, confidence: 0.82, status: "pass"}
+    - {phoneme: "m",  gop: 0.75, confidence: 0.80, status: "pass"}
+    - {phoneme: "m",  gop: 0.72, confidence: 0.78, status: "pass"}
+    - {phoneme: "a:", gop: 0.70, confidence: 0.77, status: "pass"}
+  syllable_scores:
+    - {syllable: "அம்", score: 0.77, status: "pass"}
+    - {syllable: "மா",  score: 0.71, status: "pass"}
+
+state:
+  session_id: "SES-0017"
+  exercise_id: "TA_AMMA_01"
+  target_word: "அம்மா"
+  attempt_count: 1
+  consecutive_retries: 0
+  session_attempt_count: 30   # >= max_attempts_per_session (30)
+  no_response_count: 0
+  capture_status: "valid"
+
+expected:
+  result: "break"
+  response_intent: "OFFER_BREAK"
+  avatar_state: "NEUTRAL"
+  weak_unit: null
+  attempts_remaining: 0

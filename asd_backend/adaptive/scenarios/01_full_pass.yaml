@@ -1,0 +1,31 @@
+# Scenario: full pass — all syllables and phonemes pass
+description: "Child pronounces அம்மா correctly — all syllables pass"
+
+scoring:
+  attempt_id: "ATT-00001"
+  model_version: "ta-phoneme-ctc-1.0.0"
+  overall_confidence: 0.92
+  phoneme_scores:
+    - {phoneme: "a",  gop: 0.91, confidence: 0.92, status: "pass"}
+    - {phoneme: "m",  gop: 0.88, confidence: 0.90, status: "pass"}
+    - {phoneme: "m",  gop: 0.85, confidence: 0.87, status: "pass"}
+    - {phoneme: "a:", gop: 0.82, confidence: 0.86, status: "pass"}
+  syllable_scores:
+    - {syllable: "அம்", score: 0.89, status: "pass"}
+    - {syllable: "மா",  score: 0.84, status: "pass"}
+
+state:
+  session_id: "SES-0001"
+  exercise_id: "TA_AMMA_01"
+  target_word: "அம்மா"
+  attempt_count: 0
+  consecutive_retries: 0
+  session_attempt_count: 1
+  no_response_count: 0
+  capture_status: "valid"
+
+expected:
+  result: "pass"
+  response_intent: "CELEBRATE_PASS"
+  avatar_state: "CELEBRATE"
+  weak_unit: null
