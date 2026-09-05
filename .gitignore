@@ -9,6 +9,7 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+.worktrees/
 
 # Member 2 model and benchmark artifacts must remain local.
 modeling/artifacts/*
@@ -22,4 +23,3 @@ benchmarks/fixtures/private/
 *.wav
 *.flac
 *.mp3
-
