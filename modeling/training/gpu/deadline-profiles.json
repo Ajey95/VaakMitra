@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "profiles": [
+    {
+      "name": "smoke",
+      "reference_epochs": {"head_only": 1, "top_encoder_blocks": 1, "full_encoder": 1},
+      "student_epochs": 1,
+      "maximum_students": 1,
+      "batch_size": 1,
+      "gradient_accumulation": 1,
+      "bucket_size": 16,
+      "checkpoint_every_updates": 2,
+      "session_max_seconds": 1800,
+      "session_reserve_seconds": 120,
+      "minimum_full_stage_per_improvement": 0.005,
+      "maximum_unknown_phone_record_rate": 0.05,
+      "split_limits": {"train": 64, "validation": 16, "test": 16}
+    },
+    {
+      "name": "deadline_7day",
+      "reference_epochs": {"head_only": 3, "top_encoder_blocks": 3, "full_encoder": 2},
+      "student_epochs": 5,
+      "maximum_students": 1,
+      "batch_size": 1,
+      "gradient_accumulation": 8,
+      "bucket_size": 128,
+      "checkpoint_every_updates": 500,
+      "session_max_seconds": 39600,
+      "session_reserve_seconds": 600,
+      "minimum_full_stage_per_improvement": 0.005,
+      "maximum_unknown_phone_record_rate": 0.05,
+      "split_limits": {"train": null, "validation": null, "test": null}
+    },
+    {
+      "name": "research_full",
+      "reference_epochs": {"head_only": 3, "top_encoder_blocks": 3, "full_encoder": 2},
+      "student_epochs": 5,
+      "maximum_students": 2,
+      "batch_size": 1,
+      "gradient_accumulation": 8,
+      "bucket_size": 128,
+      "checkpoint_every_updates": 500,
+      "session_max_seconds": 39600,
+      "session_reserve_seconds": 600,
+      "minimum_full_stage_per_improvement": 0.005,
+      "maximum_unknown_phone_record_rate": 0.05,
+      "split_limits": {"train": null, "validation": null, "test": null}
+    }
+  ]
+}

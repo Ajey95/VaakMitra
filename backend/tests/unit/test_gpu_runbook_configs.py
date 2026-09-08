@@ -94,6 +94,18 @@ def test_student_configs_share_teacher_features_and_edge_gates() -> None:
         assert config["production_ready"] is False
 
 
+def test_deadline_profiles_prioritize_reference_and_limit_students() -> None:
+    config = _config("deadline-profiles.json")
+    profiles = {profile["name"]: profile for profile in config["profiles"]}
+
+    assert set(profiles) == {"smoke", "deadline_7day", "research_full"}
+    deadline = profiles["deadline_7day"]
+    assert deadline["checkpoint_every_updates"] == 500
+    assert deadline["maximum_students"] == 1
+    assert deadline["minimum_full_stage_per_improvement"] == 0.005
+    assert deadline["maximum_unknown_phone_record_rate"] == 0.05
+
+
 def test_powershell_scripts_are_fail_closed_and_never_accept_tokens_as_arguments() -> None:
     stages = (GPU_DIR / "run_stages.ps1").read_text(encoding="utf-8")
     distillation = (GPU_DIR / "run_distillation.ps1").read_text(encoding="utf-8")
