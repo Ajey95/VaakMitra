@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import math
+from typing import Any
 
 import numpy as np
+import numpy.typing as npt
 
 from vaakmitra.ctc.vocabulary import PhonemeVocabulary
 
@@ -12,7 +14,7 @@ _NORMALIZATION_TOLERANCE = 1e-4
 
 
 def validate_log_probabilities(
-    log_probabilities: np.ndarray,
+    log_probabilities: npt.NDArray[np.floating[Any]],
     vocabulary: PhonemeVocabulary,
 ) -> None:
     """Validate tensor shape, values, and per-frame normalization without mutation."""
@@ -38,7 +40,7 @@ def validate_log_probabilities(
         raise ValueError("log probabilities must normalize to one for every frame")
 
 
-def frame_times_ms(frame_count: int, frame_shift_ms: float) -> np.ndarray:
+def frame_times_ms(frame_count: int, frame_shift_ms: float) -> npt.NDArray[np.float64]:
     """Return deterministic start timestamps for each CTC frame."""
 
     if frame_count <= 0:
@@ -46,4 +48,3 @@ def frame_times_ms(frame_count: int, frame_shift_ms: float) -> np.ndarray:
     if not math.isfinite(frame_shift_ms) or frame_shift_ms <= 0:
         raise ValueError("frame_shift_ms must be finite and positive")
     return np.arange(frame_count, dtype=np.float64) * frame_shift_ms
-

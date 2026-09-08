@@ -39,7 +39,7 @@ class StudentExportMetadata:
     direct_text_posteriors_exported: bool
 
 
-class _StudentOnnxWrapper(nn.Module):  # type: ignore[misc]
+class _StudentOnnxWrapper(nn.Module):
     def __init__(self, model: nn.Module) -> None:
         super().__init__()
         self.model = model
@@ -53,7 +53,7 @@ class _StudentOnnxWrapper(nn.Module):  # type: ignore[misc]
         return result.logits, result.frame_lengths
 
 
-class _ReferenceOnnxWrapper(nn.Module):  # type: ignore[misc]
+class _ReferenceOnnxWrapper(nn.Module):
     def __init__(self, model: nn.Module) -> None:
         super().__init__()
         self.model = model
@@ -93,7 +93,9 @@ def export_reference_onnx(
     lengths = torch.tensor([example_samples], dtype=torch.long)
     with torch.no_grad(), warnings.catch_warnings():
         warnings.filterwarnings("ignore", category=DeprecationWarning)
-        tracer_warning = cast(type[Warning], torch.jit.TracerWarning)
+        tracer_warning = cast(
+            type[Warning], torch.jit.TracerWarning  # type: ignore[attr-defined]
+        )
         warnings.filterwarnings("ignore", category=tracer_warning)
         warnings.filterwarnings("ignore", category=UserWarning)
         torch.onnx.export(
@@ -142,7 +144,7 @@ def export_student_onnx(
         with torch.no_grad(), warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=DeprecationWarning)
             tracer_warning = cast(
-                type[Warning], torch.jit.TracerWarning
+                type[Warning], torch.jit.TracerWarning  # type: ignore[attr-defined]
             )
             warnings.filterwarnings("ignore", category=tracer_warning)
             warnings.filterwarnings("ignore", category=UserWarning)

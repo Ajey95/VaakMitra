@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from typing import Self
+from typing import Any, Self
 
 import numpy as np
+import numpy.typing as npt
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
@@ -13,7 +14,7 @@ class AcousticOutput(BaseModel):
 
     model_config = ConfigDict(arbitrary_types_allowed=True, frozen=True)
 
-    log_probabilities: np.ndarray
+    log_probabilities: npt.NDArray[np.floating[Any]]
     frame_shift_ms: float = Field(gt=0)
     model_version: str = Field(min_length=1)
     vocabulary_version: str = Field(min_length=1)
@@ -36,4 +37,3 @@ class AcousticOutput(BaseModel):
         if not np.isfinite(probabilities).all():
             raise ValueError("log_probabilities must contain only finite values")
         return self
-

@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 import numpy as np
+import numpy.typing as npt
 
 from vaakmitra.acoustic.base import AcousticModelRuntime
 from vaakmitra.contracts.acoustic import AcousticOutput
@@ -33,7 +36,11 @@ class AssessmentPipeline:
         self._vocabulary = vocabulary
         self._config = config
 
-    def infer(self, audio: np.ndarray, sample_rate: int) -> AcousticOutput:
+    def infer(
+        self,
+        audio: npt.NDArray[np.floating[Any]],
+        sample_rate: int,
+    ) -> AcousticOutput:
         """Run the local model and validate the Member 1 probability contract."""
 
         self._validate_audio(audio, sample_rate)
@@ -116,7 +123,10 @@ class AssessmentPipeline:
         )
 
     @staticmethod
-    def _validate_audio(audio: np.ndarray, sample_rate: int) -> None:
+    def _validate_audio(
+        audio: npt.NDArray[np.floating[Any]],
+        sample_rate: int,
+    ) -> None:
         if sample_rate != 16000:
             raise ValueError("acoustic runtime requires a 16000 Hz sample rate")
         if not isinstance(audio, np.ndarray) or audio.ndim != 1:

@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, cast
 
 import numpy as np
+import numpy.typing as npt
 
 from vaakmitra.acoustic.metadata import ModelManifest, verify_model_integrity
 from vaakmitra.contracts.acoustic import AcousticOutput
@@ -68,7 +69,11 @@ class OnnxAcousticModelRuntime:
 
         return tuple(self._session.get_providers())
 
-    def infer(self, audio: np.ndarray, sample_rate: int) -> AcousticOutput:
+    def infer(
+        self,
+        audio: npt.NDArray[np.floating[Any]],
+        sample_rate: int,
+    ) -> AcousticOutput:
         """Run one mono waveform and normalize model output to `[frames, vocabulary]`."""
 
         if sample_rate != self._manifest.sample_rate:
@@ -107,10 +112,12 @@ class OnnxAcousticModelRuntime:
         )
 
 
-def _log_softmax(logits: np.ndarray) -> np.ndarray:
+def _log_softmax(
+    logits: npt.NDArray[np.floating[Any]],
+) -> npt.NDArray[np.floating[Any]]:
     maximum = np.max(logits, axis=1, keepdims=True)
     shifted = logits - maximum
     return cast(
-        np.ndarray,
+        npt.NDArray[np.floating[Any]],
         shifted - np.log(np.exp(shifted).sum(axis=1, keepdims=True)),
     )

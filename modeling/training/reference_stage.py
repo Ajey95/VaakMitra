@@ -313,7 +313,7 @@ def run_reference_stage(
                 )
                 raise FloatingPointError("non-finite training loss")
 
-            scaler.scale(loss / gradient_accumulation).backward()
+            torch.autograd.backward(scaler.scale(loss / gradient_accumulation))
             accumulated += 1
             is_last_batch = batch_index + 1 == len(order.batches)
             if accumulated < gradient_accumulation and not is_last_batch:

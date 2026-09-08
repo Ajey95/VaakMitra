@@ -52,8 +52,7 @@ class FullTrackSmokeReport(BaseModel):
         return result
 
 
-# PyTorch is an optional, externally typed dependency in the backend mypy boundary.
-class _FixtureEncoder(nn.Module):  # type: ignore[misc]
+class _FixtureEncoder(nn.Module):
     def __init__(self) -> None:
         super().__init__()
         self.layers = nn.ModuleList([nn.Linear(4, 8), nn.Linear(8, 8)])

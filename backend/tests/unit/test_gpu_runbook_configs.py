@@ -40,12 +40,8 @@ def test_local_model_tooling_keeps_numpy_compatible_with_python_311_mypy() -> No
 
     assert "numpy>=1.26,<2" in project["project"]["dependencies"]
     assert "numpy==1.26.4" in requirements.splitlines()
-    assert project["tool"]["mypy"]["overrides"] == [
-        {
-            "module": ["numpy", "numpy.*", "torch", "torch.*"],
-            "follow_imports": "skip",
-        }
-    ]
+    assert project["tool"]["mypy"]["exclude"] == ["^modeling/artifacts/"]
+    assert "overrides" not in project["tool"]["mypy"]
 
 
 def test_full_reference_has_exact_staged_transfer_schedule_and_fail_closed_inputs() -> None:

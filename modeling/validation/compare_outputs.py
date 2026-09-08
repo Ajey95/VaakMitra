@@ -6,6 +6,7 @@ from dataclasses import asdict, dataclass
 from typing import Any
 
 import numpy as np
+import numpy.typing as npt
 from vaakmitra.contracts.alignment import AlignedPhoneme
 from vaakmitra.ctc.probabilities import validate_log_probabilities
 from vaakmitra.ctc.vocabulary import PhonemeVocabulary
@@ -24,8 +25,8 @@ class OutputComparisonReport:
 
 
 def compare_probability_outputs(
-    fp32_log_probabilities: np.ndarray,
-    optimized_log_probabilities: np.ndarray,
+    fp32_log_probabilities: npt.NDArray[np.floating[Any]],
+    optimized_log_probabilities: npt.NDArray[np.floating[Any]],
     aligned_phonemes: tuple[AlignedPhoneme, ...],
     vocabulary: PhonemeVocabulary,
 ) -> OutputComparisonReport:

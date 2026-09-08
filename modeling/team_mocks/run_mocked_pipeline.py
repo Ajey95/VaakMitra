@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+import numpy.typing as npt
 from vaakmitra.contracts.acoustic import AcousticOutput
 from vaakmitra.contracts.alignment import SyllableDefinition
 from vaakmitra.ctc.vocabulary import PhonemeVocabulary
@@ -25,7 +26,11 @@ class _FixtureRuntime:
     def __init__(self, vocabulary: PhonemeVocabulary) -> None:
         self._vocabulary = vocabulary
 
-    def infer(self, audio: np.ndarray, sample_rate: int) -> AcousticOutput:
+    def infer(
+        self,
+        audio: npt.NDArray[np.floating[Any]],
+        sample_rate: int,
+    ) -> AcousticOutput:
         del audio, sample_rate
         probabilities = np.array(
             [

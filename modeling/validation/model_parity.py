@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+from typing import Any
 
 import numpy as np
 import numpy.typing as npt
@@ -20,7 +21,10 @@ class ModelParityReport(BaseModel):
     sequence_count: int = Field(gt=0)
 
 
-def _greedy_sequences(logits: npt.NDArray[np.floating], blank_index: int) -> tuple[tuple[int, ...], ...]:
+def _greedy_sequences(
+    logits: npt.NDArray[np.floating[Any]],
+    blank_index: int,
+) -> tuple[tuple[int, ...], ...]:
     sequences: list[tuple[int, ...]] = []
     for row in np.argmax(logits, axis=-1):
         output: list[int] = []
@@ -35,8 +39,8 @@ def _greedy_sequences(logits: npt.NDArray[np.floating], blank_index: int) -> tup
 
 
 def compare_model_parity(
-    reference_logits: npt.NDArray[np.floating],
-    candidate_logits: npt.NDArray[np.floating],
+    reference_logits: npt.NDArray[np.floating[Any]],
+    candidate_logits: npt.NDArray[np.floating[Any]],
     *,
     blank_index: int,
     reference_per: float,

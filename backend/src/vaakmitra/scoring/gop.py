@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import math
+from typing import Any
 
 import numpy as np
+import numpy.typing as npt
 
 from vaakmitra.contracts.acoustic import AcousticOutput
 from vaakmitra.contracts.alignment import AlignmentResult
@@ -21,7 +23,11 @@ class UnscorableEvidenceError(ValueError):
         super().__init__(reason)
 
 
-def phoneme_gop(segment: np.ndarray, expected_index: int, blank_index: int) -> float:
+def phoneme_gop(
+    segment: npt.NDArray[np.floating[Any]],
+    expected_index: int,
+    blank_index: int,
+) -> float:
     """Return sigmoid of expected mean log posterior versus strongest competitor."""
 
     if not isinstance(segment, np.ndarray) or segment.ndim != 2 or segment.shape[0] == 0:
@@ -99,4 +105,3 @@ def score_aligned_phonemes(
             )
         )
     return tuple(scores)
-
