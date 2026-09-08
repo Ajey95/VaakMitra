@@ -15,6 +15,14 @@ This branch implements only Backend Member 2's local speech-intelligence scope:
 
 See `docs/superpowers/specs/2026-08-02-member2-speech-intelligence-design.md` for the approved design.
 
+## Training-first Colab handoff
+
+The seven-day path prioritizes a resumable AI4Bharat IndicConformer phoneme-head reference model
+before optional student distillation. The committed Colab notebook runs a measured GPU canary,
+head-only training and export, gated adaptive stages, and write-once reference evidence. Start with
+`docs/verification/training-first-colab-preflight.md`. Local tests prove orchestration and exact
+resume behavior; they do not prove that the external Colab GPU run or clinical validation is done.
+
 ## Repository layout
 
 ```text

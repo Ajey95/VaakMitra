@@ -199,3 +199,15 @@ Physical or emulator Android JSON is reduced with:
 
 Only a physical report with at least 30 runs, offline/network-denial evidence, a matching model
 hash, and P95 at or below 500 ms can pass the device gate.
+
+## Deadline reference-training path
+
+`notebooks/VaakMitra_GPU_Training_Colab.ipynb` is now the executable training-first orchestrator.
+It loads `modeling/training/gpu/deadline-profiles.json`, binds the run to a clean resolved Git
+commit, rejects excessive unknown-phone coverage, measures a 30-minute GPU canary, and trains the
+reference through the shared mid-epoch checkpoint engine. The head checkpoint and native manifest
+are frozen before optional adaptive stages or student work.
+
+This implementation is locally verified, but the real gated IndicConformer CUDA run is not yet
+evidence. Follow `docs/verification/training-first-colab-preflight.md`; only Drive checkpoints,
+`canary-report.json`, and inspected reference metrics from that run can establish GPU completion.

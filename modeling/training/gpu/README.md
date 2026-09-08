@@ -147,3 +147,45 @@ The notebook writes aggregate reference metrics, the private teacher-feature man
 student reports, FP32/INT8 ONNX candidates, artifact hashes, and `vaakmitra-gpu-results.zip` under
 `MyDrive/VaakMitraGPU/runs/`. Without an expert-reviewed inventory, every output is labelled
 provisional and must be retrained after clinician review.
+
+## 7. Training-first Colab launch for the seven-day deadline
+
+The committed notebook defaults to `TRAINING_PROFILE_NAME="deadline_7day"`. That profile makes
+the adult Tamil reference the mandatory result, limits student work to Compact Conformer, and
+records Conv-BiGRU as deferred. It uses batch size 1, gradient accumulation 8, deterministic
+length buckets, and a checkpoint every 500 optimizer updates. The full encoder stage is optional:
+it runs only when the top-block stage improves validation PER by at least 0.005 and its projected
+runtime fits the remaining session.
+
+Before opening Colab, upload
+`modeling/artifacts/colab/vaakmitra-colab-private-metadata.zip` to
+`/content/drive/MyDrive/VaakMitraGPU/inputs/`. Put the pinned OpenSLR archive there too, or leave
+download enabled. The notebook requires 13,803,410,250 archive bytes, 17,314,415,289 extracted
+bytes, and a 10 GiB working reserve before it stages the corpus. It verifies the pinned archive
+size and SHA-256 before extraction.
+
+Accept the AI4Bharat model conditions first. Store `HF_TOKEN` only in Colab Secrets—never in the
+notebook, Drive filenames, Git, or terminal output. Push the intended repository commit and set
+`VAAKMITRA_REPOSITORY_REF` to that branch or commit. The repository cell clones into
+`/content/vaakmitra-source`, resolves a 40-character commit, checks it out detached, rejects a
+dirty tree, and writes the resolved commit into the run binding.
+
+Select a Colab GPU runtime and execute from `configuration`. CondaColab intentionally restarts the
+runtime once; after that restart, rerun from the configuration cell. Run through `gpu-canary`
+before committing the remaining GPU time. The canary runs for at least 1,800 seconds under the
+deadline profile, saves a durable checkpoint, reloads it, performs one more update, and writes
+`canary-report.json`. Continue only when losses are finite, the checkpoint hash verifies, resume
+passes, and the projected mandatory reference work fits the remaining deadline.
+
+If Colab preempts the job, reconnect and rerun from the configuration cell. A compatible run
+resumes at the next unapplied optimizer boundary; a binding mismatch fails closed. Inspect Drive
+for `run-status.json`, the numbered checkpoint and sidecar hash before continuing. Never delete a
+local checkpoint merely because its Drive copy failed.
+
+The valid evidence ceiling is an adult Tamil engineering proxy. It is not child or clinical validation,
+does not prove articulation-error thresholds, and must keep `production_ready=false`.
+Download `vaakmitra-gpu-results.zip` for aggregate evidence and download the selected native
+checkpoint separately; native weights intentionally stay outside the public evidence bundle.
+
+Use the exact checklist in `docs/verification/training-first-colab-preflight.md` before spending
+Colab credits.
