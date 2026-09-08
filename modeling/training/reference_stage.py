@@ -320,6 +320,11 @@ def run_reference_stage(
                 continue
 
             scaler.unscale_(optimizer)
+            if accumulated < gradient_accumulation:
+                correction = gradient_accumulation / accumulated
+                for parameter in model.parameters():
+                    if parameter.grad is not None:
+                        parameter.grad.mul_(correction)
             gradient_norm = torch.nn.utils.clip_grad_norm_(
                 tuple(parameter for parameter in model.parameters() if parameter.requires_grad),
                 gradient_clip_norm,
@@ -360,6 +365,89 @@ def run_reference_stage(
                     history=history,
                 )
 
+            decision = session_budget.decision()
+            requested_stop = (
+                stop_after_global_update is not None
+                and cursor.global_update >= stop_after_global_update
+            )
+            if decision.should_stop or requested_stop:
+                if latest is None or cursor.global_update % checkpoint_every_updates:
+                    latest = _save(
+                        local_dir=local_dir,
+                        durable_dir=durable_dir,
+                        binding_sha256=binding_sha256,
+                        cursor=cursor,
+                        model=model,
+                        optimizer=optimizer,
+                        scaler=scaler,
+                        best_validation_per=best_validation_per,
+                        history=history,
+                    )
+                _write_status(
+                    status_path,
+                    status="checkpointed_for_session_stop",
+                    binding_sha256=binding_sha256,
+                    cursor=cursor,
+                    checkpoint=latest,
+                    decision=decision,
+                    reason=(
+                        decision.reason
+                        if decision.should_stop
+                        else "requested_global_update_stop"
+                    ),
+                )
+                return StageResult(
+                    "checkpointed_for_session_stop",
+                    stage,
+                    cursor.global_update,
+                    best_validation_per,
+                    tuple(history),
+                    latest.durable_path,
+                )
+
+        if accumulated:
+            scaler.unscale_(optimizer)
+            correction = gradient_accumulation / accumulated
+            for parameter in model.parameters():
+                if parameter.grad is not None:
+                    parameter.grad.mul_(correction)
+            gradient_norm = torch.nn.utils.clip_grad_norm_(
+                tuple(parameter for parameter in model.parameters() if parameter.requires_grad),
+                gradient_clip_norm,
+            )
+            if not bool(torch.isfinite(gradient_norm).item()):
+                _write_failure(
+                    durable_dir,
+                    stage=stage,
+                    code="non_finite_gradient_norm",
+                    binding_sha256=binding_sha256,
+                    cursor=cursor,
+                    scalar_summary={"gradient_norm_finite": False},
+                )
+                raise FloatingPointError("non-finite gradient norm")
+            scaler.step(optimizer)
+            scaler.update()
+            optimizer.zero_grad(set_to_none=True)
+            cursor = ResumeCursor(
+                stage,
+                epoch,
+                len(order.batches),
+                cursor.global_update + 1,
+                epoch,
+                order.order_sha256,
+            )
+            if cursor.global_update % checkpoint_every_updates == 0:
+                latest = _save(
+                    local_dir=local_dir,
+                    durable_dir=durable_dir,
+                    binding_sha256=binding_sha256,
+                    cursor=cursor,
+                    model=model,
+                    optimizer=optimizer,
+                    scaler=scaler,
+                    best_validation_per=best_validation_per,
+                    history=history,
+                )
             decision = session_budget.decision()
             requested_stop = (
                 stop_after_global_update is not None

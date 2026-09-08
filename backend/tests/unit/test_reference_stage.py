@@ -267,3 +267,42 @@ def test_head_only_stage_keeps_acoustic_module_in_evaluation_mode(tmp_path: Path
     )
 
     assert observed_modes == [False]
+
+
+def test_partial_accumulation_is_flushed_when_final_batches_are_skipped(
+    tmp_path: Path,
+) -> None:
+    model = _make_model(17)
+    starting_weight = model.weight.detach().clone()
+    calls = 0
+
+    def train_batch(active_model: nn.Module, _indexes: tuple[int, ...]) -> torch.Tensor | None:
+        nonlocal calls
+        calls += 1
+        if calls > 1:
+            return None
+        return active_model(torch.ones(1, 1)).square().mean()
+
+    result = run_reference_stage(
+        model=model,
+        optimizer=torch.optim.SGD(model.parameters(), lr=0.02),
+        scaler=IdentityScaler(),
+        stage="head_only",
+        epochs=1,
+        length_records=tuple(LengthRecord(index, 1) for index in range(3)),
+        batch_size=1,
+        bucket_size=3,
+        seed=17,
+        gradient_accumulation=2,
+        binding_sha256="a" * 64,
+        local_dir=tmp_path / "local",
+        durable_dir=tmp_path / "durable",
+        session_budget=SessionBudget(time.monotonic(), 3_600, 60, time.monotonic),
+        train_batch=train_batch,
+        evaluate_validation=lambda _model: {"phoneme_error_rate": 1.0},
+        checkpoint_every_updates=2,
+        status_path=tmp_path / "run-status.json",
+    )
+
+    assert result.global_updates == 1
+    assert not torch.equal(model.weight, starting_weight)
