@@ -39,7 +39,7 @@ class StudentExportMetadata:
     direct_text_posteriors_exported: bool
 
 
-class _StudentOnnxWrapper(nn.Module):
+class _StudentOnnxWrapper(nn.Module):  # type: ignore[misc]
     def __init__(self, model: nn.Module) -> None:
         super().__init__()
         self.model = model
@@ -51,6 +51,68 @@ class _StudentOnnxWrapper(nn.Module):
         if not isinstance(result, StudentOutput):
             raise TypeError("student model must return StudentOutput")
         return result.logits, result.frame_lengths
+
+
+class _ReferenceOnnxWrapper(nn.Module):  # type: ignore[misc]
+    def __init__(self, model: nn.Module) -> None:
+        super().__init__()
+        self.model = model
+
+    def forward(
+        self,
+        audio: torch.Tensor,
+        input_lengths: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        result = self.model(audio, input_lengths)
+        if not isinstance(result, tuple) or len(result) != 2:
+            raise TypeError("reference model must return logits and frame lengths")
+        logits, frame_lengths = result
+        if not isinstance(logits, torch.Tensor) or not isinstance(
+            frame_lengths, torch.Tensor
+        ):
+            raise TypeError("reference outputs must be tensors")
+        return logits, frame_lengths
+
+
+def export_reference_onnx(
+    model: nn.Module,
+    output_path: str | Path,
+    *,
+    example_samples: int = 16_000,
+) -> ArtifactRecord:
+    """Export a tuple-returning reference model with dynamic batch and sample axes."""
+
+    if example_samples < 400:
+        raise ValueError("example_samples must be at least 400")
+    output = Path(output_path)
+    if output.exists():
+        raise ValueError("reference ONNX output exists; refusing to overwrite")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    wrapper = _ReferenceOnnxWrapper(model.cpu().eval())
+    audio = torch.zeros((1, example_samples), dtype=torch.float32)
+    lengths = torch.tensor([example_samples], dtype=torch.long)
+    with torch.no_grad(), warnings.catch_warnings():
+        warnings.filterwarnings("ignore", category=DeprecationWarning)
+        tracer_warning = cast(type[Warning], torch.jit.TracerWarning)
+        warnings.filterwarnings("ignore", category=tracer_warning)
+        warnings.filterwarnings("ignore", category=UserWarning)
+        torch.onnx.export(
+            wrapper,
+            (audio, lengths),
+            str(output),
+            input_names=["audio", "input_lengths"],
+            output_names=["phoneme_logits", "frame_lengths"],
+            dynamic_axes={
+                "audio": {0: "batch", 1: "samples"},
+                "input_lengths": {0: "batch"},
+                "phoneme_logits": {0: "batch", 1: "frames"},
+                "frame_lengths": {0: "batch"},
+            },
+            opset_version=17,
+            do_constant_folding=True,
+            dynamo=False,
+        )
+    return describe_artifact(output)
 
 
 def export_student_onnx(
@@ -80,7 +142,7 @@ def export_student_onnx(
         with torch.no_grad(), warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=DeprecationWarning)
             tracer_warning = cast(
-                type[Warning], torch.jit.TracerWarning  # type: ignore[attr-defined]
+                type[Warning], torch.jit.TracerWarning
             )
             warnings.filterwarnings("ignore", category=tracer_warning)
             warnings.filterwarnings("ignore", category=UserWarning)

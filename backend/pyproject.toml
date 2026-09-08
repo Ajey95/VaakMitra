@@ -48,5 +48,18 @@ strict = true
 packages = ["vaakmitra"]
 
 [[tool.mypy.overrides]]
-module = ["numpy", "numpy.*", "torch", "torch.*"]
+module = [
+  "numpy",
+  "numpy.*",
+  "onnx",
+  "onnx.*",
+  "onnxruntime",
+  "onnxruntime.*",
+  "torch",
+  "torch.*",
+]
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = ["modeling.distillation.teacher_features"]
 follow_imports = "skip"

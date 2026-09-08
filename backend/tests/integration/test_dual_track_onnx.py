@@ -8,8 +8,65 @@ import pytest
 import torch
 from modeling.distillation.students import CompactConformerCtc, CompactConvBiGruCtc
 from modeling.export.export_onnx import export_student_onnx
+from modeling.export.reference_artifact import export_reference_candidate
 from modeling.quantization.quantize_onnx import quantize_dynamic_int8
 from modeling.validation.model_parity import compare_model_parity
+from torch import nn
+
+
+class _ReferenceFixture(nn.Module):
+    def forward(
+        self,
+        audio: torch.Tensor,
+        input_lengths: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        frames = audio[:, ::4]
+        logits = torch.stack((torch.zeros_like(frames), frames, -frames), dim=-1)
+        frame_lengths = torch.div(input_lengths + 3, 4, rounding_mode="floor")
+        return logits, frame_lengths
+
+
+def test_reference_candidate_exports_dynamic_onnx_with_pytorch_parity(
+    tmp_path: Path,
+) -> None:
+    model = _ReferenceFixture().eval()
+    checkpoint = tmp_path / "selected.pt"
+    checkpoint.write_bytes(b"native checkpoint")
+    validation = tmp_path / "validation.json"
+    validation.write_text('{"phoneme_error_rate":0.4}\n', encoding="utf-8")
+    result = export_reference_candidate(
+        model=model,
+        native_checkpoint=checkpoint,
+        output_dir=tmp_path / "reference",
+        tokens=("<blank>", "a", "b"),
+        run_binding={"binding_sha256": "c" * 64},
+        artifact_role="head_only_candidate",
+        selected_stage="head_only",
+        validation_metrics_path=validation,
+        test_metrics_path=None,
+        sample_rate_hz=16_000,
+        frame_subsampling=4,
+    )
+
+    assert result.onnx_status == "passed"
+    assert result.onnx_path is not None
+    session = ort.InferenceSession(str(result.onnx_path), providers=["CPUExecutionProvider"])
+    for sample_count in (16_000, 32_000):
+        audio = np.linspace(-0.5, 0.5, sample_count, dtype=np.float32)[None, :]
+        lengths = np.array([sample_count], dtype=np.int64)
+        onnx_logits, onnx_lengths = session.run(
+            None,
+            {"audio": audio, "input_lengths": lengths},
+        )
+        with torch.inference_mode():
+            torch_logits, torch_lengths = model(
+                torch.from_numpy(audio),
+                torch.from_numpy(lengths),
+            )
+        assert onnx_logits.shape == tuple(torch_logits.shape)
+        assert onnx_lengths.tolist() == torch_lengths.tolist()
+        assert np.isfinite(onnx_logits).all()
+        assert np.max(np.abs(onnx_logits - torch_logits.numpy())) < 1e-6
 
 
 @pytest.mark.parametrize("architecture", ["conformer", "conv_bigru"])
