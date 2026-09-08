@@ -13,6 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 StageName = Literal["head_only", "top_encoder_blocks", "full_encoder"]
 SplitName = Literal["train", "validation", "test"]
+TRAINING_CONTRACT_VERSION = "2.0"
 
 
 class TrainingProfileName(str, Enum):

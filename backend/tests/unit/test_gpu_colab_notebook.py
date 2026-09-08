@@ -58,9 +58,17 @@ def test_colab_notebook_exposes_the_frozen_gpu_execution_contract() -> None:
             "text_posterior_kl": 0.0,
         },
         "maximum_relative_student_per_degradation": 0.1,
+        "default_profile": "deadline_7day",
+        "checkpoint_every_updates": 500,
+        "maximum_students": 1,
+        "maximum_unknown_phone_record_rate": 0.05,
+        "canary_seconds": 1800,
         "outputs": [
             "run-manifest.json",
+            "canary-report.json",
             "reference-metrics.json",
+            "reference-artifact-head-only.json",
+            "reference-artifact-manifest.json",
             "teacher-feature-manifest.json",
             "student-comparison.json",
             "artifact-hashes.json",
@@ -85,10 +93,14 @@ def test_colab_notebook_has_ordered_resume_safe_executable_phases() -> None:
         "teacher-access-and-probe",
         "corpus-materialization",
         "phoneme-targets",
-        "reference-training",
+        "gpu-canary",
+        "reference-head-training",
+        "reference-head-export",
+        "reference-adaptive-training",
+        "reference-final-export",
         "teacher-features",
         "student-training",
-        "evaluation-export",
+        "optional-student-export",
         "results-bundle",
     ]
     assert all(cell["cell_type"] in {"markdown", "code"} for cell in cells)
@@ -109,6 +121,11 @@ def test_colab_notebook_has_ordered_resume_safe_executable_phases() -> None:
     assert "insertions" in code
     assert "quantize_dynamic" in code
     assert "physical_device_required" in code
+    assert 'TRAINING_PROFILE_NAME = "deadline_7day"' in code
+    assert "VAAKMITRA_REPOSITORY_URL" in code
+    assert "VAAKMITRA_REPOSITORY_REF" in code
+    assert "shutil.disk_usage" in code
+    assert "17_314_415_289" in code
 
 
 def test_colab_environment_restart_is_condacolab_state_driven() -> None:
@@ -123,3 +140,10 @@ def test_colab_environment_restart_is_condacolab_state_driven() -> None:
     assert "if conda_ready:" in code
     assert "raise SystemExit" not in code
     assert "sys.version_info[:2] != (3, 10)" not in code
+
+
+def test_every_code_cell_is_valid_python() -> None:
+    notebook = _load_notebook()
+    for cell in notebook["cells"]:
+        if cell["cell_type"] == "code":
+            compile("".join(cell["source"]), f"notebook:{cell['id']}", "exec")
