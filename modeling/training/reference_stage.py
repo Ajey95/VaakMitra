@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import platform
 from collections.abc import Callable, Mapping, Sequence
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -129,10 +130,29 @@ def _write_json_atomic(path: Path, payload: Mapping[str, object]) -> None:
     os.replace(temporary, path)
 
 
-def _write_failure(durable_dir: Path, *, stage: CheckpointStage, code: str) -> None:
+def _write_failure(
+    durable_dir: Path,
+    *,
+    stage: CheckpointStage,
+    code: str,
+    binding_sha256: str,
+    cursor: ResumeCursor,
+    scalar_summary: Mapping[str, object],
+) -> None:
     _write_json_atomic(
         durable_dir / "diagnostic-failure.json",
-        {"failure_code": code, "stage": stage},
+        {
+            "binding_sha256": binding_sha256,
+            "cursor": asdict(cursor),
+            "environment": {
+                "cuda": torch.version.cuda,
+                "python": platform.python_version(),
+                "torch": torch.__version__,
+            },
+            "failure_code": code,
+            "scalar_summary": dict(scalar_summary),
+            "stage": stage,
+        },
     )
 
 
@@ -177,6 +197,7 @@ def _write_status(
     cursor: ResumeCursor,
     checkpoint: VerifiedCheckpoint,
     decision: StopDecision,
+    reason: str | None,
 ) -> None:
     _write_json_atomic(
         status_path,
@@ -186,6 +207,7 @@ def _write_status(
             "cursor": asdict(cursor),
             "elapsed_seconds": decision.elapsed_seconds,
             "production_ready": False,
+            "reason": reason,
             "stage": cursor.stage,
             "status": status,
         },
@@ -269,6 +291,11 @@ def run_reference_stage(
             raise ValueError("checkpoint batch order mismatch")
 
         model.train()
+        if stage == "head_only":
+            for attribute in ("acoustic", "encoder"):
+                frozen_encoder = getattr(model, attribute, None)
+                if isinstance(frozen_encoder, nn.Module):
+                    frozen_encoder.eval()
         optimizer.zero_grad(set_to_none=True)
         accumulated = 0
         for batch_index in range(next_batch_index, len(order.batches)):
@@ -280,6 +307,9 @@ def run_reference_stage(
                     durable_dir,
                     stage=stage,
                     code="non_finite_training_loss",
+                    binding_sha256=binding_sha256,
+                    cursor=cursor,
+                    scalar_summary={"loss_finite": False},
                 )
                 raise FloatingPointError("non-finite training loss")
 
@@ -299,6 +329,9 @@ def run_reference_stage(
                     durable_dir,
                     stage=stage,
                     code="non_finite_gradient_norm",
+                    binding_sha256=binding_sha256,
+                    cursor=cursor,
+                    scalar_summary={"gradient_norm_finite": False},
                 )
                 raise FloatingPointError("non-finite gradient norm")
             scaler.step(optimizer)
@@ -352,6 +385,11 @@ def run_reference_stage(
                     cursor=cursor,
                     checkpoint=latest,
                     decision=decision,
+                    reason=(
+                        decision.reason
+                        if decision.should_stop
+                        else "requested_global_update_stop"
+                    ),
                 )
                 return StageResult(
                     "checkpointed_for_session_stop",
@@ -413,6 +451,7 @@ def run_reference_stage(
         cursor=cursor,
         checkpoint=latest,
         decision=decision,
+        reason=None,
     )
     return StageResult(
         "complete",

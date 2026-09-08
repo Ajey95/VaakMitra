@@ -18,6 +18,10 @@ def test_full_track_cpu_smoke_is_deterministic_and_explicitly_not_teacher_traini
     assert first.upstream_checkpoint_loaded is False
     assert first.cuda_training_completed is False
     assert first.final_loss >= 0.0
+    assert first.checkpoint_schema_version == "2.0"
+    assert first.mid_epoch_resume_verified is True
+    assert len(first.final_state_sha256) == 64
+    assert set(first.final_state_sha256) <= set("0123456789abcdef")
 
     output = tmp_path / "full-smoke.json"
     write_smoke_report(output, first)

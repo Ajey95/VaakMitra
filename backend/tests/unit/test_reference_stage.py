@@ -101,6 +101,9 @@ def test_resumed_fixture_training_matches_uninterrupted_weights(tmp_path: Path) 
         stop_after=None,
     )
     _, stopped_updates, stopped_status = _run(tmp_path / "resumed", stop_after=2)
+    stopped_report = json.loads(
+        (tmp_path / "resumed" / "run-status.json").read_text(encoding="utf-8")
+    )
     resumed_model, resumed_updates, resumed_status = _run(
         tmp_path / "resumed",
         stop_after=None,
@@ -109,6 +112,7 @@ def test_resumed_fixture_training_matches_uninterrupted_weights(tmp_path: Path) 
     assert uninterrupted_status == "complete"
     assert stopped_status == "checkpointed_for_session_stop"
     assert stopped_updates == 2
+    assert stopped_report["reason"] == "requested_global_update_stop"
     assert resumed_status == "complete"
     assert resumed_updates == uninterrupted_updates
     for name, value in uninterrupted_model.state_dict().items():
@@ -211,10 +215,55 @@ def test_non_finite_training_loss_writes_sanitized_diagnostic(tmp_path: Path) ->
             status_path=tmp_path / "run-status.json",
         )
 
-    diagnostic = (tmp_path / "durable" / "diagnostic-failure.json").read_text(
-        encoding="utf-8"
-    )
+    diagnostic_path = tmp_path / "durable" / "diagnostic-failure.json"
+    diagnostic = diagnostic_path.read_text(encoding="utf-8")
+    payload = json.loads(diagnostic)
+    assert payload["binding_sha256"] == "a" * 64
+    assert payload["cursor"]["global_update"] == 0
+    assert payload["scalar_summary"] == {"loss_finite": False}
+    assert set(payload["environment"]) == {"cuda", "python", "torch"}
     assert "non_finite_training_loss" in diagnostic
     assert "audio" not in diagnostic
     assert "transcript" not in diagnostic
     assert "target" not in diagnostic
+
+
+def test_head_only_stage_keeps_acoustic_module_in_evaluation_mode(tmp_path: Path) -> None:
+    class HeadModel(nn.Module):
+        def __init__(self) -> None:
+            super().__init__()
+            self.acoustic = nn.Linear(1, 1)
+            self.phoneme_head = nn.Linear(1, 1)
+
+    model = HeadModel()
+    for parameter in model.acoustic.parameters():
+        parameter.requires_grad = False
+    observed_modes: list[bool] = []
+
+    def train_batch(active_model: nn.Module, _indexes: tuple[int, ...]) -> torch.Tensor:
+        assert isinstance(active_model, HeadModel)
+        observed_modes.append(active_model.acoustic.training)
+        return active_model.phoneme_head(torch.ones(1, 1)).square().mean()
+
+    run_reference_stage(
+        model=model,
+        optimizer=torch.optim.SGD(model.phoneme_head.parameters(), lr=0.01),
+        scaler=IdentityScaler(),
+        stage="head_only",
+        epochs=1,
+        length_records=(LengthRecord(0, 1),),
+        batch_size=1,
+        bucket_size=1,
+        seed=17,
+        gradient_accumulation=1,
+        binding_sha256="a" * 64,
+        local_dir=tmp_path / "local",
+        durable_dir=tmp_path / "durable",
+        session_budget=SessionBudget(time.monotonic(), 3_600, 60, time.monotonic),
+        train_batch=train_batch,
+        evaluate_validation=lambda _model: {"phoneme_error_rate": 1.0},
+        checkpoint_every_updates=2,
+        status_path=tmp_path / "run-status.json",
+    )
+
+    assert observed_modes == [False]
