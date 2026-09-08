@@ -1,8 +1,13 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any, cast
+from unittest import mock
+
+import pytest
 
 NOTEBOOK = Path("notebooks/VaakMitra_GPU_Training_Colab.ipynb")
 
@@ -128,18 +133,44 @@ def test_colab_notebook_has_ordered_resume_safe_executable_phases() -> None:
     assert "17_314_415_289" in code
 
 
-def test_colab_environment_restart_is_condacolab_state_driven() -> None:
+def test_colab_environment_rejects_unsupported_python_before_installing() -> None:
     notebook = _load_notebook()
     environment = next(
         cell for cell in notebook["cells"] if cell["id"] == "environment"
     )
     code = "".join(environment["source"])
 
-    assert "condacolab.check()" in code
-    assert "conda_ready = False" in code
-    assert "if conda_ready:" in code
-    assert "raise SystemExit" not in code
-    assert "sys.version_info[:2] != (3, 10)" not in code
+    fake_condacolab = SimpleNamespace(
+        check=mock.Mock(side_effect=AssertionError),
+        install=mock.Mock(),
+    )
+
+    with (
+        mock.patch.object(sys, "version_info", (3, 13, 0, "final", 0)),
+        mock.patch.dict(sys.modules, {"condacolab": fake_condacolab}),
+        mock.patch("subprocess.run") as subprocess_run,
+        pytest.raises(RuntimeError, match=r"2025\.07.*Python 3\.11"),
+    ):
+        exec(
+            compile(code, "notebook:environment", "exec"),
+            {
+                "AI4BHARAT_NEMO_REVISION": "test-revision",
+                "Path": Path,
+            },
+        )
+
+    subprocess_run.assert_not_called()
+
+
+def test_colab_environment_uses_the_native_python_311_runtime() -> None:
+    notebook = _load_notebook()
+    environment = next(
+        cell for cell in notebook["cells"] if cell["id"] == "environment"
+    )
+    code = "".join(environment["source"])
+
+    assert notebook["metadata"]["language_info"]["version"] == "3.11"
+    assert "condacolab" not in code.lower()
 
 
 def test_every_code_cell_is_valid_python() -> None:

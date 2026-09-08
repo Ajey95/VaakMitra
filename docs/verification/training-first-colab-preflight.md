@@ -23,9 +23,9 @@ is not child or clinical validation.
 1. Open `notebooks/VaakMitra_GPU_Training_Colab.ipynb` from the pushed revision.
 2. Confirm `TRAINING_PROFILE_NAME="deadline_7day"` and set `VAAKMITRA_REPOSITORY_REF` to the pushed
    branch or exact commit.
-3. Run `configuration`, then `environment`. CondaColab performs one expected restart.
-4. After the restart, rerun from the configuration cell. Verify the detached repository commit and
-   clean-tree checks before proceeding.
+3. In `Runtime > Change runtime type`, select runtime version `2025.07` and a GPU. Reconnect and
+   run `configuration`, then `environment`; the environment cell requires native Python 3.11.
+4. Verify the detached repository commit and clean-tree checks before proceeding.
 5. Run through `gpu-canary`. Do not start `reference-head-training` until the report below passes.
 
 | Gate | Required value |

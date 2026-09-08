@@ -170,9 +170,10 @@ notebook, Drive filenames, Git, or terminal output. Push the intended repository
 `/content/vaakmitra-source`, resolves a 40-character commit, checks it out detached, rejects a
 dirty tree, and writes the resolved commit into the run binding.
 
-Select a Colab GPU runtime and execute from `configuration`. CondaColab intentionally restarts the
-runtime once; after that restart, rerun from the configuration cell. Run through `gpu-canary`
-before committing the remaining GPU time. The canary runs for at least 1,800 seconds under the
+Select the Colab `2025.07` fallback runtime with a GPU; this is the currently available Python
+3.11 image compatible with the pinned PyTorch wheel. The environment cell fails before installing
+anything if Colab silently assigns another Python version. Execute from `configuration`, then run
+through `gpu-canary` before committing the remaining GPU time. The canary runs for at least 1,800 seconds under the
 deadline profile, saves a durable checkpoint, reloads it, performs one more update, and writes
 `canary-report.json`. Continue only when losses are finite, the checkpoint hash verifies, resume
 passes, and the projected mandatory reference work fits the remaining deadline.

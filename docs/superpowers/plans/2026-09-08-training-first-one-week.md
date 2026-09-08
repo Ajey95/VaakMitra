@@ -6,7 +6,7 @@
 
 **Architecture:** Pure Python modules under `modeling/training/` own profiles, deterministic batch order, resume cursors, checkpoint integrity, session budgets, and canary metrics. `notebooks/VaakMitra_GPU_Training_Colab.ipynb` remains the Colab-facing orchestrator and uses those tested modules after cloning the pinned VaakMitra commit. Google Drive holds durable manifests/checkpoints/final artifacts; corpus extraction and hot training reads use `/content`.
 
-**Tech Stack:** Python 3.10.12 in Colab, Python 3.11 local tests, PyTorch/torchaudio 2.2.0 CUDA 12.1, pinned AI4Bharat NeMo commit `8dce88cf8e94963e2033c3137f7b9993b51db88a`, Pydantic 2, NumPy 1.26, ONNX opset 17, ONNX Runtime, pytest, Ruff, strict mypy, Jupyter notebook JSON.
+**Tech Stack:** Colab runtime `2025.07` with native Python 3.11, Python 3.11 local tests, PyTorch/torchaudio 2.2.0 CUDA 12.1, pinned AI4Bharat NeMo commit `8dce88cf8e94963e2033c3137f7b9993b51db88a`, Pydantic 2, NumPy 1.26, ONNX opset 17, ONNX Runtime, pytest, Ruff, strict mypy, Jupyter notebook JSON.
 
 **Spec:** `docs/superpowers/specs/2026-09-08-training-first-one-week-design.md`
 
@@ -845,7 +845,7 @@ The operator must:
 3. Accept AI4Bharat model conditions and place `HF_TOKEN` only in Colab Secrets.
 4. Select a GPU runtime, confirm the repository ref, execute from configuration, and verify the
    resolved commit printed by the repository cell.
-5. After the expected CondaColab restart, rerun from configuration.
+5. Confirm the environment cell reports Python 3.11, the pinned PyTorch version, and the assigned GPU.
 6. Inspect `canary-report.json` before the long stage.
 7. After preemption, reconnect and rerun from configuration; compatible checkpoints resume at the
    next unapplied optimizer boundary.
