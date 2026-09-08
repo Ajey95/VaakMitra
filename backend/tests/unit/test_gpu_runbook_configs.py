@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import tomllib
 from pathlib import Path
 from typing import Any, cast
 
@@ -29,6 +30,22 @@ def test_environment_pins_compatible_python_cuda_torch_and_ai4bharat_nemo() -> N
         "revision": NEMO_REVISION,
         "install_extra": "asr",
     }
+
+
+def test_local_model_tooling_keeps_numpy_compatible_with_python_311_mypy() -> None:
+    project = tomllib.loads(Path("backend/pyproject.toml").read_text(encoding="utf-8"))
+    requirements = Path("modeling/training/requirements-cpu.txt").read_text(
+        encoding="utf-8"
+    )
+
+    assert "numpy>=1.26,<2" in project["project"]["dependencies"]
+    assert "numpy==1.26.4" in requirements.splitlines()
+    assert project["tool"]["mypy"]["overrides"] == [
+        {
+            "module": ["numpy", "numpy.*", "torch", "torch.*"],
+            "follow_imports": "skip",
+        }
+    ]
 
 
 def test_full_reference_has_exact_staged_transfer_schedule_and_fail_closed_inputs() -> None:
