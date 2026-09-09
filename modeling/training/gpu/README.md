@@ -164,8 +164,12 @@ download enabled. The notebook requires 13,803,410,250 archive bytes, 17,314,415
 bytes, and a 10 GiB working reserve before it stages the corpus. It verifies the pinned archive
 size and SHA-256 before extraction.
 
-Accept the AI4Bharat model conditions first. Store `HF_TOKEN` only in Colab Secrets—never in the
-notebook, Drive filenames, Git, or terminal output. Push the intended repository commit and set
+Because the VaakMitra repository is private, create a fine-grained GitHub token limited to this
+repository with read-only Contents access. Store it as `GH_TOKEN` in Colab Secrets and enable
+notebook access. The notebook sends it through a temporary Git authorization header; it never
+places the token in the clone URL or printed command. Accept the AI4Bharat model conditions and
+store its token separately as `HF_TOKEN` in Colab Secrets. Never put either token in the notebook,
+Drive filenames, Git, or terminal output. Push the intended repository commit and set
 `VAAKMITRA_REPOSITORY_REF` to that branch or commit. The repository cell clones into
 `/content/vaakmitra-source`, resolves a 40-character commit, checks it out detached, rejects a
 dirty tree, and writes the resolved commit into the run binding.

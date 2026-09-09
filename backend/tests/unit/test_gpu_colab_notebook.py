@@ -173,6 +173,32 @@ def test_colab_environment_uses_the_native_python_311_runtime() -> None:
     assert "condacolab" not in code.lower()
 
 
+def test_private_github_checkout_uses_colab_secret_without_printing_token() -> None:
+    notebook = _load_notebook()
+    configuration = next(
+        cell for cell in notebook["cells"] if cell["id"] == "configuration"
+    )
+    environment = next(cell for cell in notebook["cells"] if cell["id"] == "environment")
+    checkout = next(
+        cell for cell in notebook["cells"] if cell["id"] == "drive-and-repository"
+    )
+    configuration_code = "".join(configuration["source"])
+    environment_code = "".join(environment["source"])
+    checkout_code = "".join(checkout["source"])
+
+    assert (
+        'VAAKMITRA_REPOSITORY_URL = "https://github.com/Ajey95/VaakMitra.git"'
+        in configuration_code
+    )
+    assert "[https://" not in configuration_code
+    assert 'userdata.get("GH_TOKEN")' in checkout_code
+    assert "GIT_CONFIG_COUNT" in checkout_code
+    assert "http.https://github.com/.extraheader" in checkout_code
+    assert "env=github_git_environment" in checkout_code
+    assert "env: dict[str, str] | None = None" in environment_code
+    assert "print(\"+\", \" \".join(command))" in environment_code
+
+
 def test_every_code_cell_is_valid_python() -> None:
     notebook = _load_notebook()
     for cell in notebook["cells"]:
