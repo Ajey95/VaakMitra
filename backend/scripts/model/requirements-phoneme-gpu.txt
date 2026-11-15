@@ -1,0 +1,9 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+numpy==1.26.4
+scipy==1.15.3
+soundfile==0.14.0
+onnx==1.17.0
+onnxruntime==1.21.1
+pydantic==2.14.3
+pytest==9.2.0

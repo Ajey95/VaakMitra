@@ -1,0 +1,27 @@
+{
+  "bundle_version": "phoneme-ta19-v2",
+  "artifact_revision": "phoneme-ta19-v7-improved",
+  "decoder": {
+    "type": "ctc_prefix_beam",
+    "beam_width": 5,
+    "nonblank_top_k": 8
+  },
+  "model_file": "phoneme.fp32.onnx",
+  "model_sha256": "94c30918c5be357d7384ddc6dd39fb65ed16ae80a507699b649332c049885683",
+  "vocabulary_sha256": "741c46f796cd5bed542ee43575ef5f8a82ce81720cd4d650cf867ad1e550ddeb",
+  "input_samples": 48000,
+  "output_frames": 75,
+  "frame_shift_ms": 40,
+  "training_vocabulary_sha256": "a503f4aebf63939b73ee85ec4adceab597a7516406d4af4dfc6acfd3806429af",
+  "tokens": 61,
+  "approved_for_child_scoring": false,
+  "production_ready": false,
+  "base_sha256": "e136e6f6438f681b3832e41e8fbb064fe6403448553b80f75213ed57fd4d1649",
+  "checkpoint_sha256": "f5f0a0191e06888f0b55f663c4146027bdfd8c3612744a7210171e5de6b5236a",
+  "export_entrypoint_sha256": "cb4ea4dc9760ff14cc9469f327b05eaecab309782a70470947dd3bdccde399a7",
+  "decoder_source_sha256": "53f95e321cc0520c1bba79e4ea047f3e5f20e16ed4c20f9a0ab15ae68bb44c67",
+  "dataset_sha256": "5c4b3b1ed5b9b11ff13b5c62cea718107360d208b6f7c4a2687a09c8e9619982",
+  "encoder_blocks": 5,
+  "input_name": "waveform",
+  "output_name": "logits"
+}

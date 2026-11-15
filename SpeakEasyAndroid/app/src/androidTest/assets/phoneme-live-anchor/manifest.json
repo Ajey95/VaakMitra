@@ -1,0 +1,33 @@
+{
+  "purpose": "unqualified terminal control2 adult memory-only diagnostic; not app promotion",
+  "model_file": "anchor-candidate.fp32.onnx",
+  "model_sha256": "fdd54c165ff083f6fdac748fdd4072b62aed104aae28f11c2cbd637fcadbf495",
+  "checkpoint_sha256": "09b500ab897abb300f4fcf0f2ee4d2e3010b7fbb91677da3adbbd62ed63b8630",
+  "selection_sha256": "f7ba177d77d9f477c1e69d45616a7379227128f2eab79973d14c1f85ee146b8e",
+  "probe_freeze_sha256": "1f7491be04a43a6698877b3f641d0e64a409f875d61754dff4695e8da62b0f12",
+  "qualified_for_app": false,
+  "approved_for_child_scoring": false,
+  "production_ready": false,
+  "baseline_model_sha256": "94c30918c5be357d7384ddc6dd39fb65ed16ae80a507699b649332c049885683",
+  "vocabulary_sha256": "741c46f796cd5bed542ee43575ef5f8a82ce81720cd4d650cf867ad1e550ddeb",
+  "decoder": {
+    "type": "ctc_prefix_beam",
+    "beam_width": 5,
+    "nonblank_top_k": 8
+  },
+  "input_samples": 48000,
+  "output_frames": 75,
+  "tokens": 61,
+  "fixture_sha256": "493366a212568f4da06f8d9400355643c1bd7ce088caaafffd90d9cffd13573b",
+  "fixture_prediction": [
+    30,
+    6,
+    36,
+    38,
+    21,
+    6,
+    30,
+    30,
+    38
+  ]
+}

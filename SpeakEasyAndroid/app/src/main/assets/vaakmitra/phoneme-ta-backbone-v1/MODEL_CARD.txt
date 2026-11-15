@@ -1,0 +1,7 @@
+Internal adult-public-data engineering preview. No child scoring or clinical validation.
+Speech31/XLS-R-tamil-phoneme revision0dd27bfcba3a8bbe12103f1998eea2123e948369; source license not declared.
+Public release approval is pending. Upstream pretraining/test overlap not verified.
+Two tail blocks adapted on public training audio only. Dynamic16kHz400..48000samples.
+Unconstrained CTC prefix beam5/top8; no expected-word conditioning.
+Preserve gemination, vowel length, affricates and unknown evidence.
+Error patterns are uncertain sequence hypotheses; all official outcomes remain UNSCORABLE.

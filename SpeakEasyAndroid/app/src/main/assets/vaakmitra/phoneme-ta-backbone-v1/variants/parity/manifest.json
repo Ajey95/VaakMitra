@@ -1,0 +1,65 @@
+{
+  "schema": "PHN016-explicit-native-parity",
+  "cases": [
+    {
+      "index": 0,
+      "values_file": "values-0.f32",
+      "logp_file": "logp-0.f32",
+      "frames": 49,
+      "phones": [
+        "a",
+        "n̪",
+        "t̪",
+        "a"
+      ],
+      "source": "existing public MSWC corpus; no supplied child collection; contributor ages unverified",
+      "source_id": "mswc-ta-62298757f74a1b7bce74bf5c",
+      "samples": 16000,
+      "units": 39,
+      "values_sha256": "704d42f2b1f43150b7a062d05fd7c37f90fd3abd0722cff0a0bc293035d12141",
+      "logp_sha256": "6c9e9556b2d31a73d21917ab1a0a40c526c0f12776035a30e96771120835083b"
+    },
+    {
+      "index": 1,
+      "values_file": "values-1.f32",
+      "logp_file": "logp-1.f32",
+      "frames": 49,
+      "phones": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "source": "existing public MSWC corpus; no supplied child collection; contributor ages unverified",
+      "source_id": "mswc-ta-8cf15be71e9089a21001b097",
+      "samples": 16000,
+      "units": 39,
+      "values_sha256": "88a69c1f3f588c2066d4a87e43562c4af6c1fac8298ca41ffbed81a324260947",
+      "logp_sha256": "85fc8242613350678a45635bb9572a54c3a9983093e8771e63adb4b23e6b74e9"
+    },
+    {
+      "index": 2,
+      "values_file": "values-2.f32",
+      "logp_file": "logp-2.f32",
+      "frames": 49,
+      "phones": [
+        "a",
+        "n̪",
+        "t̪",
+        "a",
+        "ʋ",
+        "a"
+      ],
+      "source": "existing public MSWC corpus; no supplied child collection; contributor ages unverified",
+      "source_id": "mswc-ta-ca7bfca77348594ad88eee93",
+      "samples": 16000,
+      "units": 39,
+      "values_sha256": "60196df6961810c3f3a1e9d59275a8464903a01644d45fc7e6203f94b64fb673",
+      "logp_sha256": "68659d474e796ac679b96a87983da3f29ae316a104873aad077f86be23dec2b5"
+    }
+  ],
+  "no_recording": true,
+  "android_run_status": "not_run",
+  "model_sha256": "7103c31f472593f5bf9b50bf4ee6c29736cd2abe353f1113380a5ab03be9ae16",
+  "reference": "CPU PyTorch exact merged weights"
+}

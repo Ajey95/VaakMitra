@@ -1,0 +1,1462 @@
+{
+  "schema_version": "vaakmitra-vocabulary-1",
+  "version": "ta-words-v1.1.0",
+  "entries": [
+    {
+      "word_id": "TA_WORD_0001",
+      "canonical_tamil": "அம்மா",
+      "english_gloss": "mother",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0002",
+      "canonical_tamil": "அப்பா",
+      "english_gloss": "father",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0003",
+      "canonical_tamil": "அக்கா",
+      "english_gloss": "older sister",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0004",
+      "canonical_tamil": "அண்ணா",
+      "english_gloss": "older brother",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0005",
+      "canonical_tamil": "தம்பி",
+      "english_gloss": "younger brother",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0006",
+      "canonical_tamil": "தங்கை",
+      "english_gloss": "younger sister",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0007",
+      "canonical_tamil": "பாட்டி",
+      "english_gloss": "grandmother",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0008",
+      "canonical_tamil": "தாத்தா",
+      "english_gloss": "grandfather",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0009",
+      "canonical_tamil": "ஆசிரியர்",
+      "english_gloss": "teacher",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0010",
+      "canonical_tamil": "நண்பர்",
+      "english_gloss": "friend",
+      "category": "family_people",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0011",
+      "canonical_tamil": "தண்ணீர்",
+      "english_gloss": "water",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0012",
+      "canonical_tamil": "உணவு",
+      "english_gloss": "food",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0013",
+      "canonical_tamil": "வேண்டும்",
+      "english_gloss": "want",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0014",
+      "canonical_tamil": "வேண்டாம்",
+      "english_gloss": "do not want",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0015",
+      "canonical_tamil": "இன்னும்",
+      "english_gloss": "more",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0016",
+      "canonical_tamil": "போதும்",
+      "english_gloss": "enough",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0017",
+      "canonical_tamil": "உதவி",
+      "english_gloss": "help",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0018",
+      "canonical_tamil": "ஓய்வு",
+      "english_gloss": "break",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0019",
+      "canonical_tamil": "கழிப்பறை",
+      "english_gloss": "toilet",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0020",
+      "canonical_tamil": "வலி",
+      "english_gloss": "pain",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0021",
+      "canonical_tamil": "பசி",
+      "english_gloss": "hunger",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0022",
+      "canonical_tamil": "தாகம்",
+      "english_gloss": "thirst",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0023",
+      "canonical_tamil": "சூடு",
+      "english_gloss": "hot",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0024",
+      "canonical_tamil": "குளிர்",
+      "english_gloss": "cold",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0025",
+      "canonical_tamil": "தூக்கம்",
+      "english_gloss": "sleepiness",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0026",
+      "canonical_tamil": "பால்",
+      "english_gloss": "milk",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0027",
+      "canonical_tamil": "சோறு",
+      "english_gloss": "rice",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0028",
+      "canonical_tamil": "இட்லி",
+      "english_gloss": "idli",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0029",
+      "canonical_tamil": "தோசை",
+      "english_gloss": "dosa",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0030",
+      "canonical_tamil": "பழம்",
+      "english_gloss": "fruit",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0031",
+      "canonical_tamil": "ஆப்பிள்",
+      "english_gloss": "apple",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0032",
+      "canonical_tamil": "வாழை",
+      "english_gloss": "banana",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0033",
+      "canonical_tamil": "மாம்பழம்",
+      "english_gloss": "mango",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0034",
+      "canonical_tamil": "காய்கறி",
+      "english_gloss": "vegetable",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0035",
+      "canonical_tamil": "முட்டை",
+      "english_gloss": "egg",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0036",
+      "canonical_tamil": "ரொட்டி",
+      "english_gloss": "bread",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0037",
+      "canonical_tamil": "சாறு",
+      "english_gloss": "juice",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0038",
+      "canonical_tamil": "தயிர்",
+      "english_gloss": "curd",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0039",
+      "canonical_tamil": "பிஸ்கட்",
+      "english_gloss": "biscuit",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0040",
+      "canonical_tamil": "தேநீர்",
+      "english_gloss": "tea",
+      "category": "food_drink",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0041",
+      "canonical_tamil": "வா",
+      "english_gloss": "come",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0042",
+      "canonical_tamil": "போ",
+      "english_gloss": "go",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0043",
+      "canonical_tamil": "உட்கார்",
+      "english_gloss": "sit",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0044",
+      "canonical_tamil": "நில்",
+      "english_gloss": "stand",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0045",
+      "canonical_tamil": "கொடு",
+      "english_gloss": "give",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0046",
+      "canonical_tamil": "எடு",
+      "english_gloss": "take",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0047",
+      "canonical_tamil": "பார்",
+      "english_gloss": "look",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0048",
+      "canonical_tamil": "கேள்",
+      "english_gloss": "listen",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0049",
+      "canonical_tamil": "சொல்",
+      "english_gloss": "say",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0050",
+      "canonical_tamil": "படி",
+      "english_gloss": "read",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0051",
+      "canonical_tamil": "எழுது",
+      "english_gloss": "write",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0052",
+      "canonical_tamil": "விளையாடு",
+      "english_gloss": "play",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0053",
+      "canonical_tamil": "சாப்பிடு",
+      "english_gloss": "eat",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0054",
+      "canonical_tamil": "குடி",
+      "english_gloss": "drink",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0055",
+      "canonical_tamil": "திற",
+      "english_gloss": "open",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0056",
+      "canonical_tamil": "மூடு",
+      "english_gloss": "close",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0057",
+      "canonical_tamil": "காத்திரு",
+      "english_gloss": "wait",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0058",
+      "canonical_tamil": "நிறுத்து",
+      "english_gloss": "stop",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0059",
+      "canonical_tamil": "தொடங்கு",
+      "english_gloss": "start",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0060",
+      "canonical_tamil": "தூங்கு",
+      "english_gloss": "sleep",
+      "category": "actions",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0061",
+      "canonical_tamil": "வீடு",
+      "english_gloss": "home",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0062",
+      "canonical_tamil": "பள்ளி",
+      "english_gloss": "school",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0063",
+      "canonical_tamil": "அறை",
+      "english_gloss": "room",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0064",
+      "canonical_tamil": "கதவு",
+      "english_gloss": "door",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0065",
+      "canonical_tamil": "ஜன்னல்",
+      "english_gloss": "window",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0066",
+      "canonical_tamil": "நாற்காலி",
+      "english_gloss": "chair",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0067",
+      "canonical_tamil": "மேசை",
+      "english_gloss": "table",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0068",
+      "canonical_tamil": "புத்தகம்",
+      "english_gloss": "book",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0069",
+      "canonical_tamil": "பேனா",
+      "english_gloss": "pen",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0070",
+      "canonical_tamil": "பந்து",
+      "english_gloss": "ball",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0071",
+      "canonical_tamil": "பொம்மை",
+      "english_gloss": "toy",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0072",
+      "canonical_tamil": "படம்",
+      "english_gloss": "picture",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0073",
+      "canonical_tamil": "கைபேசி",
+      "english_gloss": "phone",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0074",
+      "canonical_tamil": "பேருந்து",
+      "english_gloss": "bus",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0075",
+      "canonical_tamil": "பூங்கா",
+      "english_gloss": "park",
+      "category": "objects_places",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0076",
+      "canonical_tamil": "மகிழ்ச்சி",
+      "english_gloss": "happy",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0077",
+      "canonical_tamil": "சோகம்",
+      "english_gloss": "sad",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0078",
+      "canonical_tamil": "கோபம்",
+      "english_gloss": "angry",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0079",
+      "canonical_tamil": "பயம்",
+      "english_gloss": "afraid",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0080",
+      "canonical_tamil": "அமைதி",
+      "english_gloss": "calm",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0081",
+      "canonical_tamil": "நல்லது",
+      "english_gloss": "good",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0082",
+      "canonical_tamil": "இல்லை",
+      "english_gloss": "no",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0083",
+      "canonical_tamil": "ஆம்",
+      "english_gloss": "yes",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0084",
+      "canonical_tamil": "கை",
+      "english_gloss": "hand",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0085",
+      "canonical_tamil": "கால்",
+      "english_gloss": "leg",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0086",
+      "canonical_tamil": "தலை",
+      "english_gloss": "head",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0087",
+      "canonical_tamil": "வாய்",
+      "english_gloss": "mouth",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0088",
+      "canonical_tamil": "கண்",
+      "english_gloss": "eye",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0089",
+      "canonical_tamil": "காது",
+      "english_gloss": "ear",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0090",
+      "canonical_tamil": "பாதுகாப்பு",
+      "english_gloss": "safety",
+      "category": "feelings_body_safety",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0091",
+      "canonical_tamil": "வணக்கம்",
+      "english_gloss": "hello",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0092",
+      "canonical_tamil": "நன்றி",
+      "english_gloss": "thank you",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0093",
+      "canonical_tamil": "தயவு",
+      "english_gloss": "please",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0094",
+      "canonical_tamil": "மன்னிக்கவும்",
+      "english_gloss": "sorry",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0095",
+      "canonical_tamil": "சரி",
+      "english_gloss": "okay",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0096",
+      "canonical_tamil": "மீண்டும்",
+      "english_gloss": "again",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0097",
+      "canonical_tamil": "மெதுவாக",
+      "english_gloss": "slowly",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0098",
+      "canonical_tamil": "இங்கே",
+      "english_gloss": "here",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0099",
+      "canonical_tamil": "அங்கே",
+      "english_gloss": "there",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0100",
+      "canonical_tamil": "சேர்ந்து",
+      "english_gloss": "together",
+      "category": "social_session",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0101",
+      "canonical_tamil": "என்ன",
+      "english_gloss": "what",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0102",
+      "canonical_tamil": "நான்",
+      "english_gloss": "I / me",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0103",
+      "canonical_tamil": "இது",
+      "english_gloss": "this",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    },
+    {
+      "word_id": "TA_WORD_0104",
+      "canonical_tamil": "எனக்கு",
+      "english_gloss": "for me / to me",
+      "category": "needs_self_advocacy",
+      "aliases": [],
+      "kind": "word",
+      "state": "intended",
+      "scoreable": true,
+      "human_review": {
+        "status": "pending",
+        "reviewer_id": null
+      }
+    }
+  ]
+}

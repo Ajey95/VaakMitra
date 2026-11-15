@@ -1,0 +1,226 @@
+{
+  "approved_for_child_scoring": false,
+  "architecture_version": "raw-wave-temporal8-dc-rms-v1",
+  "bundle_version": "vm-mobile-student-ta19-v1",
+  "high_thresholds": {
+    "TA_WORD_0001": 0.65,
+    "TA_WORD_0002": 0.65,
+    "TA_WORD_0012": 0.65,
+    "TA_WORD_0013": 0.9509857791662216,
+    "TA_WORD_0014": 0.9774185800552367,
+    "TA_WORD_0015": 0.65,
+    "TA_WORD_0016": 0.65,
+    "TA_WORD_0017": 0.65,
+    "TA_WORD_0049": 0.9610141587257384,
+    "TA_WORD_0050": 0.65,
+    "TA_WORD_0072": 0.65,
+    "TA_WORD_0082": 0.954377188086509,
+    "TA_WORD_0083": 0.65,
+    "TA_WORD_0086": 0.9128685188293453,
+    "TA_WORD_0090": 0.6814022195339146,
+    "TA_WORD_0096": 0.65,
+    "TA_WORD_0098": 0.65,
+    "TA_WORD_0099": 0.65,
+    "TA_WORD_0100": 0.65
+  },
+  "low_thresholds": {
+    "TA_WORD_0001": 0.15551695227622986,
+    "TA_WORD_0002": 0.14264468848705292,
+    "TA_WORD_0012": 0.18155455589294434,
+    "TA_WORD_0013": 0.19264287874102592,
+    "TA_WORD_0014": 0.1780109852552414,
+    "TA_WORD_0015": 0.16020549833774567,
+    "TA_WORD_0016": 0.17707698047161102,
+    "TA_WORD_0017": 0.18456465378403664,
+    "TA_WORD_0049": 0.1663154624402523,
+    "TA_WORD_0050": 0.16656842827796936,
+    "TA_WORD_0072": 0.1769636869430542,
+    "TA_WORD_0082": 0.16826214268803596,
+    "TA_WORD_0083": 0.1552427001297474,
+    "TA_WORD_0086": 0.17669633030891418,
+    "TA_WORD_0090": 0.18931583315134048,
+    "TA_WORD_0096": 0.1733083575963974,
+    "TA_WORD_0098": 0.1640242338180542,
+    "TA_WORD_0099": 0.17027726769447327,
+    "TA_WORD_0100": 0.17216577008366585
+  },
+  "minimum_margin": 0.1,
+  "minimum_similarity": 0.6,
+  "model_sha256": "1cd088caf579a2b9fb4447347d9553d015c6b5f1ed75670ab8e41b030a5f551b",
+  "schema_version": "vaakmitra-mobile-adult-engineering-calibration-1",
+  "target_duration_samples": {
+    "TA_WORD_0001": 7025,
+    "TA_WORD_0002": 7040,
+    "TA_WORD_0012": 6390,
+    "TA_WORD_0013": 5761,
+    "TA_WORD_0014": 8942,
+    "TA_WORD_0015": 6391,
+    "TA_WORD_0016": 7028,
+    "TA_WORD_0017": 5755,
+    "TA_WORD_0049": 5112,
+    "TA_WORD_0050": 4475,
+    "TA_WORD_0072": 6390,
+    "TA_WORD_0082": 5101,
+    "TA_WORD_0083": 5759,
+    "TA_WORD_0086": 4478,
+    "TA_WORD_0090": 10195,
+    "TA_WORD_0096": 6390,
+    "TA_WORD_0098": 6386,
+    "TA_WORD_0099": 7019,
+    "TA_WORD_0100": 7026
+  },
+  "target_reports": {
+    "TA_WORD_0001": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.15551695227622986,
+      "negative_at_or_above_high": 6,
+      "negative_samples": 1549,
+      "positive_at_or_above_high": 2,
+      "positive_samples": 3
+    },
+    "TA_WORD_0002": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.14264468848705292,
+      "negative_at_or_above_high": 10,
+      "negative_samples": 1547,
+      "positive_at_or_above_high": 4,
+      "positive_samples": 5
+    },
+    "TA_WORD_0012": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.18155455589294434,
+      "negative_at_or_above_high": 6,
+      "negative_samples": 1547,
+      "positive_at_or_above_high": 5,
+      "positive_samples": 5
+    },
+    "TA_WORD_0013": {
+      "high_threshold": 0.9509857791662216,
+      "low_threshold": 0.19264287874102592,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1542,
+      "positive_at_or_above_high": 8,
+      "positive_samples": 10
+    },
+    "TA_WORD_0014": {
+      "high_threshold": 0.9774185800552367,
+      "low_threshold": 0.1780109852552414,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1549,
+      "positive_at_or_above_high": 3,
+      "positive_samples": 3
+    },
+    "TA_WORD_0015": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.16020549833774567,
+      "negative_at_or_above_high": 13,
+      "negative_samples": 1550,
+      "positive_at_or_above_high": 2,
+      "positive_samples": 2
+    },
+    "TA_WORD_0016": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.17707698047161102,
+      "negative_at_or_above_high": 13,
+      "negative_samples": 1547,
+      "positive_at_or_above_high": 4,
+      "positive_samples": 5
+    },
+    "TA_WORD_0017": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.18456465378403664,
+      "negative_at_or_above_high": 12,
+      "negative_samples": 1542,
+      "positive_at_or_above_high": 10,
+      "positive_samples": 10
+    },
+    "TA_WORD_0049": {
+      "high_threshold": 0.9610141587257384,
+      "low_threshold": 0.1663154624402523,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1550,
+      "positive_at_or_above_high": 2,
+      "positive_samples": 2
+    },
+    "TA_WORD_0050": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.16656842827796936,
+      "negative_at_or_above_high": 11,
+      "negative_samples": 1545,
+      "positive_at_or_above_high": 5,
+      "positive_samples": 7
+    },
+    "TA_WORD_0072": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.1769636869430542,
+      "negative_at_or_above_high": 10,
+      "negative_samples": 1549,
+      "positive_at_or_above_high": 3,
+      "positive_samples": 3
+    },
+    "TA_WORD_0082": {
+      "high_threshold": 0.954377188086509,
+      "low_threshold": 0.16826214268803596,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1544,
+      "positive_at_or_above_high": 7,
+      "positive_samples": 8
+    },
+    "TA_WORD_0083": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.1552427001297474,
+      "negative_at_or_above_high": 12,
+      "negative_samples": 1550,
+      "positive_at_or_above_high": 2,
+      "positive_samples": 2
+    },
+    "TA_WORD_0086": {
+      "high_threshold": 0.9128685188293453,
+      "low_threshold": 0.17669633030891418,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1545,
+      "positive_at_or_above_high": 5,
+      "positive_samples": 7
+    },
+    "TA_WORD_0090": {
+      "high_threshold": 0.6814022195339146,
+      "low_threshold": 0.18931583315134048,
+      "negative_at_or_above_high": 16,
+      "negative_samples": 1543,
+      "positive_at_or_above_high": 8,
+      "positive_samples": 9
+    },
+    "TA_WORD_0096": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.1733083575963974,
+      "negative_at_or_above_high": 6,
+      "negative_samples": 1545,
+      "positive_at_or_above_high": 5,
+      "positive_samples": 7
+    },
+    "TA_WORD_0098": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.1640242338180542,
+      "negative_at_or_above_high": 11,
+      "negative_samples": 1544,
+      "positive_at_or_above_high": 6,
+      "positive_samples": 8
+    },
+    "TA_WORD_0099": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.17027726769447327,
+      "negative_at_or_above_high": 10,
+      "negative_samples": 1547,
+      "positive_at_or_above_high": 5,
+      "positive_samples": 5
+    },
+    "TA_WORD_0100": {
+      "high_threshold": 0.65,
+      "low_threshold": 0.17216577008366585,
+      "negative_at_or_above_high": 7,
+      "negative_samples": 1548,
+      "positive_at_or_above_high": 2,
+      "positive_samples": 4
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# API additions to the existing pinned NeMo environment; does not replace torch/numpy.
+fastapi==0.116.1
+uvicorn==0.35.0
+pymongo==4.14.1
+bcrypt==4.3.0
+PyJWT==2.10.1
+pydantic-settings==2.10.1
+python-multipart==0.0.20
+email-validator==2.2.0
+cloudinary==1.44.1
+aiofiles==24.1.0
+httpx==0.28.1
+onnxruntime==1.22.1

@@ -1,0 +1,1 @@
+<resources><style name="Theme.SpeakEasy" parent="android:Theme.Material.Light.NoActionBar"><item name="android:windowBackground">@drawable/vm_startup_background</item><item name="android:statusBarColor">#FFF6E3</item><item name="android:navigationBarColor">#FFF6E3</item><item name="android:windowLightStatusBar">true</item></style></resources>

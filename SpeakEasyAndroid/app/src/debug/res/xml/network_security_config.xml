@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEBUG-ONLY network security config.
+  Permits cleartext HTTP to any host so the app can reach a backend on any LAN
+  IP supplied via -PbackendUrl=http://<your-pc-lan-ip>:8000/ during development.
+  Release builds use app/src/main/res/xml/network_security_config.xml, which
+  restricts cleartext to the local emulator/loopback hosts only.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

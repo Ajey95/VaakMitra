@@ -1,0 +1,13 @@
+# Round-only reward correction
+
+User explicitly selected automatic sticker/Tamil name cheer after a three-turn practice round. SSOT3.3.52 DEC066 PRS009 governs; prior per-action trigger requirements are superseded.
+
+Use explicit PraiseEvent.ROUND with a central automatic-event gate in EncouragementPanel. This removes both visual reward and audio construction for all non-round automatic call sites, including saved legacy events and summaries. Manual labelled Rewards preview remains usable. Word/letter completed-round sites pass ROUND. Existing completed-round earning checks require at least3participating completed turns. Preserve configured1/3/5pacing:1stays quiet,5celebrates at its existing full boundary; do not lengthen sessions or withhold exits.
+
+Show the action changes only the illustration and exposure report count. It does not call countWordTurn, set markedTurn/turnParticipation or issue praise. More/Next and manual letter completion preserve the existing session path. Picture match/recorded attempts supply participation, not validated speech correctness. Individual result/caption feedback remains, but the big reward/audio is absent. Session summaries retain progress without another celebration.
+
+Considered gating each call site individually (easy to miss shared/legacy paths) versus a central ROUND gate plus fixing demo accounting. Chosen central gate is consistent across all25word and247letter routes. Same asset, avatars, speaker, preference schema, model assets and unscorable gates; no dependencies/network/training.
+
+Verify missing-interface JVM RED and real native negative-case RED on installed195ee225main before implementation. Tests: demo taps and result previews never show actor/audio; first two picture/letter completions quiet, third earned round cheers once, summary/recreation/Stop/opt-out remain quiet. Inspect normal/2x actual phone captures; binary transfer uses known2KiBbase64+phoneSHA method. One fresh scoped source review, one Important correction pass if needed; no commits/merge/push/cleanup or old-delivery mutation.
+
+Final-review corrections within the same rule: save a version-tagged participation snapshot, restoring old untagged demonstration-era attribution as0 without resetting pacing/progress; current-version rotation preserves active credits. Count and display earned final rounds before terminal navigation, offering End session directly when no next item exists. Private child routes never accept public diagnostic seed state; any terminal-word fixture seed must require both DEBUG and an existing public preview outcome. Native last-letter case supplies real manual completions; new-version rotation and final-word public fixture validate rendering/navigation.

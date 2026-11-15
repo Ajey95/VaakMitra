@@ -1,0 +1,7 @@
+{
+  "schema": "practice-reference-bundle-v1",
+  "references_file": "references.json",
+  "references_sha256": "3ad7f9dcea173ba7bf41439b85477403dda38a6014ea8d6c43586f3ccbd4f86c",
+  "production_ready": false,
+  "approved_for_child_scoring": false
+}

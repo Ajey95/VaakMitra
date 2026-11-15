@@ -1,0 +1,76 @@
+{
+  "schema_version": "vaakmitra-mobile-verification-1",
+  "requirements": [
+    "DEC-028",
+    "MST-001",
+    "MST-002",
+    "MST-003",
+    "MST-004",
+    "MST-005",
+    "MST-006",
+    "MST-007",
+    "MST-008",
+    "MST-009",
+    "MST-010"
+  ],
+  "bundle": {
+    "version": "vm-mobile-student-ta19-v0",
+    "approved_for_child_scoring": false,
+    "release_build_enabled": false,
+    "model_sha256": "02d01587210bf0b9353080da99b0daa4ed39bc1124454bc524fdb7ca1bc1d6d5",
+    "model_bytes": 75549,
+    "vad_sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3",
+    "vad_bytes": 2327524
+  },
+  "dataset": {
+    "kind": "adult_public_engineering_only",
+    "samples": 15230,
+    "target_samples": 1197,
+    "other_samples": 14033,
+    "child_data_used": false,
+    "source_manifest_sha256": "1003e9cfc5ed29d1dc999e679a772c305a0aed9ba0e1e796c63056dd0cdc125c"
+  },
+  "quantization": {
+    "evaluation_samples": 1581,
+    "raw_top1_agreement": 0.9715370018975332,
+    "actionable_samples": 1319,
+    "actionable_coverage": 0.8342820999367488,
+    "actionable_top1_agreement": 1.0,
+    "probability_mae": 0.0023076485126099265,
+    "fp32_macro_f1": 0.19928475920394356,
+    "int8_macro_f1": 0.19609735659254418,
+    "macro_f1_loss": 0.0031874026113993814,
+    "accepted_for_android_engineering_integration": true
+  },
+  "android": {
+    "device": "Pixel 7 AVD",
+    "sdk": 37,
+    "abi": "x86_64",
+    "memory_kb": 4008492,
+    "wifi_enabled_during_native_test": false,
+    "mobile_data_enabled_during_native_test": false,
+    "instrumentation_tests": 2,
+    "instrumentation_failures": 0,
+    "student_warm_latency_ms": [9, 35, 4, 11, 6],
+    "full_synthetic_lifecycle_seconds": 2.951,
+    "physical_arm64_device_tested": false,
+    "android_10_tested": false
+  },
+  "apk": {
+    "path": "D:\\VaakMitra-Integrated-Backend-Lab\\deliverables\\VaakMitra-Mobile-INT8-Review-2026-09-15.apk",
+    "abi": "arm64-v8a",
+    "signing": "debug",
+    "bytes": 53623193,
+    "sha256": "604aa1d817216841aecf2bd56581f8d540760ca74c1999968a67eda9562d72d3"
+  },
+  "official_result_contract": {
+    "decision": "UNSCORABLE",
+    "word_match_probability": null,
+    "development_results": [
+      "DEV_MATCH",
+      "DEV_TRY_AGAIN",
+      "DEV_UNCERTAIN",
+      "DEV_UNAVAILABLE"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-11-12",
+  "prompt": "Use case: illustration-story. Asset type: transparent PNG reward sticker for VaakMitra Tamil children's speech-practice Android app. Primary request: one original friendly Tamil man wearing a traditional white veshti with a subtle gold border, a simple maroon short-sleeve shirt and black cooling-glasses sunglasses. Warm medium-brown skin, neat black moustache and hair, broad gentle closed-mouth smile. A small respectful vibhuti mark on forehead. Full body, one hand giving a friendly thumbs-up and the other relaxed, approachable rounded proportions, simple clean polished 2D children's-book sticker illustration, warm Tamil 1990s/2000s cultural feel, cream/maroon/gold palette, readable at small mobile size. Composition: single centered character only, all limbs and veshti visible with generous transparent padding, no background or scene, genuine transparent alpha. No text, captions, speech bubbles, watermark, logos, extra objects, duplicate characters or celebrity resemblance. No glows, flashing or confetti. Illustration should work as a quiet celebratory cameo without replacing any app avatar.",
+  "source": "C:/Users/AJEYA/.codex/generated_images/01a1c031-d07a-75f2-b827-3007f0462c73/exec-50cacc46-e694-4272-860f-53758bed1614.png",
+  "intended_resource": "SpeakEasyAndroid/app/src/main/res/drawable-nodpi/vm_reward_veshti_man.png",
+  "notes": "Original generated decorative artwork; no actor likeness, film footage or child data. Generated alpha is preserved; no image edits or resizing.",
+  "sha256": "624071d83d89153f077ec282c797eeb7372fddfafbe2fc2a76be4e2ab86c60a5",
+  "resource_path": "SpeakEasyAndroid/app/src/main/res/drawable-nodpi/vm_reward_veshti_man.png"
+}

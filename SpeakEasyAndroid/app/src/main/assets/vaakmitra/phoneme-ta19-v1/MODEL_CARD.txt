@@ -1,0 +1,8 @@
+Provisional adult Tamil phoneme CTC transfer model. Audio-derived tokens; no child correctness approval.
+Training data attribution:
+IISc MILE Tamil ASR Corpus / OpenSLR 127. Source: https://www.openslr.org/127/
+License: Creative Commons Attribution 2.0 https://creativecommons.org/licenses/by/2.0/
+This fixture is a segmented adult recording, converted to PCM16; synthetic variants are separately labelled.
+
+Revision phoneme-ta19-v7-improved: experimental adult19appword phoneme tokens. Recurrent dropout0.2 was training-only; inference architecture remains290701parameters,mono16kHz/48000samples,40ms/75frames/61symbols. Decoder audio-only prefixbeam5top8, no expectedword/lexicon/language model. Calibration-only modelselection with immutable-by-procedure digest before descriptive tests.
+Targetadulttest14.81->13.89% (80->75/540phones); broad1665test58.97->59.11%, belowfixedV5+1pp cap59.29667%. Syntheticcondition averages2improved/2unchanged/1worsened; not everyclip orcondition improved. Old107test/192audit exposed repeatedly, no fresh independenceclaim. Shared data/customspeakerfolds include341 addedtrainingclips from334upstreamofficial-test utterances; officialtestnotuntouched. Audit15/19words/71Vendum unbalanced. Expertacoustic truth andpretraining independence unvalidated; childvowels3speakers not supplied here. No child/clinical/physical/live-mic claim. OfficialUNSCORABLE, tokens transient. V6andV5 rollbacks preserved. Sourceexpansion occurredR2; R5 addsno data orlabels.

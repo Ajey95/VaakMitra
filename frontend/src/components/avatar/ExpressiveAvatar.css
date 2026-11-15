@@ -1,0 +1,74 @@
+.expressive-avatar {
+  --avatar-ease: cubic-bezier(.2, .8, .2, 1);
+  display: grid;
+  place-items: end center;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.expressive-rig {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  overflow: visible;
+  transform-origin: 50% 95%;
+  animation: avatar-breathe 4.8s ease-in-out infinite;
+}
+
+.expressive-rig__shadow { fill: rgba(51, 40, 65, .14); }
+.expressive-rig__head,
+.expressive-rig__arm,
+.expressive-rig__eye,
+.expressive-rig__brow { transform-box: fill-box; transition: transform .42s var(--avatar-ease); }
+.expressive-rig__head { transform-origin: 50% 80%; }
+.expressive-rig__arm { transform-origin: 50% 10%; }
+.expressive-rig__eye { transform-origin: center; animation: avatar-blink 6.2s infinite; }
+.expressive-rig__brow { transform-origin: center; }
+
+.expressive-rig__mouth > [data-avatar-part^='mouth-'],
+.expressive-rig__teeth { opacity: 0; }
+.expressive-rig__mouth.mouth-neutral [data-avatar-part='mouth-neutral'],
+.expressive-rig__mouth.mouth-m [data-avatar-part='mouth-m'],
+.expressive-rig__mouth.mouth-a [data-avatar-part='mouth-a'],
+.expressive-rig__mouth.mouth-a .expressive-rig__teeth--a,
+.expressive-rig__mouth.mouth-e [data-avatar-part='mouth-e'],
+.expressive-rig__mouth.mouth-e .expressive-rig__teeth--e,
+.expressive-rig__mouth.mouth-o [data-avatar-part='mouth-o'] { opacity: 1; }
+
+.expressive-avatar[data-expression='attentive'] .expressive-rig__head { transform: rotate(-2deg) translateY(-2px); }
+.expressive-avatar[data-expression='attentive'] .expressive-rig__eye { transform: scale(1.08); }
+.expressive-avatar[data-expression='thinking'] .expressive-rig__head { transform: rotate(3deg) translateY(2px); }
+.expressive-avatar[data-expression='thinking'] .expressive-rig__brow--right { transform: translateY(-4px) rotate(4deg); }
+.expressive-avatar[data-expression='joy'] .expressive-rig__head { animation: avatar-happy-nod .75s var(--avatar-ease) both; }
+.expressive-avatar[data-expression='joy'] .expressive-rig__eye { transform: scaleY(.66); }
+.expressive-avatar[data-expression='encouraging'] .expressive-rig__brow { transform: translateY(-2px); }
+.expressive-avatar[data-expression='reassuring'] .expressive-rig__head { transform: rotate(-2deg); }
+.expressive-avatar[data-expression='concerned'] .expressive-rig__brow--left { transform: rotate(8deg); }
+.expressive-avatar[data-expression='concerned'] .expressive-rig__brow--right { transform: rotate(-8deg); }
+
+.expressive-avatar[data-gesture='explain'] .expressive-rig__arm--right { transform: rotate(-33deg) translate(-12px, -19px); }
+.expressive-avatar[data-gesture='listen'] .expressive-rig__arm--right { transform: rotate(-48deg) translate(-21px, -40px); }
+.expressive-avatar[data-gesture='celebrate'] .expressive-rig__arm--left { transform: rotate(54deg) translate(27px, -56px); }
+.expressive-avatar[data-gesture='celebrate'] .expressive-rig__arm--right { transform: rotate(-54deg) translate(-27px, -56px); }
+.expressive-avatar[data-gesture='demonstrate'] .expressive-rig__arm--left { transform: rotate(30deg) translate(13px, -22px); }
+.expressive-avatar[data-gesture='invite'] .expressive-rig__arm--left { transform: rotate(18deg) translate(9px, -9px); }
+.expressive-avatar[data-gesture='invite'] .expressive-rig__arm--right { transform: rotate(-18deg) translate(-9px, -9px); }
+
+.expressive-avatar[data-avatar-phase='PROMPTING'] .expressive-rig__mouth,
+.expressive-avatar[data-avatar-phase='PRAISE'] .expressive-rig__mouth { animation: avatar-mouth-pulse .32s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+
+.expressive-avatar[data-motion='reduced'] .expressive-rig { animation-duration: 8s; }
+.expressive-avatar[data-motion='reduced'] .expressive-rig__eye { animation: none; }
+.expressive-avatar[data-motion='still'] *,
+.expressive-avatar[data-motion='still'] .expressive-rig { animation: none !important; transition-duration: .01ms !important; }
+
+@keyframes avatar-breathe { 0%, 100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(-2px) scaleY(1.006); } }
+@keyframes avatar-blink { 0%, 44%, 48%, 100% { transform: scaleY(1); } 46% { transform: scaleY(.08); } }
+@keyframes avatar-happy-nod { 0% { transform: translateY(0); } 45% { transform: translateY(-7px) rotate(-2deg); } 100% { transform: translateY(0); } }
+@keyframes avatar-mouth-pulse { from { transform: scaleY(.94); } to { transform: scaleY(1.06); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .expressive-avatar *, .expressive-rig { animation: none !important; transition-duration: .01ms !important; }
+}

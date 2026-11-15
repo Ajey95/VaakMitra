@@ -1,0 +1,18 @@
+[extend]
+useDefault = true
+
+# These are a vocabulary checksum and React presentation code, not credentials.
+# Keep both path and line constraints so unrelated secrets remain detectable.
+[[allowlists]]
+description = "Public token-inventory SHA-256 provenance"
+condition = "AND"
+paths = ['''(^|/)SpeakEasyAndroid/app/src/main/assets/vaakmitra/practice-words-v1/references\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"source_token_inventory_sha256":\s*"[a-f0-9]{64}",?\s*$''']
+
+[[allowlists]]
+description = "React password-strength display classes"
+condition = "AND"
+paths = ['''(^|/)frontend/src/pages/RegisterPage\.jsx$''']
+regexTarget = "line"
+regexes = ['''^\s*<div key=\{level\} className=\{`.*passwordStrength\.level.*passwordStrength\.color.*`\} />\s*$''']

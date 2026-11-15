@@ -1,0 +1,62 @@
+.avatar-picker { --ink: #342841; --muted: #70657b; --cream: #fff9f3; color: var(--ink); }
+.avatar-picker__heading { display: grid; gap: .65rem; margin-bottom: 1.25rem; }
+.avatar-picker__heading span, .avatar-picker__preview-kicker { color: #167e82; font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.avatar-picker__heading h3 { margin: .18rem 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 5vw, 2.15rem); line-height: 1.08; }
+.avatar-picker__heading p { color: var(--muted); margin: 0; max-width: 58rem; line-height: 1.55; }
+.avatar-picker__workspace { display: grid; gap: 1rem; }
+.avatar-picker__preview { position: relative; min-height: 34rem; display: flex; flex-direction: column; padding: 1rem 1rem 0; overflow: hidden; border: 1px solid #f1d9ca; border-radius: 1.75rem; background: radial-gradient(circle at 82% 8%, #ffe0c4 0 12%, transparent 35%), linear-gradient(160deg, #fffaf5, #f5f9f6 70%); }
+.avatar-picker__preview::after { content: ''; position: absolute; inset: auto -15% -20% -15%; height: 35%; border-radius: 50% 50% 0 0; background: #e6f2e9; z-index: 0; }
+.avatar-picker__speech { position: relative; z-index: 2; align-self: flex-start; max-width: 26rem; margin: .75rem 0 -.5rem; padding: .9rem 1rem; border-radius: 1.1rem 1.1rem 1.1rem .25rem; background: white; box-shadow: 0 12px 30px rgba(74, 51, 51, .1); }
+.avatar-picker__speech strong, .avatar-picker__speech span { display: block; }
+.avatar-picker__speech strong { color: #cf6457; font-size: .78rem; margin-bottom: .18rem; }
+.avatar-picker__speech span { font-weight: 700; line-height: 1.35; }
+.avatar-picker__preview > .expressive-avatar { position: relative; z-index: 1; flex: 1; min-height: 19rem; margin: -.3rem auto 0; }
+.avatar-picker__reactions { position: relative; z-index: 3; margin: -1.4rem -.25rem 1rem; padding: .75rem; border: 1px solid rgba(255,255,255,.72); border-radius: 1.15rem; background: rgba(255,255,255,.83); backdrop-filter: blur(12px); box-shadow: 0 12px 30px rgba(52, 40, 65, .1); }
+.avatar-picker__reactions > span { display: block; color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .45rem .2rem; }
+.avatar-picker__reactions > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: .4rem; }
+.avatar-picker__reactions button { min-height: 2.75rem; display: flex; align-items: center; justify-content: center; gap: .35rem; border: 1px solid #eadfda; border-radius: .75rem; background: #fff; color: #64586c; font-size: .75rem; font-weight: 800; }
+.avatar-picker__reactions button.is-active { border-color: #168d92; background: #e7f8f5; color: #116e72; }
+.avatar-picker__reactions svg { width: 1rem; }
+.avatar-picker__controls { display: grid; align-content: start; gap: 1.1rem; padding: 1rem; border: 1px solid #ece4e0; border-radius: 1.75rem; background: #fff; }
+.avatar-picker fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.avatar-picker legend { margin-bottom: .65rem; font-weight: 900; font-size: .86rem; }
+.avatar-picker__identity-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .55rem; }
+.avatar-picker__identity-grid > button { position: relative; min-height: 8.7rem; display: grid; grid-template-rows: 5.6rem auto; padding: .45rem; border: 2px solid #eee6e0; border-radius: 1rem; background: var(--cream); color: var(--ink); text-align: left; overflow: hidden; }
+.avatar-picker__identity-grid > button[data-selected='true'] { border-color: #168d92; background: #eefaf7; box-shadow: 0 0 0 3px rgba(22,141,146,.12); }
+.avatar-picker__identity-grid > button > svg { position: absolute; top: .45rem; right: .45rem; width: 1.1rem; color: #168d92; }
+.avatar-picker__mini { display: grid; place-items: end center; overflow: hidden; border-radius: .7rem; background: linear-gradient(#ffe9d8, #e8f3ed); }
+.avatar-picker__mini .expressive-rig { width: 6rem; margin-bottom: -2.3rem; }
+.avatar-picker__identity-grid strong, .avatar-picker__identity-grid small { display: block; }
+.avatar-picker__identity-grid strong { font-size: .88rem; }
+.avatar-picker__identity-grid small { margin-top: .1rem; color: var(--muted); font-size: .67rem; line-height: 1.2; }
+.avatar-picker__swatches { display: flex; gap: .65rem; }
+.avatar-picker__swatch { position: relative; width: 3.15rem; min-height: 3.15rem; border: 2px solid transparent; border-radius: 50%; background: white; padding: .2rem; }
+.avatar-picker__swatch[aria-pressed='true'] { border-color: #342841; }
+.avatar-picker__swatch span { display: block; width: 100%; height: 100%; border-radius: inherit; }
+.avatar-picker__swatch--coral-teal span { background: linear-gradient(135deg,#168d92 50%,#f07e6e 50%); }
+.avatar-picker__swatch--sunrise span { background: linear-gradient(135deg,#d86651 50%,#f4be55 50%); }
+.avatar-picker__swatch--lotus span { background: linear-gradient(135deg,#8b5bb5 50%,#e486a5 50%); }
+.avatar-picker__swatch svg { position: absolute; inset: 50% auto auto 50%; width: 1rem; color: white; filter: drop-shadow(0 1px 2px #302638); transform: translate(-50%,-50%); }
+.avatar-picker__motion-options { display: grid; gap: .45rem; }
+.avatar-picker__motion-options button { min-height: 3.5rem; padding: .65rem .75rem; border: 1px solid #eadfda; border-radius: .85rem; background: white; color: var(--ink); text-align: left; }
+.avatar-picker__motion-options button[aria-pressed='true'] { border-color: #168d92; background: #eefaf7; }
+.avatar-picker__motion-options strong, .avatar-picker__motion-options small { display: block; }
+.avatar-picker__motion-options small { color: var(--muted); margin-top: .12rem; }
+.avatar-picker__save { min-height: 3.25rem; display: flex; align-items: center; justify-content: center; gap: .45rem; border: 0; border-radius: 1rem; background: linear-gradient(135deg,#168d92,#28b9aa); color: white; font-weight: 900; box-shadow: 0 10px 24px rgba(22,141,146,.22); }
+.avatar-picker__save svg { width: 1.1rem; }
+.avatar-picker__privacy { margin: -.55rem 0 0; color: var(--muted); text-align: center; font-size: .7rem; }
+.avatar-picker button { cursor: pointer; touch-action: manipulation; }
+.avatar-picker button:focus-visible { outline: 3px solid #e16157; outline-offset: 3px; }
+
+@media (min-width: 800px) {
+  .avatar-picker__heading { grid-template-columns: minmax(0,1fr) minmax(18rem, .75fr); align-items: end; }
+  .avatar-picker__workspace { grid-template-columns: minmax(22rem, 1.05fr) minmax(22rem, .95fr); }
+  .avatar-picker__controls { padding: 1.25rem; }
+  .avatar-picker__reactions > div { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .avatar-picker__preview { min-height: 31rem; padding-inline: .75rem; }
+  .avatar-picker__identity-grid { grid-template-columns: 1fr 1fr; }
+  .avatar-picker__identity-grid > button { min-height: 8rem; }
+}

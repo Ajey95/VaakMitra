@@ -1,0 +1,3 @@
+# Default API/development dependencies. Install requirements-model.txt only in
+# the isolated, CUDA-matched private-edge model environment.
+-r requirements-core.txt

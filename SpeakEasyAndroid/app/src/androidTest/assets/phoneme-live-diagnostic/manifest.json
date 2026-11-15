@@ -1,0 +1,16 @@
+{
+  "purpose": "adult operator memory-only diagnostic; not app-model promotion",
+  "model_file": "tempo-candidate.fp32.onnx",
+  "model_sha256": "6219ec930a64431e812ebf7ba54cd5137f313791e7d7819e7918c75521760e8b",
+  "checkpoint_sha256": "4e9f7829bacca754ba376152a977b3da0611a3c756094bfaa107139a3dfa4ef6",
+  "qualified_for_app": false,
+  "approved_for_child_scoring": false,
+  "production_ready": false,
+  "baseline_model_sha256": "94c30918c5be357d7384ddc6dd39fb65ed16ae80a507699b649332c049885683",
+  "vocabulary_sha256": "741c46f796cd5bed542ee43575ef5f8a82ce81720cd4d650cf867ad1e550ddeb",
+  "decoder": {
+    "type": "ctc_prefix_beam",
+    "beam_width": 5,
+    "nonblank_top_k": 8
+  }
+}

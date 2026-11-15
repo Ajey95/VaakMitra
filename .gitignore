@@ -1,0 +1,64 @@
+# Local tools and editors
+.superpowers/
+PHONEME_TRAINING_CONTEXT.md
+.claude/
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Python / backend
+.env
+.env.*
+!.env.example
+.venv/
+backend/venv/
+backend/.env
+backend/uploads/
+uploads/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+npm-debug.log*
+.qa-screenshots/
+
+# Android / Gradle
+SpeakEasyAndroid/.gradle/
+SpeakEasyAndroid/local.properties
+SpeakEasyAndroid/.idea/
+SpeakEasyAndroid/build/
+SpeakEasyAndroid/app/build/
+SpeakEasyAndroid/captures/
+SpeakEasyAndroid/.externalNativeBuild/
+SpeakEasyAndroid/.cxx/
+*.apk
+*.aab
+
+# Private datasets, trained weights and exported model tensors are provisioned separately.
+eval/
+artifacts/
+outputs/
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.onnx.data
+*.onnx_data
+*.f32

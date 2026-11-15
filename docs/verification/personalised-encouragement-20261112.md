@@ -1,0 +1,35 @@
+# Automatic personalised encouragement - 12 November 2026
+
+SSOT3.3.48 / DEC062, DEC063, DEC064 / PRS001..007. Fresh earned participation automatically presents a short Tamil cheer and small kolam stamp. A child never needs to tap replay to trigger the first cheer. Hear again is optional; Rewards has a separate Play sample and Cheer settings. Unsaved settings default to speech ON, while explicit sound OFF, motion OFF, guide Still, and letter reward OFF are preserved.
+
+The current profile name is inserted locally into original Tamil praise. Calm guide, Little hero and Playful friend use the installed offline Tamil system voice with bounded delivery parameters, not film recordings or a celebrity clone. No new paid service, API key, dependency, child recording or cloud upload. Existing avatars, session navigation, 25 word routes, 18-word focused itinerary, 247 letters and manual unlocking remain. Appreciation indicates participation, never phoneme correctness, attention or mastery. Model status remains UNSCORABLE / production_ready=false / approved_for_child_scoring=false.
+
+## Completion and interruption rules
+
+Actual picture matches, explored contextual turns, nonempty microphone captures, manual letter practice, eligible rounds and participating summaries can arm a fresh ticket. Empty recordings and empty More turns do not earn a stamp; support breaks remain neutral. Letter captures count towards their session summary without opening levels. Empty summaries show no earned stamp. Existing account stars are unchanged.
+
+One ephemeral identity-bound mailbox prevents duplicate/recreated/re-enabled cheers, rejects stale completions before mutation and cancels on teaching Example, microphone, Stop, background and navigation. Utterance ownership prevents a departing cheer from stopping an Example or another screen. Summary eligibility is armed before report storage and invalidated if backgrounded; the report can still save, and double End is idempotent. Voice startup uses a four-second monotonic deadline. Shared confirmed preferences include session-only identities; verified settings use atomic disk writes. Missing offline Tamil speech leaves text/visual feedback available. The brief stamp respects motion opt-out, Reduced and Still. No flashing or continuous confetti.
+
+## Verified final candidate
+
+171 JVM tests: zero failures/errors/skips. Lint: zero errors, 8 warnings. Both ABI APKs and instrumentation APK build successfully. iQOO API36: 62 passing native checks (19 retained letter/model/reference +43 complete gallery); emulator API34 x86: 18 (5 model/ABI +13 changed-feedback UI). Test/main installed hashes were read back before each group. This is not a full legacy-gallery rerun on x86. Phone 1 and emulator 4 complete PNGs; retrieval errors 2/0. Dialog evidence captures the actual app-owned Compose dialog; other-window exclusion remains tested. MainActivity reopened after the suites on both. After the separate phone voice probe, USB disappeared again, so the final foreground reopen is unconfirmed. Phone export stopped after two consecutive failures: 1/45 PNGs retrieved, 2 failed, 42 unattempted. All62 phone tests had already passed; four emulator images were inspected, including the actual2x dialog. No phone full-visual-export claim.
+
+Phone main SHA256: `30bebc64c839605a96bee99dec335ced74ed6ba93546592337baeb99b34399e7`. Emulator main: `fd9548605793c12f6f14beed4666a1bb7ff022ebcacdffded3d315a541ce9fff`. Instrumentation: `db0a11598e69bd2426ca2954dd3ac78bc26a30a410ddc2e7d615dff5ca97cad0`. Final source and protected-asset bindings are in artifact-verification.json and the delivery manifest.
+
+Separate physical public-name offline speaker probe: `accepted=true began=true completed=true unavailable=false`. This verifies accepted/start/terminal callbacks, not audible pronunciation, natural completion, clinical effectiveness or a production no-tap audible end-to-end interaction. Public gallery tests deliberately suppress speech and avoid private profile writes. No private child participation was manufactured.
+
+## Review and evidence limits
+
+ONE fresh read-only final AI review, eight Important findings plus two author-regraded Important issues; ONE correction pass, no rereview. Contract RED logs record missing policy interfaces; native RED logs independently show false round stamps and inaccessible large-text settings. The correction adds ten JVM boundary cases and three native cases. Prior failures remain historical. Final runtime evidence is author-verified after source review. Actual TalkBack output, private-profile persistence across process death, audible name quality, the child's interest/comfort and therapeutic benefit remain unvalidated.
+
+Deferred minors: speaker probe conflates onDone/onStop (claim narrowed); combining-mark-only names can survive sanitisation. Neither is represented as validated child performance.
+
+## Resources, rollback and handoff
+
+Existing dirty branch codex/backend-verification-lab, HEAD712de54ee568da6262131f06092c0d4d251b2c92 retained. No commit, merge, push, cleanup or model retraining. Read-only reference roots untouched. All15 protected files and all12 assets per main APK are hash-verified; V7 ONNX remains94c30918c5be357d7384ddc6dd39fb65ed16ae80a507699b649332c049885683. Current-task rollback is the frozen analysis/rollback-arm64.zip containing ARM f1ba41c588f54fe94c3d4a1e0c6cc8a8556d063b81115af73656ecda99dc73f5, ZIP CRC/digest checked. The older clear-scenes c42 rollback remains separate.
+
+Storage constraints were handled by NTFS compression of generated metadata and17 existing delivered APKs, each logical SHA verified unchanged; no files/datasets deleted. Emulator fstrim succeeded but produced no measured immediate host-space improvement. The compressed current rollback moved C-to-D with ZIP digest verification. Existing frozen delivery source/manifest bytes were not rebound. New delivery records measured space and whether an independent ARM copy fits a250MiB reserve. Analysis: D:/VaakMitraData/analysis/personalised-encouragement-20261112. Delivery: D:/VaakMitraData/deliveries/personalised-encouragement-20261112. Exhaustive decisions and costs are in .superpowers/sdd/2026-11-12-personalised-encouragement/progress.md.
+
+References for original hero-style direction and sensory controls: [NHS supporting an autistic child](https://www.nhs.uk/conditions/autism/supporting-a-child/), [Padayappa retrospective](https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/movie-milestone-20-years-of-rajinikanths-padayappa/amp_articleshow/68795621.cms), [Android TextToSpeech](https://developer.android.com/reference/android/speech/tts/TextToSpeech). These do not establish child preferences or treatment benefit.
+
+Visual inspection: emulator Rewards grid/preview,2x owned settings dialog (OFF switches and Save/Cancel),2x word Stop area, and participating summary inspected. Phone Rewards image inspected with readable preview/grid. The2x word frame shows the Stop area; native access checks independently exercised its stamp and replay. No claim that every phone screenshot was exported/inspected.

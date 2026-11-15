@@ -1,0 +1,39 @@
+.parent-practice { display: grid; gap: 20px; overflow: hidden; margin-bottom: 24px; border: 1px solid #dbeafe; border-radius: 28px; padding: clamp(20px, 4vw, 30px); background: radial-gradient(circle at 100% 0%, rgba(103,232,249,.18), transparent 26%), #fff; box-shadow: 0 16px 42px rgba(30,64,175,.08); }
+.parent-practice__heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.parent-practice__heading h2, .parent-practice--empty h2 { color: #172554; font-size: 1.45rem; font-weight: 900; }
+.parent-practice__heading > span { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 7px 11px; background: #eef2ff; color: #4338ca; font-size: .72rem; font-weight: 850; }
+.parent-practice__heading svg { width: 16px; }
+.parent-practice__eyebrow { color: #4f46e5; font-size: .68rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.parent-practice__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.parent-practice__stats > div { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0 10px; border-radius: 18px; padding: 15px; background: #f8fafc; }
+.parent-practice__stats svg { grid-row: 1 / 3; width: 25px; height: 25px; color: #6366f1; }
+.parent-practice__stats strong { color: #172554; font-size: 1.4rem; font-weight: 900; line-height: 1; }
+.parent-practice__stats span { color: #64748b; font-size: .68rem; }
+.parent-practice__trend { display: grid; grid-template-columns: minmax(150px,.65fr) minmax(280px,1.35fr); align-items: stretch; gap: 18px; border-top: 1px solid #e2e8f0; padding-top: 18px; }
+.parent-practice__trend-title { display: flex; align-items: flex-start; gap: 9px; color: #475569; }
+.parent-practice__trend-title svg { flex: 0 0 20px; width: 20px; color: #059669; }
+.parent-practice__trend-title span { display: grid; }
+.parent-practice__trend-title strong { color: #334155; font-size: .82rem; }
+.parent-practice__trend-title small { color: #94a3b8; font-size: .66rem; line-height: 1.4; }
+.parent-practice__bars { display: flex; align-items: end; justify-content: stretch; gap: 8px; min-height: 112px; }
+.parent-practice__bar { display: grid; justify-items: center; align-self: stretch; flex: 1; grid-template-rows: auto 1fr auto; gap: 4px; min-width: 34px; }
+.parent-practice__bar-value { color: #475569; font-size: .62rem; font-weight: 850; }
+.parent-practice__bar-track { position: relative; width: min(32px, 90%); overflow: hidden; border-radius: 8px 8px 4px 4px; background: #e2e8f0; }
+.parent-practice__bar-track i { position: absolute; inset: auto 0 0; border-radius: inherit; background: linear-gradient(#34d399, #4f46e5); }
+.parent-practice__bar time { color: #94a3b8; font-size: .62rem; }
+.parent-practice__recommendation { display: flex; align-items: flex-start; gap: 10px; border-radius: 16px; padding: 13px 15px; background: #ecfdf5; color: #047857; }
+.parent-practice__recommendation svg { flex: 0 0 21px; width: 21px; }
+.parent-practice__recommendation div { display: grid; gap: 2px; }
+.parent-practice__recommendation strong { font-size: .75rem; font-weight: 900; }
+.parent-practice__recommendation p { font-size: .78rem; line-height: 1.45; }
+.parent-practice--empty { grid-template-columns: auto 1fr auto; align-items: center; }
+.parent-practice--empty p { color: #64748b; font-size: .8rem; }
+.parent-practice--empty > a, .parent-practice--error button { border-radius: 13px; padding: 9px 13px; background: #4f46e5; color: #fff; font-size: .75rem; font-weight: 850; }
+.parent-practice__hero { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 18px; background: #eef2ff; color: #4f46e5; }
+.parent-practice--loading { grid-template-columns: 1fr 1fr 1fr; }
+.parent-practice--loading span { height: 78px; border-radius: 17px; background: linear-gradient(90deg,#f1f5f9,#e2e8f0,#f1f5f9); background-size: 200% 100%; animation: practice-shimmer 1.4s linear infinite; }
+.parent-practice--error { grid-template-columns: auto 1fr auto; align-items: center; border-color: #fecdd3; background: #fff1f2; color: #be123c; }
+.parent-practice--error > svg { width: 24px; }
+.parent-practice--error p { color: #9f1239; font-size: .75rem; }
+@keyframes practice-shimmer { to { background-position: -200% 0; } }
+@media (max-width: 680px) { .parent-practice__stats { grid-template-columns: 1fr; } .parent-practice__trend { grid-template-columns: 1fr; } .parent-practice--empty, .parent-practice--error { grid-template-columns: 1fr; justify-items: start; } }

@@ -1,0 +1,60 @@
+{
+  "schema_version": "vaakmitra-source-registry-1",
+  "sources": [
+    {
+      "source_id": "mlcommons-mswc-ta",
+      "source_revision": "0bc9df68e92fd6bb54176bf7eb29e2b9e97cb218",
+      "homepage": "https://huggingface.co/datasets/MLCommons/ml_spoken_words",
+      "licence_id": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "licence_status": "verified",
+      "terms_checked_at": "2026-09-06",
+      "enabled": true,
+      "intended_uses": ["other", "confusable"]
+    },
+    {
+      "source_id": "openslr-65-ta",
+      "source_revision": "openslr65-2019-metadata-533be052-1a0c01af",
+      "homepage": "https://openslr.org/65/",
+      "licence_id": "CC-BY-SA-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licence_status": "verified",
+      "terms_checked_at": "2026-09-06",
+      "enabled": true,
+      "intended_uses": ["target", "other", "confusable", "canary"]
+    },
+    {
+      "source_id": "openslr-127-mile-ta",
+      "source_revision": "etag-336bf534a-5e2b7e67be13b",
+      "homepage": "https://openslr.org/127/",
+      "licence_id": "CC-BY-2.0",
+      "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+      "licence_status": "verified",
+      "terms_checked_at": "2026-09-06",
+      "enabled": true,
+      "intended_uses": ["target", "other", "confusable", "canary"]
+    },
+    {
+      "source_id": "google-fleurs-ta-in",
+      "source_revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "homepage": "https://huggingface.co/datasets/google/fleurs",
+      "licence_id": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "licence_status": "verified",
+      "terms_checked_at": "2026-09-06",
+      "enabled": true,
+      "intended_uses": ["other", "confusable", "canary"]
+    },
+    {
+      "source_id": "ai4bharat-kathbath-ta",
+      "source_revision": "5b9e92849222026d9141acba4e8434fe816396bf",
+      "homepage": "https://huggingface.co/datasets/ai4bharat/Kathbath",
+      "licence_id": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "licence_status": "verified",
+      "terms_checked_at": "2026-09-06",
+      "enabled": false,
+      "intended_uses": ["target", "other", "confusable", "canary"]
+    }
+  ]
+}

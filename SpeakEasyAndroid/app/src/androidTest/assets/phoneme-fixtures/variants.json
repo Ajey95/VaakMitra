@@ -1,0 +1,27 @@
+[
+  {
+    "kind": "noise20",
+    "file": "noise20.wav",
+    "sha256": "38b0db16803b027237de1ce70748b0bb1dcac20b9bd123202d0a5e57241da284"
+  },
+  {
+    "kind": "noise10",
+    "file": "noise10.wav",
+    "sha256": "86dd737f8b3482a8b12b83044d8e3337585569910d20bb7cbd8c17cd8eb826d2"
+  },
+  {
+    "kind": "echo",
+    "file": "echo.wav",
+    "sha256": "9faafa5ed2aa5cfe6af0c3e2d6af04feea4b4fb3f33939f1c22e1d3ad6d1b21e"
+  },
+  {
+    "kind": "lowpass",
+    "file": "lowpass.wav",
+    "sha256": "d54ce0ac592ade214801c4c57b112e3026f4bbb3347d9a44b28ddbeb9c017445"
+  },
+  {
+    "kind": "quiet",
+    "file": "quiet.wav",
+    "sha256": "333c18e45453a369405acb01a6022ae60676ae0f779d1fefaa2e2248723efc96"
+  }
+]

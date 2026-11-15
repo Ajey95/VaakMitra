@@ -1,0 +1,60 @@
+/** DEC-022: real browser-to-loopback adult diagnostic smoke, never child scoring. */
+import assert from 'node:assert/strict'
+import { chromium } from 'playwright'
+
+const browser = await chromium.launch({ channel: 'chrome', headless: true })
+try {
+  const page = await browser.newPage()
+  await page.goto('http://127.0.0.1:5173/dev/backend-lab')
+  await page.getByRole('checkbox').check()
+  await page.getByRole('button', { name: 'Open local test session' }).click()
+  // DEC-018: a cold NeMo restore can exceed the ordinary UI assertion timeout.
+  await page.getByText('Model: ready').waitFor({ timeout: 120_000 })
+  await page.getByLabel('Test word').selectOption('TA_WORD_0096')
+  const adultWav = 'D:\\VaakMitraData\\prepared\\openslr127-word-v1\\train\\ISTL_0000209_0000058\\00.wav'
+  await page.getByLabel('Adult WAV (optional)', { exact: true }).setInputFiles(adultWav)
+  await page.getByRole('button', { name: 'Run real audio test' }).click()
+  const result = page.getByLabel('Real audio result')
+  await result.waitFor({ timeout: 70_000 })
+  const visible = await result.innerText()
+  assert.match(visible, /REAL MODEL · ADULT ENGINEERING EVIDENCE/)
+  assert.match(visible, /Development result:\s*MATCH/)
+  assert.match(visible, /Provisional adult match estimate: 100%/)
+  assert.match(visible, /Model candidate/)
+  assert.match(visible, /Speech detected/)
+  assert.match(visible, /No child score or pronunciation diagnosis/)
+  assert.doesNotMatch(visible, /UNSCORABLE/)
+  assert.equal(await page.getByLabel('Adult visual chunk coach').count(), 0)
+  // DEC-024/DDV-004: the same audio against a different target exercises remediation.
+  await page.getByLabel('Test word').selectOption('TA_WORD_0001')
+  // DEC-025/DLA-005: changing target invalidates and clears the prior turn's capture.
+  await page.getByLabel('Adult WAV (optional)', { exact: true }).setInputFiles(adultWav)
+  await page.getByRole('button', { name: 'Run real audio test' }).click()
+  await result.getByText(/Development result:\s*(TRY AGAIN|UNCERTAIN — RETRY)/).waitFor({ timeout: 70_000 })
+  const coach = page.getByLabel('Adult visual chunk coach')
+  await coach.waitFor()
+  assert.match(await coach.innerText(), /written chunks, not verified syllables/i)
+  assert.match(await coach.innerText(), /Coached cycle 1 of 2/)
+  assert.match(await coach.innerText(), /unvalidated ASR text hypothesis/i)
+  await coach.getByRole('button', { name: /Focus chunk 1:/ }).click()
+  assert.match(await coach.innerText(), /manually selected visual chunk/i)
+  await coach.getByRole('button', { name: 'I tried this chunk' }).click()
+  assert.match(await coach.innerText(), /Blend the chunks:/)
+  await coach.getByRole('button', { name: 'I blended the word' }).click()
+  assert.match(await coach.innerText(), /Only the whole-word adult diagnostic will run/)
+  await page.getByRole('button', { name: 'Run real audio test' }).click()
+  await coach.getByText('Coached cycle 2 of 2').waitFor({ timeout: 70_000 })
+  await coach.getByRole('button', { name: 'I tried this chunk' }).click()
+  await coach.getByRole('button', { name: 'I blended the word' }).click()
+  await page.getByRole('button', { name: 'Run real audio test' }).click()
+  await coach.getByText(/Time for a break/).waitFor({ timeout: 70_000 })
+  assert.match(await coach.innerText(), /no correctness claim was made/i)
+  await page.getByRole('button', { name: 'Stop \/ clear audio' }).click()
+  assert.equal(await result.count(), 0)
+  assert.equal(await coach.count(), 0)
+  await page.getByRole('button', { name: 'Close test session' }).click()
+  await page.getByRole('button', { name: 'Open local test session' }).waitFor()
+  console.log(JSON.stringify({ real_browser: 'passed', development_match: true, development_remediation: true, chunk_cycles: 2, break_enforced: true }))
+} finally {
+  await browser.close()
+}

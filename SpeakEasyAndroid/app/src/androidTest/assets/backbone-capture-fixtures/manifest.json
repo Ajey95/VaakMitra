@@ -1,0 +1,4893 @@
+{
+  "calibration_only": true,
+  "source_clips": 128,
+  "practice_words": 25,
+  "cases": [
+    {
+      "file": "00302-clean.wav",
+      "sha256": "8736d042bfe9dbe1dc6dc0b65b310c42f4394631c44ef5d1281465814efa6c5f",
+      "source_row": 302,
+      "source_split": "calibration",
+      "source_audio_sha256": "8d10e587182d05b62392686dee47c6a1e45de8d4ab37159dc8fd2618760eada0",
+      "word_id": "TA_WORD_0103",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00302-quiet_last150ms.wav",
+      "sha256": "895e37160c580b1b8d4d289ab240811d29f3333f92cee2d9b8142c8a69ce4627",
+      "source_row": 302,
+      "source_split": "calibration",
+      "source_audio_sha256": "8d10e587182d05b62392686dee47c6a1e45de8d4ab37159dc8fd2618760eada0",
+      "word_id": "TA_WORD_0103",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00314-clean.wav",
+      "sha256": "0e1d2bfcc9a62c01a8838c13df9baed48a256019032f16b975cd7af7b898bc3d",
+      "source_row": 314,
+      "source_split": "calibration",
+      "source_audio_sha256": "d5c6f787dbafb267aecc28084ad5503af7eed4d4aa5463deaa08d0e35dee99e7",
+      "word_id": "TA_WORD_0002",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00314-quiet_last150ms.wav",
+      "sha256": "119ec897ee5d62754cfee37b5023521784cc433939eabd9258a7ad26efc822c3",
+      "source_row": 314,
+      "source_split": "calibration",
+      "source_audio_sha256": "d5c6f787dbafb267aecc28084ad5503af7eed4d4aa5463deaa08d0e35dee99e7",
+      "word_id": "TA_WORD_0002",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00316-clean.wav",
+      "sha256": "6ba70e96067651f115c46370cf44833b8ec285c6e65aaff784aab530b80e32ee",
+      "source_row": 316,
+      "source_split": "calibration",
+      "source_audio_sha256": "2e3447fa9193c32a0e85426684e1e949409b264c6907ae4e5146ca36a2ca87b1",
+      "word_id": "TA_WORD_0102",
+      "kind": "clean",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00316-quiet_last150ms.wav",
+      "sha256": "e757e89adecaf4da454afa9811a55876529dab8fd6f96183a5f60d96a61f8ece",
+      "source_row": 316,
+      "source_split": "calibration",
+      "source_audio_sha256": "2e3447fa9193c32a0e85426684e1e949409b264c6907ae4e5146ca36a2ca87b1",
+      "word_id": "TA_WORD_0102",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00327-clean.wav",
+      "sha256": "02b2332261fe221d07feebf29da9d606e0945acd73260c0f5711b3e18fe4fb79",
+      "source_row": 327,
+      "source_split": "calibration",
+      "source_audio_sha256": "9dcf80c7be2dbe98978317b24420dfa1e2f9ace0d2ce3aa17b248548072d92d1",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00327-quiet_last150ms.wav",
+      "sha256": "e9986da429b77ec758dbf2f144a183c5a72211bc1431004e25fcb1b669abb322",
+      "source_row": 327,
+      "source_split": "calibration",
+      "source_audio_sha256": "9dcf80c7be2dbe98978317b24420dfa1e2f9ace0d2ce3aa17b248548072d92d1",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00349-clean.wav",
+      "sha256": "a6f4fc72873788b5d3445c6d34a7f10719acd98d8a64566a510be7cdc6ceb1b0",
+      "source_row": 349,
+      "source_split": "calibration",
+      "source_audio_sha256": "cd02061e02b3512d93d1dd57605fc72bbe5f5a6c0c068e962a79cf757e0632e2",
+      "word_id": "TA_WORD_0049",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "o",
+        "l"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00349-quiet_last150ms.wav",
+      "sha256": "af39b39cf7e36e4989bc9fda070f1092c2c6e89a0c69c6e3b29d8207ac5ad2fb",
+      "source_row": 349,
+      "source_split": "calibration",
+      "source_audio_sha256": "cd02061e02b3512d93d1dd57605fc72bbe5f5a6c0c068e962a79cf757e0632e2",
+      "word_id": "TA_WORD_0049",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "o",
+        "l"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00715-clean.wav",
+      "sha256": "ca60f049e9fdfa4de64d644cad01ace190dc4a13e666e357b21fcff01972b449",
+      "source_row": 715,
+      "source_split": "calibration",
+      "source_audio_sha256": "50e4a4d5301dee982618a7aa7dc233953f56af166f88917f9a2204cce4320282",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00715-quiet_last150ms.wav",
+      "sha256": "5b3f1b34c1cb9ca25f840a4a374f8440ace3380053e84088ad05bfef1951ec52",
+      "source_row": 715,
+      "source_split": "calibration",
+      "source_audio_sha256": "50e4a4d5301dee982618a7aa7dc233953f56af166f88917f9a2204cce4320282",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00716-clean.wav",
+      "sha256": "905939c9c0a4506706911e762dc098daf8f8fcf38b41de3ba90d93ef22cafa48",
+      "source_row": 716,
+      "source_split": "calibration",
+      "source_audio_sha256": "e51db30fea3e78767d11c637fc02edbbcd5ccb47f6cfb49042c85d4823b01321",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00716-quiet_last150ms.wav",
+      "sha256": "cd82c105ca3aa44b2cef539239eb39e49148c33d36fbd2ade49192c64ab34f59",
+      "source_row": 716,
+      "source_split": "calibration",
+      "source_audio_sha256": "e51db30fea3e78767d11c637fc02edbbcd5ccb47f6cfb49042c85d4823b01321",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00718-clean.wav",
+      "sha256": "abc35a0d45c993cfa68cd5f1db3429c0fe6325ba027549ed4a0d4c6d6f3c16a0",
+      "source_row": 718,
+      "source_split": "calibration",
+      "source_audio_sha256": "14da8024f222c60348f06844adc901cf89597a3a013725d8ed573e286d20f36f",
+      "word_id": "TA_WORD_0102",
+      "kind": "clean",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00718-quiet_last150ms.wav",
+      "sha256": "fa3e475a864ed9e368558a8aaf37dc8c43f58691132813d6016e69ba4fecd6db",
+      "source_row": 718,
+      "source_split": "calibration",
+      "source_audio_sha256": "14da8024f222c60348f06844adc901cf89597a3a013725d8ed573e286d20f36f",
+      "word_id": "TA_WORD_0102",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00720-clean.wav",
+      "sha256": "8f7be7219fb3234a6266a97ea765ab7644a60d7124213924133722cdd72140ca",
+      "source_row": 720,
+      "source_split": "calibration",
+      "source_audio_sha256": "1bdd7f45a6c7c186b11ea097a824b59b55c261420b080e2eef958a70d473390d",
+      "word_id": "TA_WORD_0002",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "00720-quiet_last150ms.wav",
+      "sha256": "6da95b3621a0d2fb265a034038e0aeb0f2b56580910125094012da4338bf5039",
+      "source_row": 720,
+      "source_split": "calibration",
+      "source_audio_sha256": "1bdd7f45a6c7c186b11ea097a824b59b55c261420b080e2eef958a70d473390d",
+      "word_id": "TA_WORD_0002",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01026-clean.wav",
+      "sha256": "07d4b0006c12f52c17235cad9f77af04b90e3b2c70e65db0be4a32d5be222916",
+      "source_row": 1026,
+      "source_split": "calibration",
+      "source_audio_sha256": "314d3f23cc3b28d80e4d8d7187b7dd2173c82d9a65c4fd5bf6ae13b2a508a49c",
+      "word_id": "TA_WORD_0084",
+      "kind": "clean",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01026-quiet_last150ms.wav",
+      "sha256": "b3820f9713174a3f4ce1c976a02d3def60650fb7d74a802a6173c970b0968963",
+      "source_row": 1026,
+      "source_split": "calibration",
+      "source_audio_sha256": "314d3f23cc3b28d80e4d8d7187b7dd2173c82d9a65c4fd5bf6ae13b2a508a49c",
+      "word_id": "TA_WORD_0084",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01032-clean.wav",
+      "sha256": "5adbe36944b6fd796f4c98e8bea7340322caad8e05dda95d18f0560dd4b95db9",
+      "source_row": 1032,
+      "source_split": "calibration",
+      "source_audio_sha256": "99b74c67d43c222755f82c74fe998129d6cc5fb2d53614f8a9c6b36402f3a256",
+      "word_id": "TA_WORD_0099",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01032-quiet_last150ms.wav",
+      "sha256": "ab57272864a1fe9e1cda8f2ac2a8ad3fb8b9c6ea5d9353fa6267c6bd367caba6",
+      "source_row": 1032,
+      "source_split": "calibration",
+      "source_audio_sha256": "99b74c67d43c222755f82c74fe998129d6cc5fb2d53614f8a9c6b36402f3a256",
+      "word_id": "TA_WORD_0099",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01051-clean.wav",
+      "sha256": "dd468528ba8577d7fb923756e5e1716317c32c58cff5824d9ac0815925bf7c2b",
+      "source_row": 1051,
+      "source_split": "calibration",
+      "source_audio_sha256": "79f520884f6023538a21cf9ecbd40dd88ec86da00b4ed4a19f61af67599db962",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01051-quiet_last150ms.wav",
+      "sha256": "7b54d22c92cc51900cbe329346d61bb26d4adea060caa0535d28c1975bc80104",
+      "source_row": 1051,
+      "source_split": "calibration",
+      "source_audio_sha256": "79f520884f6023538a21cf9ecbd40dd88ec86da00b4ed4a19f61af67599db962",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01060-clean.wav",
+      "sha256": "cb114f9b86e99ac13a3d400f43c82a88b51b4e01868913f08cf85bc97974828f",
+      "source_row": 1060,
+      "source_split": "calibration",
+      "source_audio_sha256": "c41b48fa0b138608b278ef3dd5f1ee3f8000ad73080dbf3d524b7a264fba237b",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01060-quiet_last150ms.wav",
+      "sha256": "48e446924e05aed935ce5bbae780e07a3d5e18a9da4275fc96f03213bceb0e20",
+      "source_row": 1060,
+      "source_split": "calibration",
+      "source_audio_sha256": "c41b48fa0b138608b278ef3dd5f1ee3f8000ad73080dbf3d524b7a264fba237b",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01079-clean.wav",
+      "sha256": "21ffee08aa03ad16853087b0432b358e19f9ac23ac140953753f8b057115cb15",
+      "source_row": 1079,
+      "source_split": "calibration",
+      "source_audio_sha256": "06c468dcad6173a6993e9eceb896cc67922d326d1399c63fe419e9b5b6693fce",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01079-quiet_last150ms.wav",
+      "sha256": "1156a8b024cea5d8a91617ae3032a51df95b2443f3b239c25856e726afa993a5",
+      "source_row": 1079,
+      "source_split": "calibration",
+      "source_audio_sha256": "06c468dcad6173a6993e9eceb896cc67922d326d1399c63fe419e9b5b6693fce",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01091-clean.wav",
+      "sha256": "e410a18f74639c8429c19187a90230dfc7b8a16228b347b0aadd4db1e80d3fac",
+      "source_row": 1091,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a31d38325a83426d7554a6c523ce0e41377843c6663a6ab21f0a65d71493c05",
+      "word_id": "TA_WORD_0014",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "01091-quiet_last150ms.wav",
+      "sha256": "0005023ea3f8a3d087b39d7a2675473b36c2d5bceefd7a874a8528e7105cdb01",
+      "source_row": 1091,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a31d38325a83426d7554a6c523ce0e41377843c6663a6ab21f0a65d71493c05",
+      "word_id": "TA_WORD_0014",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02124-clean.wav",
+      "sha256": "6cb40c339b150dc490255741e6f8b6242c2638fb2f69fb2bfc4c037e7c37b50f",
+      "source_row": 2124,
+      "source_split": "calibration",
+      "source_audio_sha256": "6bd9f0c795638c75216e9d002ea47128849e5876303aff9af772ae6d958a8cd3",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02124-quiet_last150ms.wav",
+      "sha256": "cb09cab705cb04bc1c04672cbc008ad55f373eff495e8e5179c549388ec9c012",
+      "source_row": 2124,
+      "source_split": "calibration",
+      "source_audio_sha256": "6bd9f0c795638c75216e9d002ea47128849e5876303aff9af772ae6d958a8cd3",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02148-clean.wav",
+      "sha256": "093b230ed200156ae7429fe72dc0de20f38af70f71a9e90ef229663f91830570",
+      "source_row": 2148,
+      "source_split": "calibration",
+      "source_audio_sha256": "92aa9c83d7e571830065c47830bf7bdacc5eecd7b6af0b2dfbf15cde3915a85e",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02148-quiet_last150ms.wav",
+      "sha256": "07e35c2b6f806c01f9256f8bd5b94850f1db0c96be80273d7c7415076c545a3b",
+      "source_row": 2148,
+      "source_split": "calibration",
+      "source_audio_sha256": "92aa9c83d7e571830065c47830bf7bdacc5eecd7b6af0b2dfbf15cde3915a85e",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02149-clean.wav",
+      "sha256": "91c21beb820ff7c518c0f91839ff77fa929f3bc90214aa5f7a80be9ae8b7aa30",
+      "source_row": 2149,
+      "source_split": "calibration",
+      "source_audio_sha256": "172f42a0f0d0acbcdb03521807743e32eed99b3f706a7cc4fccfbf871c20be91",
+      "word_id": "TA_WORD_0099",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02149-quiet_last150ms.wav",
+      "sha256": "4f6562617c015ef35a641d791c257ac189ee64c9eca3dcf3c20c19508d187ae8",
+      "source_row": 2149,
+      "source_split": "calibration",
+      "source_audio_sha256": "172f42a0f0d0acbcdb03521807743e32eed99b3f706a7cc4fccfbf871c20be91",
+      "word_id": "TA_WORD_0099",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02154-clean.wav",
+      "sha256": "d856f90279ade36b67b3caeaa83bc8a7d251b3a2d04932580db7995bc52c3440",
+      "source_row": 2154,
+      "source_split": "calibration",
+      "source_audio_sha256": "d2ac3f2cee4a492bd2b95e6a8a82d4de4aecf3d4905c0d8cc6342f8d1940b22e",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02154-quiet_last150ms.wav",
+      "sha256": "32abe06a0fd5c103136ff0da25ebda6276812b81a37b81e60eb1e029f9e61798",
+      "source_row": 2154,
+      "source_split": "calibration",
+      "source_audio_sha256": "d2ac3f2cee4a492bd2b95e6a8a82d4de4aecf3d4905c0d8cc6342f8d1940b22e",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02156-clean.wav",
+      "sha256": "b127cb0d3fdb10c61bb3a5d8fea914e91100be45ddca0c24ce92e6f90bebc174",
+      "source_row": 2156,
+      "source_split": "calibration",
+      "source_audio_sha256": "78f1ff9b07f2e05ceee4549e25c861830532f87f375dc9ed5c9b45608af80cc3",
+      "word_id": "TA_WORD_0099",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02156-quiet_last150ms.wav",
+      "sha256": "bbc8deb2a113ee94fc04bc409c5d3b7cd8fa7537f7102f348085026496e0082d",
+      "source_row": 2156,
+      "source_split": "calibration",
+      "source_audio_sha256": "78f1ff9b07f2e05ceee4549e25c861830532f87f375dc9ed5c9b45608af80cc3",
+      "word_id": "TA_WORD_0099",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02157-clean.wav",
+      "sha256": "6f4b8baab15bb1654f0ab5e3be18aff241d2ddf22b0b46f5e34e10d4574a259b",
+      "source_row": 2157,
+      "source_split": "calibration",
+      "source_audio_sha256": "c21b6a4dd61d9f50d2c059f6eb1c8c2e734470811312fc72b3970887c5a866db",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02157-quiet_last150ms.wav",
+      "sha256": "9e026b0dfa98fb90ba404544e5d9e61a83c348e4556ca7ead2bd93c1ec82e878",
+      "source_row": 2157,
+      "source_split": "calibration",
+      "source_audio_sha256": "c21b6a4dd61d9f50d2c059f6eb1c8c2e734470811312fc72b3970887c5a866db",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02158-clean.wav",
+      "sha256": "8f765f11fe1de5a86ba2c2ca17133c63315c21a4b0299af06ad5ec0db73b4b7c",
+      "source_row": 2158,
+      "source_split": "calibration",
+      "source_audio_sha256": "254f85265ccc2b512b97e58756751d565f247c23acb9ec45accf3b516b2d3c53",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02158-quiet_last150ms.wav",
+      "sha256": "2d53bfcb125ffad9ea85fce53176062690103c569c7bd4b0d756637ceb04eee9",
+      "source_row": 2158,
+      "source_split": "calibration",
+      "source_audio_sha256": "254f85265ccc2b512b97e58756751d565f247c23acb9ec45accf3b516b2d3c53",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02164-clean.wav",
+      "sha256": "bebe9da806b678a23f3606bd5a07410126f786d80365eb1cc6e4aba227ac2419",
+      "source_row": 2164,
+      "source_split": "calibration",
+      "source_audio_sha256": "6a89870f3f624a4ca26e0a6af18ac15de2a2cc00cd9d54ea476c16379d4fb891",
+      "word_id": "TA_WORD_0083",
+      "kind": "clean",
+      "reference": [
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02164-quiet_last150ms.wav",
+      "sha256": "69bcbea995d4b8b09f03053f2a5572a7289f04a5056bb048a2d1b9b4c98d7f66",
+      "source_row": 2164,
+      "source_split": "calibration",
+      "source_audio_sha256": "6a89870f3f624a4ca26e0a6af18ac15de2a2cc00cd9d54ea476c16379d4fb891",
+      "word_id": "TA_WORD_0083",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02178-clean.wav",
+      "sha256": "856da3ec1f5d2ea672567976a421728c9da4a6e104de6e27c72c17dd345a68b3",
+      "source_row": 2178,
+      "source_split": "calibration",
+      "source_audio_sha256": "bea20acf4918e8766f27561185fb6e823373be5b3d16d5beb45c3b95686671be",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02178-quiet_last150ms.wav",
+      "sha256": "4393c14d75907326858cebc26f6fef4ffd7df934331d24dab6bcc41a55847958",
+      "source_row": 2178,
+      "source_split": "calibration",
+      "source_audio_sha256": "bea20acf4918e8766f27561185fb6e823373be5b3d16d5beb45c3b95686671be",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02187-clean.wav",
+      "sha256": "51a773335a6abf28acb1060a47e61e8099daf81baf48440f50e2cf43cb565a19",
+      "source_row": 2187,
+      "source_split": "calibration",
+      "source_audio_sha256": "21023dfe1d33d74c1d5d284a218c3cb1faa23a148d5aa4343316b8a59f674458",
+      "word_id": "TA_WORD_0100",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02187-quiet_last150ms.wav",
+      "sha256": "578a089ad0175cc58430a1d617c7f463c21a3aaf126f51c12f70911851a8f663",
+      "source_row": 2187,
+      "source_split": "calibration",
+      "source_audio_sha256": "21023dfe1d33d74c1d5d284a218c3cb1faa23a148d5aa4343316b8a59f674458",
+      "word_id": "TA_WORD_0100",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02188-clean.wav",
+      "sha256": "57e0d23f5affb1577ab3ce36dd8fd5a1c62f943983dc0ecfe12105fd1db7df92",
+      "source_row": 2188,
+      "source_split": "calibration",
+      "source_audio_sha256": "a09b37fa504817c34c2800d5c2755b0048e5e2b2b05468326effe31aacb39865",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02188-quiet_last150ms.wav",
+      "sha256": "ba09b3b6324436301079e1c768a549d2aeb3be8624136aa1ed76a4a589949d67",
+      "source_row": 2188,
+      "source_split": "calibration",
+      "source_audio_sha256": "a09b37fa504817c34c2800d5c2755b0048e5e2b2b05468326effe31aacb39865",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02202-clean.wav",
+      "sha256": "e6fbb143d90f07ccdb6de7b741a59d67fad9ef49160c1f877a1d6e751b494920",
+      "source_row": 2202,
+      "source_split": "calibration",
+      "source_audio_sha256": "69992c840683d64672369ff67e7420aca29117fbbec4d5545817f271069b3c09",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02202-quiet_last150ms.wav",
+      "sha256": "fff2541bec44499fa1b285d259273dd0718c24286237ad0483bffee07a146927",
+      "source_row": 2202,
+      "source_split": "calibration",
+      "source_audio_sha256": "69992c840683d64672369ff67e7420aca29117fbbec4d5545817f271069b3c09",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02210-clean.wav",
+      "sha256": "ade1e5dc68b19898d054021ddde50224d18775d46f5f2dfeab204a618349ec3b",
+      "source_row": 2210,
+      "source_split": "calibration",
+      "source_audio_sha256": "270e3e427692d1bfaf8dbc066b835db82c0b3738f978fb0e852165529aaa6410",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02210-quiet_last150ms.wav",
+      "sha256": "7cf541c571e81fcec70af71112900459bb01e4c165b0262d94d1a46e8df5b362",
+      "source_row": 2210,
+      "source_split": "calibration",
+      "source_audio_sha256": "270e3e427692d1bfaf8dbc066b835db82c0b3738f978fb0e852165529aaa6410",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02220-clean.wav",
+      "sha256": "24d3b9b33e733aa1edcd5557fc0b8b0fdaf11dada4d37c0471c64d4698f6b913",
+      "source_row": 2220,
+      "source_split": "calibration",
+      "source_audio_sha256": "fafce2f5e2b7ce6efcc8f0ea7bcbda7e99feae0d01051a18a231101f53036670",
+      "word_id": "TA_WORD_0061",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02220-quiet_last150ms.wav",
+      "sha256": "538a9fd7446511a078079532ade0450a8d3ece1b554fdde287b0ba71c8ddafc6",
+      "source_row": 2220,
+      "source_split": "calibration",
+      "source_audio_sha256": "fafce2f5e2b7ce6efcc8f0ea7bcbda7e99feae0d01051a18a231101f53036670",
+      "word_id": "TA_WORD_0061",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02238-clean.wav",
+      "sha256": "5f5171b422b1661a0dcea2697deceacdb6de8525eaa5222ce0758033137fc7dd",
+      "source_row": 2238,
+      "source_split": "calibration",
+      "source_audio_sha256": "04b3f870805bf0524725a8ab967933131695eb8e4a74431b5fd6c40fec939f54",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02238-quiet_last150ms.wav",
+      "sha256": "318bea2a9226675eba687ffaff25a867316b6fe73a514976e1db6ea50ec9f9a3",
+      "source_row": 2238,
+      "source_split": "calibration",
+      "source_audio_sha256": "04b3f870805bf0524725a8ab967933131695eb8e4a74431b5fd6c40fec939f54",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02341-clean.wav",
+      "sha256": "2853d806377d589327ae8e99b31e6bd1ae600d406bf9f92e2e75897b00c77b60",
+      "source_row": 2341,
+      "source_split": "calibration",
+      "source_audio_sha256": "ae93e97e7673effa59d08bb8226d34a9dbfc076e9ddcf6bcb5f281a2dbf19e4a",
+      "word_id": "TA_WORD_0015",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "n",
+        "n",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02341-quiet_last150ms.wav",
+      "sha256": "6625f3739605cd0dcd80ac034a68023086e92b0400e2cfcf6fb3b15437e61c9e",
+      "source_row": 2341,
+      "source_split": "calibration",
+      "source_audio_sha256": "ae93e97e7673effa59d08bb8226d34a9dbfc076e9ddcf6bcb5f281a2dbf19e4a",
+      "word_id": "TA_WORD_0015",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "n",
+        "n",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02344-clean.wav",
+      "sha256": "ea49994bcf638a81ab59fc3e3ec9349cb92a1701cef8b4ceee688e5d14a67e2c",
+      "source_row": 2344,
+      "source_split": "calibration",
+      "source_audio_sha256": "b058fda202480bf216acad7c7ec7fffe38259b86c0b2a1280ba694d69567007d",
+      "word_id": "TA_WORD_0072",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02344-quiet_last150ms.wav",
+      "sha256": "5ce5317a812e7c777f1fe32dc62969a54c94c4d7f093e667fba48c24ee7db2a0",
+      "source_row": 2344,
+      "source_split": "calibration",
+      "source_audio_sha256": "b058fda202480bf216acad7c7ec7fffe38259b86c0b2a1280ba694d69567007d",
+      "word_id": "TA_WORD_0072",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02370-clean.wav",
+      "sha256": "f4774aff75f25ec2f13bd88c23e4f940c6e5374c0fd76a98e2c1eee069dec25a",
+      "source_row": 2370,
+      "source_split": "calibration",
+      "source_audio_sha256": "1240359f2d9ee555b31661e8f3b190dd3db5704d0e231fe2b070731b9987cdc3",
+      "word_id": "TA_WORD_0016",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02370-quiet_last150ms.wav",
+      "sha256": "709146ae09e021394f532aa8d252d0fe60b5762a023b93192a30b7ceee2417cc",
+      "source_row": 2370,
+      "source_split": "calibration",
+      "source_audio_sha256": "1240359f2d9ee555b31661e8f3b190dd3db5704d0e231fe2b070731b9987cdc3",
+      "word_id": "TA_WORD_0016",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02383-clean.wav",
+      "sha256": "cbf4a68911adf138b6a118cb6cf799bec2d6a098bd3a455a4f5c8e8c58c51979",
+      "source_row": 2383,
+      "source_split": "calibration",
+      "source_audio_sha256": "74ae80cf796894d3afd2d0e6ed8e52a34e8cc73f2d38865a7a04086d3a3df598",
+      "word_id": "TA_WORD_0016",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02383-quiet_last150ms.wav",
+      "sha256": "f877803a8e3e7e38d945941cd202d5a52406757ca2aad9657ffba266f4806a83",
+      "source_row": 2383,
+      "source_split": "calibration",
+      "source_audio_sha256": "74ae80cf796894d3afd2d0e6ed8e52a34e8cc73f2d38865a7a04086d3a3df598",
+      "word_id": "TA_WORD_0016",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02395-clean.wav",
+      "sha256": "58e5a3d5fa22b3cb9c940c6e5eba59b1d3f0e7d682c95ee64b20d9e325839c65",
+      "source_row": 2395,
+      "source_split": "calibration",
+      "source_audio_sha256": "1e2456e19fa2bfa99337e422417e1dae9ad2d04bb6f16e13d3a8797209d45ef3",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02395-quiet_last150ms.wav",
+      "sha256": "64d8b0561d7c2d98efe6d1c34fb5348898650aafc38df541a9bf9d020a2b9e4b",
+      "source_row": 2395,
+      "source_split": "calibration",
+      "source_audio_sha256": "1e2456e19fa2bfa99337e422417e1dae9ad2d04bb6f16e13d3a8797209d45ef3",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02403-clean.wav",
+      "sha256": "199ca61003ab63c57baee758d137a86297ea6b17164a3909237a8b9d81e7b010",
+      "source_row": 2403,
+      "source_split": "calibration",
+      "source_audio_sha256": "37b14c1568e83a4b059e6219d46a61e75441c51fa02594f9a439e5e33a778e7e",
+      "word_id": "TA_WORD_0002",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "02403-quiet_last150ms.wav",
+      "sha256": "24822c416856ac554d051fe5aca20e2a88f889be97b9ccb6f1d8a4eb4fe7826c",
+      "source_row": 2403,
+      "source_split": "calibration",
+      "source_audio_sha256": "37b14c1568e83a4b059e6219d46a61e75441c51fa02594f9a439e5e33a778e7e",
+      "word_id": "TA_WORD_0002",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03282-clean.wav",
+      "sha256": "242ea8fbace9a01bd5a83861f194c2b3ce1dc408e1356884830278544e6ff277",
+      "source_row": 3282,
+      "source_split": "calibration",
+      "source_audio_sha256": "ec8e6b237e5fc5d8da1b8ebf7f08bcd8e09d4624cfc246eb13e4e623dd43c168",
+      "word_id": "TA_WORD_0016",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03282-quiet_last150ms.wav",
+      "sha256": "b86d8f33b9db2314d98aa07fe7a8ee43c1e5ffb3923b31d412e6076a49df9782",
+      "source_row": 3282,
+      "source_split": "calibration",
+      "source_audio_sha256": "ec8e6b237e5fc5d8da1b8ebf7f08bcd8e09d4624cfc246eb13e4e623dd43c168",
+      "word_id": "TA_WORD_0016",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03297-clean.wav",
+      "sha256": "df21a461390151d6d5e71114a02bfe903c2c62b6a1e9a41f0b2fe8db219b1cf6",
+      "source_row": 3297,
+      "source_split": "calibration",
+      "source_audio_sha256": "ea003f2a704db62c86fe21879debaa1817580f5b8d6ea5ed55f30dbf3ba48254",
+      "word_id": "TA_WORD_0015",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "n",
+        "n",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03297-quiet_last150ms.wav",
+      "sha256": "43344e60add8d1cd159cb62a1917fe7ae0102efd1502851662ebc6bebdada92f",
+      "source_row": 3297,
+      "source_split": "calibration",
+      "source_audio_sha256": "ea003f2a704db62c86fe21879debaa1817580f5b8d6ea5ed55f30dbf3ba48254",
+      "word_id": "TA_WORD_0015",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "n",
+        "n",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03326-clean.wav",
+      "sha256": "00be4512359b26716fe61da08e92736553deb38cb47aada524b82e2d5cebc069",
+      "source_row": 3326,
+      "source_split": "calibration",
+      "source_audio_sha256": "5bc7131da7c0991de8efa7b7fef8d47c9c7e2464172c2859b031f97d213d15b0",
+      "word_id": "TA_WORD_0103",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03326-quiet_last150ms.wav",
+      "sha256": "c48e16967f89ed25775f893f22cc3ceb674d7c93f3e13c271e005b3aa06dcfbd",
+      "source_row": 3326,
+      "source_split": "calibration",
+      "source_audio_sha256": "5bc7131da7c0991de8efa7b7fef8d47c9c7e2464172c2859b031f97d213d15b0",
+      "word_id": "TA_WORD_0103",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03331-clean.wav",
+      "sha256": "6b8d066d2a3081e48f2ac07f2d1486aaf4112238ecdc88c3881ae62b3740514b",
+      "source_row": 3331,
+      "source_split": "calibration",
+      "source_audio_sha256": "bc65493074c464a0c3e3b564d44c20211c5d530947486257bf77f01637e5431b",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03331-quiet_last150ms.wav",
+      "sha256": "fd607620522c5bd3da7ed3b0375c21897cbaef7c54f3344b465ae0e19809c28f",
+      "source_row": 3331,
+      "source_split": "calibration",
+      "source_audio_sha256": "bc65493074c464a0c3e3b564d44c20211c5d530947486257bf77f01637e5431b",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03354-clean.wav",
+      "sha256": "02eb4b0e8d2c978ef678a949a37f0881584ab425c43d14b057249bf482d1802f",
+      "source_row": 3354,
+      "source_split": "calibration",
+      "source_audio_sha256": "78f7ab5300d1b5e30f3ea02afb10e89f6c4c34b3abcc205f2e2cd4ac014d6629",
+      "word_id": "TA_WORD_0014",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03354-quiet_last150ms.wav",
+      "sha256": "d6af87ba419bd167d44e946f65203261ad0096972c4f73f328969f1df8dc45dd",
+      "source_row": 3354,
+      "source_split": "calibration",
+      "source_audio_sha256": "78f7ab5300d1b5e30f3ea02afb10e89f6c4c34b3abcc205f2e2cd4ac014d6629",
+      "word_id": "TA_WORD_0014",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03355-clean.wav",
+      "sha256": "0ed56687544a504730692fa1b010533e64afb1216baf0f95e5bed0ab86c12c3a",
+      "source_row": 3355,
+      "source_split": "calibration",
+      "source_audio_sha256": "caf770044fb588d82054b3ba9da714b9e77de1ea95d49dbb62b31f70a931b5b2",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03355-quiet_last150ms.wav",
+      "sha256": "45b099cff7bfe65aae9ace0391146740deac1fc6ded4e25b6548fe46e37fce63",
+      "source_row": 3355,
+      "source_split": "calibration",
+      "source_audio_sha256": "caf770044fb588d82054b3ba9da714b9e77de1ea95d49dbb62b31f70a931b5b2",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03520-clean.wav",
+      "sha256": "ca5ac7e6c5c2eb74d534a5becd1828c7b1c69244a774193fb50fb59685e4684f",
+      "source_row": 3520,
+      "source_split": "calibration",
+      "source_audio_sha256": "4ead559b1fc6532509c70f2b1099ea51d79754dcb295c9fffb454e7ea809376e",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03520-quiet_last150ms.wav",
+      "sha256": "69638aecb74125f58e1e38c41a4f17895f43e4694af790060488daf3d73a7349",
+      "source_row": 3520,
+      "source_split": "calibration",
+      "source_audio_sha256": "4ead559b1fc6532509c70f2b1099ea51d79754dcb295c9fffb454e7ea809376e",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03561-clean.wav",
+      "sha256": "2321ff68c98a2bfee1772f4b1ef7b248c15ddcbf5ecb0dcf09844a96e9f43479",
+      "source_row": 3561,
+      "source_split": "calibration",
+      "source_audio_sha256": "8f9bc79f654f46f993f8f59186b56ab5f4c73b0ce0cfd36c97201730f24b336c",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03561-quiet_last150ms.wav",
+      "sha256": "d52d0959b7abf9e8ea9ea121421207e24f9e3223c60feda0b051bf13b85f76e0",
+      "source_row": 3561,
+      "source_split": "calibration",
+      "source_audio_sha256": "8f9bc79f654f46f993f8f59186b56ab5f4c73b0ce0cfd36c97201730f24b336c",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03926-clean.wav",
+      "sha256": "27ae49f66e89f2b65013704cb6365f75a3727e887d69d7c2a4fb204a8ab49190",
+      "source_row": 3926,
+      "source_split": "calibration",
+      "source_audio_sha256": "e2b013f449c37516edff74b955d79633ed736868da6f5fadd814bb4bcb98f1b2",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03926-quiet_last150ms.wav",
+      "sha256": "8cd96867c2853ccb7f55f1d0c33e3a4e779dccfca916112f3b097587aac72b00",
+      "source_row": 3926,
+      "source_split": "calibration",
+      "source_audio_sha256": "e2b013f449c37516edff74b955d79633ed736868da6f5fadd814bb4bcb98f1b2",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03937-clean.wav",
+      "sha256": "99d471124ce4dda7c4771ef1c264bdc80757b321cbbee6b3c18fa627ec254207",
+      "source_row": 3937,
+      "source_split": "calibration",
+      "source_audio_sha256": "c722435ccdc634943cfd8016069b52b2382f7edfce17751ff7c58d9f8aca0434",
+      "word_id": "TA_WORD_0061",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03937-quiet_last150ms.wav",
+      "sha256": "293d1bfc9e06ffc6903a0d3b6a2c1f92cbc3eecb60abd64f4177bd5df4f1f8c5",
+      "source_row": 3937,
+      "source_split": "calibration",
+      "source_audio_sha256": "c722435ccdc634943cfd8016069b52b2382f7edfce17751ff7c58d9f8aca0434",
+      "word_id": "TA_WORD_0061",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03943-clean.wav",
+      "sha256": "11c4e572f37d33ff315084fbdcc3c8164cc1551c8eb5d229f3c51e49de2d705d",
+      "source_row": 3943,
+      "source_split": "calibration",
+      "source_audio_sha256": "8c399bc87377b2a04ee216f6b8049985314d4e825cb35d85f69f446b1330f501",
+      "word_id": "TA_WORD_0002",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03943-quiet_last150ms.wav",
+      "sha256": "8b280cb33a270c430fcbd33baec9455ae7403a5c1ffa708666ea75bfcd7fd30e",
+      "source_row": 3943,
+      "source_split": "calibration",
+      "source_audio_sha256": "8c399bc87377b2a04ee216f6b8049985314d4e825cb35d85f69f446b1330f501",
+      "word_id": "TA_WORD_0002",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03952-clean.wav",
+      "sha256": "574571633473f0413a4d0709087a5a1d0e6377fbe4a6ca10a3624d6a66a68af2",
+      "source_row": 3952,
+      "source_split": "calibration",
+      "source_audio_sha256": "03622cb154c75efc68c948aa8b27dcbe679511a117c95f9601296ff920807ad9",
+      "word_id": "TA_WORD_0001",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "03952-quiet_last150ms.wav",
+      "sha256": "abadef6a0b856e4f475d4d9b1eb832f599c6e23b7839ab2432fe2204a51e9980",
+      "source_row": 3952,
+      "source_split": "calibration",
+      "source_audio_sha256": "03622cb154c75efc68c948aa8b27dcbe679511a117c95f9601296ff920807ad9",
+      "word_id": "TA_WORD_0001",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04755-clean.wav",
+      "sha256": "05d36ee914d7502d3fce3d67693a60f2dae9c58d1f45a4d79d4a138a9c597fd0",
+      "source_row": 4755,
+      "source_split": "calibration",
+      "source_audio_sha256": "7fa76a532c59666b33facdb372648b31610bc2862dde9f0b3aa64fd7c1ebda37",
+      "word_id": "TA_WORD_0084",
+      "kind": "clean",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04755-quiet_last150ms.wav",
+      "sha256": "75b8aa7fa8160eff6535b9a4a9799c5dff0211ab9f6a0de89bce013e6fb69c56",
+      "source_row": 4755,
+      "source_split": "calibration",
+      "source_audio_sha256": "7fa76a532c59666b33facdb372648b31610bc2862dde9f0b3aa64fd7c1ebda37",
+      "word_id": "TA_WORD_0084",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04762-clean.wav",
+      "sha256": "2b68e0dcba4ba6d2322b0bfc03f63ec025f6d4806e93f0952ac6566f9d752718",
+      "source_row": 4762,
+      "source_split": "calibration",
+      "source_audio_sha256": "07d5fafaf83e5097151e7d77a413abed8b9ddba8de065836c8377a61052d824d",
+      "word_id": "TA_WORD_0072",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04762-quiet_last150ms.wav",
+      "sha256": "24fe3d08d53718c94d02e57b239b48d79099de88f3991542bc80d7758af29d0c",
+      "source_row": 4762,
+      "source_split": "calibration",
+      "source_audio_sha256": "07d5fafaf83e5097151e7d77a413abed8b9ddba8de065836c8377a61052d824d",
+      "word_id": "TA_WORD_0072",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04768-clean.wav",
+      "sha256": "0db8febaaa0a365f59dfcfe1422d9222277a8355b1d5ed452f37abbb12d0c84d",
+      "source_row": 4768,
+      "source_split": "calibration",
+      "source_audio_sha256": "8cd7b3e851d25e121f5c3ff53e0783bc7e7d7bc3d43c54ef2bc5f1074942ea0d",
+      "word_id": "TA_WORD_0099",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04768-quiet_last150ms.wav",
+      "sha256": "c36151752ae2d84f57f28cbc18b038e90fe7e8cf2dd4d957958b8b3509cce1e0",
+      "source_row": 4768,
+      "source_split": "calibration",
+      "source_audio_sha256": "8cd7b3e851d25e121f5c3ff53e0783bc7e7d7bc3d43c54ef2bc5f1074942ea0d",
+      "word_id": "TA_WORD_0099",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04820-clean.wav",
+      "sha256": "72edfd60fa4a44e723d048f12d439d6f3d3f713ca8c22190a20869be57b76375",
+      "source_row": 4820,
+      "source_split": "calibration",
+      "source_audio_sha256": "ca02e3d47f86c43e729a7d0cb49f62677138f93e78216405373abd243f7bff43",
+      "word_id": "TA_WORD_0100",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04820-quiet_last150ms.wav",
+      "sha256": "428a99acac97812486db902d0c955f4525e4d7a32e6609efeccf3ac035ac3970",
+      "source_row": 4820,
+      "source_split": "calibration",
+      "source_audio_sha256": "ca02e3d47f86c43e729a7d0cb49f62677138f93e78216405373abd243f7bff43",
+      "word_id": "TA_WORD_0100",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04821-clean.wav",
+      "sha256": "0557cf27cffbdc585ca79f7fa441d0fd114b9c0c10d0ae829141f58e815481a6",
+      "source_row": 4821,
+      "source_split": "calibration",
+      "source_audio_sha256": "fcb00d0c066617f6521258870525608b280357c3b90bc31bad134c3001c63986",
+      "word_id": "TA_WORD_0001",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04821-quiet_last150ms.wav",
+      "sha256": "6a23f9386433b4f3222127c3d8971021785e691b31acc41d8ffffdc8dd425542",
+      "source_row": 4821,
+      "source_split": "calibration",
+      "source_audio_sha256": "fcb00d0c066617f6521258870525608b280357c3b90bc31bad134c3001c63986",
+      "word_id": "TA_WORD_0001",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04822-clean.wav",
+      "sha256": "79a69b1b5168d63b56548261159c9e43d61bd6cf6a1649a04f9f476c9597969e",
+      "source_row": 4822,
+      "source_split": "calibration",
+      "source_audio_sha256": "54002de33f660265e4b4c09514fc92bcb74ca2c5d64d13133c65d99c8974fb41",
+      "word_id": "TA_WORD_0002",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04822-quiet_last150ms.wav",
+      "sha256": "ad0acfaad09a4de6be5982d0771f5c70d392ec3d992f4eea8b4bb66bddb201cb",
+      "source_row": 4822,
+      "source_split": "calibration",
+      "source_audio_sha256": "54002de33f660265e4b4c09514fc92bcb74ca2c5d64d13133c65d99c8974fb41",
+      "word_id": "TA_WORD_0002",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "p",
+        "p",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04824-clean.wav",
+      "sha256": "c34e02627093661bd86d20be3bcd879b5eab2169e301f3d8fb4803ef3aa530c5",
+      "source_row": 4824,
+      "source_split": "calibration",
+      "source_audio_sha256": "e77f2b2fcd03b33b0c8e611a07b97789257a3f28366b4985a2fe94d282d99a75",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04824-quiet_last150ms.wav",
+      "sha256": "46f935e738ec578ebd899faac00246a4186a6ff93f03a04742ae4b6d8e911252",
+      "source_row": 4824,
+      "source_split": "calibration",
+      "source_audio_sha256": "e77f2b2fcd03b33b0c8e611a07b97789257a3f28366b4985a2fe94d282d99a75",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04825-clean.wav",
+      "sha256": "ae525ee4dd2f7c9a8970ccc196df08122fe9fcae867bfdf42b118a4a589c3a28",
+      "source_row": 4825,
+      "source_split": "calibration",
+      "source_audio_sha256": "83c75be61084da03d235e5bf13c8c784348cdbeac204943ae5daf4a15d27b5f3",
+      "word_id": "TA_WORD_0101",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "n",
+        "a"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "04825-quiet_last150ms.wav",
+      "sha256": "7df10bb1dca385b6da35b728a58553b00dbffc5734a742fd1eb1d9e0315a42d7",
+      "source_row": 4825,
+      "source_split": "calibration",
+      "source_audio_sha256": "83c75be61084da03d235e5bf13c8c784348cdbeac204943ae5daf4a15d27b5f3",
+      "word_id": "TA_WORD_0101",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "n",
+        "a"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05496-clean.wav",
+      "sha256": "582916decba6d9358ab9ea495c54ef66ee66b2fd9c8f213a3abfb1c4af5b45e4",
+      "source_row": 5496,
+      "source_split": "calibration",
+      "source_audio_sha256": "9778cfdb0352d4bea9d2caca5ce03fbea52378f7f48a6145058a965f1494a7a5",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05496-quiet_last150ms.wav",
+      "sha256": "3b9893c50b91864c6598896212eac88fade3d25f7f31e119add71d6d2f8b6302",
+      "source_row": 5496,
+      "source_split": "calibration",
+      "source_audio_sha256": "9778cfdb0352d4bea9d2caca5ce03fbea52378f7f48a6145058a965f1494a7a5",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05531-clean.wav",
+      "sha256": "572e24db3dadca850584f6d4c09ac4bab57278d916cbd7a778240d014bedbfb3",
+      "source_row": 5531,
+      "source_split": "calibration",
+      "source_audio_sha256": "d6cfc0c5a136b0a61c6fd75ad1a9f7fd907a5f222c0ea0c7ff28f1626af17846",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05531-quiet_last150ms.wav",
+      "sha256": "ca529b1b8b381c6b56aa06c491ade435063a2b78e26018757d95897bbb99f524",
+      "source_row": 5531,
+      "source_split": "calibration",
+      "source_audio_sha256": "d6cfc0c5a136b0a61c6fd75ad1a9f7fd907a5f222c0ea0c7ff28f1626af17846",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05543-clean.wav",
+      "sha256": "f5892abd288f731cc8c156a6b0518bb28f3279f8ac71a64e162bf3ae89317a01",
+      "source_row": 5543,
+      "source_split": "calibration",
+      "source_audio_sha256": "ca2de9a7548b00f41d65196a7b4a3bbc21adda565c37d9e4df4984d48deacb6f",
+      "word_id": "TA_WORD_0001",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05543-quiet_last150ms.wav",
+      "sha256": "de8907c036b98bfd063458aab38b0e05369beb3f6ac7d0c3fd4f333d4f4c120b",
+      "source_row": 5543,
+      "source_split": "calibration",
+      "source_audio_sha256": "ca2de9a7548b00f41d65196a7b4a3bbc21adda565c37d9e4df4984d48deacb6f",
+      "word_id": "TA_WORD_0001",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "m",
+        "m",
+        "aː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05556-clean.wav",
+      "sha256": "54798fdd2410628db41dd5b39a5daf7755f17a6cd75be52460aba3bfc17a4681",
+      "source_row": 5556,
+      "source_split": "calibration",
+      "source_audio_sha256": "65f9e9cd7aba3886eb1ec97cc7210269af1ab1ecfa2fadae96ac319ea726616a",
+      "word_id": "TA_WORD_0016",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05556-quiet_last150ms.wav",
+      "sha256": "71b580bda9abe463496fec42b5bd7c50d669eeb3f0e59cf6d9f2e78d1f2cc772",
+      "source_row": 5556,
+      "source_split": "calibration",
+      "source_audio_sha256": "65f9e9cd7aba3886eb1ec97cc7210269af1ab1ecfa2fadae96ac319ea726616a",
+      "word_id": "TA_WORD_0016",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05559-clean.wav",
+      "sha256": "2a0663329220cd8a166875fa4b6bacdf6f2bd2995d000480e1e6a97e0d39a220",
+      "source_row": 5559,
+      "source_split": "calibration",
+      "source_audio_sha256": "076a9c2c9c261738721e38e1f949e85a658495a75f3cf20981815b7a5047d4bf",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05559-quiet_last150ms.wav",
+      "sha256": "c8b0e3ea679405a1eaf7f7eaefad7f91abf2714c4e2ac178396050d130d5e42d",
+      "source_row": 5559,
+      "source_split": "calibration",
+      "source_audio_sha256": "076a9c2c9c261738721e38e1f949e85a658495a75f3cf20981815b7a5047d4bf",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05582-clean.wav",
+      "sha256": "b14fdaf0c69c25bc5fa4b88756790f3f1b80b69bb17c5d136bc16693705246c9",
+      "source_row": 5582,
+      "source_split": "calibration",
+      "source_audio_sha256": "5c8a9504c22fdc599705afaef0ab2d0f2070b574116d8cc2a0c40bcc17cbb035",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "05582-quiet_last150ms.wav",
+      "sha256": "a9edc13f4b5e7243c761c7a96dd2ab67d400ae29646eb4aa38264aaf00125a53",
+      "source_row": 5582,
+      "source_split": "calibration",
+      "source_audio_sha256": "5c8a9504c22fdc599705afaef0ab2d0f2070b574116d8cc2a0c40bcc17cbb035",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08174-clean.wav",
+      "sha256": "b8832f7acf497607fb4c781fd43426449233244c346478c9a51bab3d5b638e85",
+      "source_row": 8174,
+      "source_split": "calibration",
+      "source_audio_sha256": "d152569f5a27a9a597a2fc9b734339596b9b2d68785851d8b754d7e96baefdf8",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08174-quiet_last150ms.wav",
+      "sha256": "857b017dfc496d65ad3e820e7a2380771b4c6c9c6014ee67d6fe5bff5b018029",
+      "source_row": 8174,
+      "source_split": "calibration",
+      "source_audio_sha256": "d152569f5a27a9a597a2fc9b734339596b9b2d68785851d8b754d7e96baefdf8",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08190-clean.wav",
+      "sha256": "fb3581a38818709cdf3c8a3ecfa0c28be1f97455261f08698da9a275191f8e40",
+      "source_row": 8190,
+      "source_split": "calibration",
+      "source_audio_sha256": "0ac9bed8ebf03596928f7b8691e07eeee0bcd547d549c16a3575962feb693a63",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08190-quiet_last150ms.wav",
+      "sha256": "a5901ed93c8f1bb65f85f089ded0d77e07807aaafa0cdf9620b25e211e76c91b",
+      "source_row": 8190,
+      "source_split": "calibration",
+      "source_audio_sha256": "0ac9bed8ebf03596928f7b8691e07eeee0bcd547d549c16a3575962feb693a63",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08193-clean.wav",
+      "sha256": "941f099c0c074cc47232ac1806bf2479565ba2781df8dae846a0416d31df82c3",
+      "source_row": 8193,
+      "source_split": "calibration",
+      "source_audio_sha256": "1d69f545387877f66e7a382f0c155139976aba041c5ab7aa97d0fc0170f39df1",
+      "word_id": "TA_WORD_0061",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08193-quiet_last150ms.wav",
+      "sha256": "7bc0de98786c868028b87454acaf054948f2bea8845c92f4336b814ed652838e",
+      "source_row": 8193,
+      "source_split": "calibration",
+      "source_audio_sha256": "1d69f545387877f66e7a382f0c155139976aba041c5ab7aa97d0fc0170f39df1",
+      "word_id": "TA_WORD_0061",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08220-clean.wav",
+      "sha256": "d9b5fc2cc4e0859ffccab7cc331667b02d24c563cf8563ae6a44049938a041d3",
+      "source_row": 8220,
+      "source_split": "calibration",
+      "source_audio_sha256": "40ca4c7f35a330129fda4d5c9c1619dc943da86f12dcd1516965c5b40ead4d9b",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08220-quiet_last150ms.wav",
+      "sha256": "14422413695eb533389b3edbad1956b756804296148dfc40921e4950210c2023",
+      "source_row": 8220,
+      "source_split": "calibration",
+      "source_audio_sha256": "40ca4c7f35a330129fda4d5c9c1619dc943da86f12dcd1516965c5b40ead4d9b",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08946-clean.wav",
+      "sha256": "96662126e7e2db08d00b60535790b4431d84abee75075315864e1f4ace41f1a5",
+      "source_row": 8946,
+      "source_split": "calibration",
+      "source_audio_sha256": "cb28d52c3490138f07aefb618c2a55cd9053f0f4a0dbf910420385e5464a4bc6",
+      "word_id": "TA_WORD_0072",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "08946-quiet_last150ms.wav",
+      "sha256": "511726900066239034ccff09b041f2936288ad0c065f91ebe1e309f34590f29d",
+      "source_row": 8946,
+      "source_split": "calibration",
+      "source_audio_sha256": "cb28d52c3490138f07aefb618c2a55cd9053f0f4a0dbf910420385e5464a4bc6",
+      "word_id": "TA_WORD_0072",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "a",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09002-clean.wav",
+      "sha256": "7434a6fbff78d12ed2e4d91ac6b213f6f55a90db86e91573e0c41a6cb6ce3ae1",
+      "source_row": 9002,
+      "source_split": "calibration",
+      "source_audio_sha256": "0e5b367151b9cabe3666cafc16b1d44abb094968a1eb49d262c7e3243f0746be",
+      "word_id": "TA_WORD_0049",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "o",
+        "l"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09002-quiet_last150ms.wav",
+      "sha256": "458b6054a9b43b267a75e45a61022aa0cfded209f0a38015734f8c933e79b72e",
+      "source_row": 9002,
+      "source_split": "calibration",
+      "source_audio_sha256": "0e5b367151b9cabe3666cafc16b1d44abb094968a1eb49d262c7e3243f0746be",
+      "word_id": "TA_WORD_0049",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "o",
+        "l"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09014-clean.wav",
+      "sha256": "72b660f3861c4961ca3037d31341213b0fd2093b3f2ca1f45a32a0c04b5677f1",
+      "source_row": 9014,
+      "source_split": "calibration",
+      "source_audio_sha256": "be033b808a99fbe3d3fdf8ca750b136f8dd69659717ab3b6406bfe7c5f1a8f68",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09014-quiet_last150ms.wav",
+      "sha256": "35b55a7c686249c3782901f852e837f3380173cb7068a86e0c2d022bf4289cc2",
+      "source_row": 9014,
+      "source_split": "calibration",
+      "source_audio_sha256": "be033b808a99fbe3d3fdf8ca750b136f8dd69659717ab3b6406bfe7c5f1a8f68",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09038-clean.wav",
+      "sha256": "5d5144af5b1a9f129a5426ebe1afaaacaf523f004dc1bc9b93207a53f73ba230",
+      "source_row": 9038,
+      "source_split": "calibration",
+      "source_audio_sha256": "c608468de9b2fe68560ddaa7754d5ee71fe710060fc78ad019ca4e32446b49d1",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09038-quiet_last150ms.wav",
+      "sha256": "1b9d82f5afc0d7fa404a6cc0aced61c58c68020b96fdefffb2ec223d8b60269b",
+      "source_row": 9038,
+      "source_split": "calibration",
+      "source_audio_sha256": "c608468de9b2fe68560ddaa7754d5ee71fe710060fc78ad019ca4e32446b49d1",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09363-clean.wav",
+      "sha256": "005b596e2b3f3e8c9c1e49a3ee66866ba84db35fe448c58298dbd2e7869b3e2a",
+      "source_row": 9363,
+      "source_split": "calibration",
+      "source_audio_sha256": "78cb58ca0a07020dcd6437fcca93712ff3f032b1a42b4ace9f50759ed6e9073e",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "09363-quiet_last150ms.wav",
+      "sha256": "69a99050a8acb07a6cba624d0dce6aafc6256e9f5e43dab1d31c8e041d66b5ad",
+      "source_row": 9363,
+      "source_split": "calibration",
+      "source_audio_sha256": "78cb58ca0a07020dcd6437fcca93712ff3f032b1a42b4ace9f50759ed6e9073e",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10369-clean.wav",
+      "sha256": "9e4504cbce2d1d4be2d1c95a488df78ab36cdf16401f355da8abf87120f4c172",
+      "source_row": 10369,
+      "source_split": "calibration",
+      "source_audio_sha256": "9ea03bf66fd7d97481a7aac9a453769507775679146964066bf188fefd104e15",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10369-quiet_last150ms.wav",
+      "sha256": "0b14190bd38ca72ef15a5fa7939c68a8533d7fb51da65233f123f0e75c519857",
+      "source_row": 10369,
+      "source_split": "calibration",
+      "source_audio_sha256": "9ea03bf66fd7d97481a7aac9a453769507775679146964066bf188fefd104e15",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10387-clean.wav",
+      "sha256": "fcb1ab0ea19250b4eccf99b7abc6784e83de7baebfcb36f6430d8c8e74aab9fa",
+      "source_row": 10387,
+      "source_split": "calibration",
+      "source_audio_sha256": "d46f911e9fa17e2eab1bc79248c9a09c67212c4a4761557f13a33bab1f0e6fa0",
+      "word_id": "TA_WORD_0100",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10387-quiet_last150ms.wav",
+      "sha256": "810975d50772edb2e92ad265f91bdb3c9c8b86d3ba6fa043fcaea64ce2fb563f",
+      "source_row": 10387,
+      "source_split": "calibration",
+      "source_audio_sha256": "d46f911e9fa17e2eab1bc79248c9a09c67212c4a4761557f13a33bab1f0e6fa0",
+      "word_id": "TA_WORD_0100",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10409-clean.wav",
+      "sha256": "43525ab6549c17aef333f91fb1804ed5fac85d44c70926b5edda1535ffdc8ab4",
+      "source_row": 10409,
+      "source_split": "calibration",
+      "source_audio_sha256": "1287ad01e43a3729889a4d5246a488bd78648302d4f60f716204928d129fea5b",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10409-quiet_last150ms.wav",
+      "sha256": "b8ea316d1de2a83d23eac01b8dd0df461e35b913ae163c5cf35f5b35bf5c2180",
+      "source_row": 10409,
+      "source_split": "calibration",
+      "source_audio_sha256": "1287ad01e43a3729889a4d5246a488bd78648302d4f60f716204928d129fea5b",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10418-clean.wav",
+      "sha256": "ee83a763651004a045e958530f487c01a82a1396596132c8b2bcb149ee8b7c9f",
+      "source_row": 10418,
+      "source_split": "calibration",
+      "source_audio_sha256": "9490938f702b51710c9b8302ee386af27092ff31f3d5c2ae9cf54604b3832a64",
+      "word_id": "TA_WORD_0102",
+      "kind": "clean",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10418-quiet_last150ms.wav",
+      "sha256": "c47261b83b67a73edad32a950e40d76785ad4fe479ace1541c624b4b6005e034",
+      "source_row": 10418,
+      "source_split": "calibration",
+      "source_audio_sha256": "9490938f702b51710c9b8302ee386af27092ff31f3d5c2ae9cf54604b3832a64",
+      "word_id": "TA_WORD_0102",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10436-clean.wav",
+      "sha256": "65b22b4927afaaa533e03dc224d9bb0faa8d820380ce9e377cf89278cff85e6e",
+      "source_row": 10436,
+      "source_split": "calibration",
+      "source_audio_sha256": "610e7b6e8646c60eddeabd8cf5d1dfaee5c5039514025b5c892e83ec688452a0",
+      "word_id": "TA_WORD_0012",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10436-quiet_last150ms.wav",
+      "sha256": "48cba36c3815f47a7be6768d10eec4b00eee7952523c7878840bf0fa220e791a",
+      "source_row": 10436,
+      "source_split": "calibration",
+      "source_audio_sha256": "610e7b6e8646c60eddeabd8cf5d1dfaee5c5039514025b5c892e83ec688452a0",
+      "word_id": "TA_WORD_0012",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10440-clean.wav",
+      "sha256": "4e2cf0e100df8135bce165deab1aac497076b9bd29ec929c51fbe1173a9f06c3",
+      "source_row": 10440,
+      "source_split": "calibration",
+      "source_audio_sha256": "6bed5b059cbfffc3621a7900b587600f43ae7d7840427bb833be9c0e6c0127ab",
+      "word_id": "TA_WORD_0012",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10440-quiet_last150ms.wav",
+      "sha256": "6576831461b6c503ad242b5b4ce2b30292c28d0378c09f9a0fa2b2faee97bf93",
+      "source_row": 10440,
+      "source_split": "calibration",
+      "source_audio_sha256": "6bed5b059cbfffc3621a7900b587600f43ae7d7840427bb833be9c0e6c0127ab",
+      "word_id": "TA_WORD_0012",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10452-clean.wav",
+      "sha256": "de1628c7214556a78aef2e50cf359d87ddb0a5605d401cdc54c79755fab4f5db",
+      "source_row": 10452,
+      "source_split": "calibration",
+      "source_audio_sha256": "fcd1b262a89f9834ba8fddbf8b7497a22e115774cad47c2c3936b0b0227288c9",
+      "word_id": "TA_WORD_0012",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10452-quiet_last150ms.wav",
+      "sha256": "e573b1ac6b79f7bf2a5eee28a2c0863b0cae901feacc7280ef13b0f153ad1fe2",
+      "source_row": 10452,
+      "source_split": "calibration",
+      "source_audio_sha256": "fcd1b262a89f9834ba8fddbf8b7497a22e115774cad47c2c3936b0b0227288c9",
+      "word_id": "TA_WORD_0012",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10472-clean.wav",
+      "sha256": "ac908b1dd7361a760f81002fb1b60f454badecad6187c6a89d247b05d741b03b",
+      "source_row": 10472,
+      "source_split": "calibration",
+      "source_audio_sha256": "3096f5304ebdae9b60329eabbfa146a683e91cfc4506ca197e180c782d7f2c5a",
+      "word_id": "TA_WORD_0014",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "10472-quiet_last150ms.wav",
+      "sha256": "7bfb1b76eee2294ee89c8c41a6d840abe1e6827e0dfb616f1587f3ca6f6be9d8",
+      "source_row": 10472,
+      "source_split": "calibration",
+      "source_audio_sha256": "3096f5304ebdae9b60329eabbfa146a683e91cfc4506ca197e180c782d7f2c5a",
+      "word_id": "TA_WORD_0014",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11013-clean.wav",
+      "sha256": "fd86236de10c328f876418fde9a7b1d6b4932860dc71c880855519c144d86a18",
+      "source_row": 11013,
+      "source_split": "calibration",
+      "source_audio_sha256": "4ed31ee345af4b2f1fed37cbd050e02c2c4db010bcc7eca531a2721353f56d2e",
+      "word_id": "TA_WORD_0084",
+      "kind": "clean",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11013-quiet_last150ms.wav",
+      "sha256": "38d8ddfa479054f65f196ef22571e34d3cf4ce2a6fd618d1230fc54463586b39",
+      "source_row": 11013,
+      "source_split": "calibration",
+      "source_audio_sha256": "4ed31ee345af4b2f1fed37cbd050e02c2c4db010bcc7eca531a2721353f56d2e",
+      "word_id": "TA_WORD_0084",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11036-clean.wav",
+      "sha256": "5ab943de5629c70695addf4067e3ff807ab93a957c1c311951b3968b0c2ef1c3",
+      "source_row": 11036,
+      "source_split": "calibration",
+      "source_audio_sha256": "748895fcb45c2f968eb519b2752c2b651af2fd09c58db4b261ea85b17e6a8aee",
+      "word_id": "TA_WORD_0100",
+      "kind": "clean",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11036-quiet_last150ms.wav",
+      "sha256": "e9106b4a5441b954f736ddfb760dc71b140526f2ee87435d00e773c371a804b6",
+      "source_row": 11036,
+      "source_split": "calibration",
+      "source_audio_sha256": "748895fcb45c2f968eb519b2752c2b651af2fd09c58db4b261ea85b17e6a8aee",
+      "word_id": "TA_WORD_0100",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t͡ʃ",
+        "eː",
+        "ɾ",
+        "n̪",
+        "t̪",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11050-clean.wav",
+      "sha256": "e2ab03a5770d41b0a54c3d58ea2b2bb32aeb236742de7148532f730fd883a454",
+      "source_row": 11050,
+      "source_split": "calibration",
+      "source_audio_sha256": "6333f2b1e1ca21f69b834ecaf5692bfd4cb664fbd496104618d811b441c2e8d6",
+      "word_id": "TA_WORD_0101",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "n",
+        "a"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11050-quiet_last150ms.wav",
+      "sha256": "4c0e9dee21fbb0f793ee234ca2b0ebe8be9ebd7144a32163a31b726c85691356",
+      "source_row": 11050,
+      "source_split": "calibration",
+      "source_audio_sha256": "6333f2b1e1ca21f69b834ecaf5692bfd4cb664fbd496104618d811b441c2e8d6",
+      "word_id": "TA_WORD_0101",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "n",
+        "a"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11053-clean.wav",
+      "sha256": "43eb6ee81ad872754cb8c8e29eb01333d582f59a9628d0210f663bf99fd80bc4",
+      "source_row": 11053,
+      "source_split": "calibration",
+      "source_audio_sha256": "f07fb7fd35d783e9da4241a3ef26fc3ff6f8a7c7d4c36e24bfa512e6bad21cc0",
+      "word_id": "TA_WORD_0098",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11053-quiet_last150ms.wav",
+      "sha256": "09633238c6931d9d7fdbba22f63cbeacb6b62737e05a819b6c13532c3d4864db",
+      "source_row": 11053,
+      "source_split": "calibration",
+      "source_audio_sha256": "f07fb7fd35d783e9da4241a3ef26fc3ff6f8a7c7d4c36e24bfa512e6bad21cc0",
+      "word_id": "TA_WORD_0098",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11056-clean.wav",
+      "sha256": "e84f453cac04d1c9621581b90f1faeab7a06ca2f2f453a87d8c6a67adee950ea",
+      "source_row": 11056,
+      "source_split": "calibration",
+      "source_audio_sha256": "c325ef62530f73e829451d9a0c36444b195f294e42aff9270422566cc7b4a515",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11056-quiet_last150ms.wav",
+      "sha256": "d3292bdf67f706e2434391bf281940750825d0fcaf8e94dd2d62e1e3f79da56b",
+      "source_row": 11056,
+      "source_split": "calibration",
+      "source_audio_sha256": "c325ef62530f73e829451d9a0c36444b195f294e42aff9270422566cc7b4a515",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11107-clean.wav",
+      "sha256": "ddd17bf645688b759b71372b34b65db7f27b57fb473abdcbbd5d955ef2f4be62",
+      "source_row": 11107,
+      "source_split": "calibration",
+      "source_audio_sha256": "254e2650165a7485b6b25d19226de74bdb40bbd88c0fa145f4d49f9068f4554c",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "11107-quiet_last150ms.wav",
+      "sha256": "3735a2ebd4dfeead0bd2bbbb74f5f5013082777e09406fc546c78a2fb58fd35c",
+      "source_row": 11107,
+      "source_split": "calibration",
+      "source_audio_sha256": "254e2650165a7485b6b25d19226de74bdb40bbd88c0fa145f4d49f9068f4554c",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12650-clean.wav",
+      "sha256": "f54c1ed001391dc42fc01d581c1516f7305df079306b767fe43e19f3c4162a6e",
+      "source_row": 12650,
+      "source_split": "calibration",
+      "source_audio_sha256": "367596a8fa925be5487c5ba01f6cc4659755dbe1c599250878d7f65f0ea96a9a",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12650-quiet_last150ms.wav",
+      "sha256": "fe93abed7c35d422a9ce4c2eacf9bd8d07feda3862cce901431798f3c510373c",
+      "source_row": 12650,
+      "source_split": "calibration",
+      "source_audio_sha256": "367596a8fa925be5487c5ba01f6cc4659755dbe1c599250878d7f65f0ea96a9a",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12663-clean.wav",
+      "sha256": "7b01fcf3db9941b4a75b7ddd5ec4c20679d68ef1264da3ae34053382bed59083",
+      "source_row": 12663,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a2b164ddee1c87a7aac11d9a821192fec3fe11527c8ea2c50c75c5c5dfcb80a",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12663-quiet_last150ms.wav",
+      "sha256": "87570008d49c3bba9760ab965da1ca55df12d9b03879b618a8daee8d79c095e7",
+      "source_row": 12663,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a2b164ddee1c87a7aac11d9a821192fec3fe11527c8ea2c50c75c5c5dfcb80a",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12737-clean.wav",
+      "sha256": "1f05873eaab4064cfdd0b9643c64426bc804edd8f256c1709a69485b7437ed6d",
+      "source_row": 12737,
+      "source_split": "calibration",
+      "source_audio_sha256": "e6fa81e714d2742ccbce021f1b0a3ece70c8386c56a32a8466c742d1d992f39e",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12737-quiet_last150ms.wav",
+      "sha256": "3633717851686557ba079b2d99cf8f85a821b88e5dead49b4f7c4635db9ba900",
+      "source_row": 12737,
+      "source_split": "calibration",
+      "source_audio_sha256": "e6fa81e714d2742ccbce021f1b0a3ece70c8386c56a32a8466c742d1d992f39e",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12759-clean.wav",
+      "sha256": "e7e1ddcbff7e6db31366e500308460a8357cfc58c2e683a8bc6bc2f5c54daa6a",
+      "source_row": 12759,
+      "source_split": "calibration",
+      "source_audio_sha256": "13a549088a614c3f42b86d90bff6c7177bf10612473138457cadadb4a9b56979",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "12759-quiet_last150ms.wav",
+      "sha256": "7d51302ca700ec85a73ccec613fc7ff439b745c368f06d223b3f955a8b44b176",
+      "source_row": 12759,
+      "source_split": "calibration",
+      "source_audio_sha256": "13a549088a614c3f42b86d90bff6c7177bf10612473138457cadadb4a9b56979",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13542-clean.wav",
+      "sha256": "e1873b140393dbc074a49e0a72116e5be08f643ab7595db0d7b66b56c9c9460e",
+      "source_row": 13542,
+      "source_split": "calibration",
+      "source_audio_sha256": "6803c42b37390a5e1668dde8b42d4d1edb8078c81ffb4b22499b4ef51a05bbaf",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13542-quiet_last150ms.wav",
+      "sha256": "b41eef968839b0826bc4788b8929dcb754a6f71bfeb81d325663ccf515e7cef1",
+      "source_row": 13542,
+      "source_split": "calibration",
+      "source_audio_sha256": "6803c42b37390a5e1668dde8b42d4d1edb8078c81ffb4b22499b4ef51a05bbaf",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13546-clean.wav",
+      "sha256": "a9672dba2b0cc42b08b8d460d4b0992f02a913f0539633623d9dac718351db3d",
+      "source_row": 13546,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a358f5c7cb6c579f0c49936de863972de84d645c96d834d4bee11012d321eab",
+      "word_id": "TA_WORD_0017",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13546-quiet_last150ms.wav",
+      "sha256": "81fc25ea2b336bf73f419492f87ad48b593528f9dd8a651f2d034f1a93a7f5b1",
+      "source_row": 13546,
+      "source_split": "calibration",
+      "source_audio_sha256": "5a358f5c7cb6c579f0c49936de863972de84d645c96d834d4bee11012d321eab",
+      "word_id": "TA_WORD_0017",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "t̪",
+        "a",
+        "ʋ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13570-clean.wav",
+      "sha256": "1db886a5bdf70e1144373be9db9662601ab88abf63b8420964ff453ab2075fa9",
+      "source_row": 13570,
+      "source_split": "calibration",
+      "source_audio_sha256": "8501e157944a74e23eb007ed5ba39bf60d9958fc5081e2eef0007f5db02c8064",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13570-quiet_last150ms.wav",
+      "sha256": "c90797e4bd9ca1446d1bd26eff7059291ba422a925673142fd504cae94c3756c",
+      "source_row": 13570,
+      "source_split": "calibration",
+      "source_audio_sha256": "8501e157944a74e23eb007ed5ba39bf60d9958fc5081e2eef0007f5db02c8064",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13572-clean.wav",
+      "sha256": "6558095271b688236cfacd0491d7ee543a075cd7b3a0aa5a9ade3a385c16bb65",
+      "source_row": 13572,
+      "source_split": "calibration",
+      "source_audio_sha256": "ce2c2dbbdf0158238f4ff341f829247b1994f4f426f87a250ae2d3ddb8f5858e",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13572-quiet_last150ms.wav",
+      "sha256": "443f5a3941609d53df6d80ddb8b0675bf7d4669b181cfcedca7c2960fad73814",
+      "source_row": 13572,
+      "source_split": "calibration",
+      "source_audio_sha256": "ce2c2dbbdf0158238f4ff341f829247b1994f4f426f87a250ae2d3ddb8f5858e",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13719-clean.wav",
+      "sha256": "8ddbc60ecee88e914f2c9c2913d703ab9153e3213ade12d9a027f972f7323239",
+      "source_row": 13719,
+      "source_split": "calibration",
+      "source_audio_sha256": "a00eb781ed26cfa2aa041f50dffc2a5fb05f8385e96e6e0ecc21e0d24b15f77f",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13719-quiet_last150ms.wav",
+      "sha256": "a55729d4294cc0c59537b69e5d381abd87afb6beede9e0299b1bd4767f326365",
+      "source_row": 13719,
+      "source_split": "calibration",
+      "source_audio_sha256": "a00eb781ed26cfa2aa041f50dffc2a5fb05f8385e96e6e0ecc21e0d24b15f77f",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13728-clean.wav",
+      "sha256": "357cdbbb1092284394aa5349156c75533f7eea2a0a32a129a31c5d994afeaf0b",
+      "source_row": 13728,
+      "source_split": "calibration",
+      "source_audio_sha256": "8faac4ea077efaa26fffaf734b4ffd1664604e8b50088cf577ed7d41a8f99c37",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13728-quiet_last150ms.wav",
+      "sha256": "73bd71d3eab72f725c12efe7fcf457e3f16d046b7d289d769e984289bfe52dc9",
+      "source_row": 13728,
+      "source_split": "calibration",
+      "source_audio_sha256": "8faac4ea077efaa26fffaf734b4ffd1664604e8b50088cf577ed7d41a8f99c37",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13730-clean.wav",
+      "sha256": "62655c0635522c591f66301d42d4d65641453b6b045d024c405ea11889148fb1",
+      "source_row": 13730,
+      "source_split": "calibration",
+      "source_audio_sha256": "cd72e2c289f9d1c3a87ea88f1fd2c3a2c88ba867e93a3728daa7e128694abbd5",
+      "word_id": "TA_WORD_0083",
+      "kind": "clean",
+      "reference": [
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13730-quiet_last150ms.wav",
+      "sha256": "3321b5877752345d7ab6594906343e52a55cd502779b11d0741f1e2fd5ef688d",
+      "source_row": 13730,
+      "source_split": "calibration",
+      "source_audio_sha256": "cd72e2c289f9d1c3a87ea88f1fd2c3a2c88ba867e93a3728daa7e128694abbd5",
+      "word_id": "TA_WORD_0083",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "aː",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13735-clean.wav",
+      "sha256": "9deaff77316366f1346d34aa4b006404a6ee40e58954f3b86b8b52c6b4a4c1a4",
+      "source_row": 13735,
+      "source_split": "calibration",
+      "source_audio_sha256": "9269f1b2a268abf82cb0ef67a57f1287a33a7f493b6467a5e58ea673d2bdfd09",
+      "word_id": "TA_WORD_0102",
+      "kind": "clean",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13735-quiet_last150ms.wav",
+      "sha256": "febafc3de84e4405800ad20fee52198d3821496dab57419475d33f6be23775e8",
+      "source_row": 13735,
+      "source_split": "calibration",
+      "source_audio_sha256": "9269f1b2a268abf82cb0ef67a57f1287a33a7f493b6467a5e58ea673d2bdfd09",
+      "word_id": "TA_WORD_0102",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "n̪",
+        "aː",
+        "n"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13750-clean.wav",
+      "sha256": "780f71d5e7df2d0b347e7856ffa16fd341d1b7e30747a9b7cdf80f43f25a0f8e",
+      "source_row": 13750,
+      "source_split": "calibration",
+      "source_audio_sha256": "001cc74053dff439c19fe4b43d6494ed159f589bb03ce7440a12a5c44543a5f1",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "13750-quiet_last150ms.wav",
+      "sha256": "a8b4e4348fc051637d75120650be74198e6692b36c5aea5f8f7d6cbf8ccac55d",
+      "source_row": 13750,
+      "source_split": "calibration",
+      "source_audio_sha256": "001cc74053dff439c19fe4b43d6494ed159f589bb03ce7440a12a5c44543a5f1",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14208-clean.wav",
+      "sha256": "39f3e64d9650a392a610787e97868733423dfef19931fff1cb412f0d723f1622",
+      "source_row": 14208,
+      "source_split": "calibration",
+      "source_audio_sha256": "ce97e59e598c858d23b4a08f5a83c443f73501f88526d9a4b8c16feba7f6c5ae",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14208-quiet_last150ms.wav",
+      "sha256": "2cecfed48330f5a30969ee9ca649beb542cdf219e9b96104935766c6f825a4d4",
+      "source_row": 14208,
+      "source_split": "calibration",
+      "source_audio_sha256": "ce97e59e598c858d23b4a08f5a83c443f73501f88526d9a4b8c16feba7f6c5ae",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14212-clean.wav",
+      "sha256": "5deaffdd9ebd08ff31f7faa876cf736f1ff11ed1f54d88f027d3cda4ed67c8c9",
+      "source_row": 14212,
+      "source_split": "calibration",
+      "source_audio_sha256": "10f20fb4ed5530ee7ef31d5b1dcf2bada318fd7017592407031ccd96b6e6243f",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14212-quiet_last150ms.wav",
+      "sha256": "6fa9a1ef83e357280fe3a1535f0fd319419c744f51120e883778430d29e66be1",
+      "source_row": 14212,
+      "source_split": "calibration",
+      "source_audio_sha256": "10f20fb4ed5530ee7ef31d5b1dcf2bada318fd7017592407031ccd96b6e6243f",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14218-clean.wav",
+      "sha256": "8722a548f27573652d56a58ba22121cee6cb72b2c27dd9b5e9dce398aac532a3",
+      "source_row": 14218,
+      "source_split": "calibration",
+      "source_audio_sha256": "ac417788cf25126420d89d0ce5bd5a09ceacf4dfed7064588637b4da6b6950a5",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14218-quiet_last150ms.wav",
+      "sha256": "467d6454c8c0ee31b59b195aee3318535097dba744a16f360031089a7791220b",
+      "source_row": 14218,
+      "source_split": "calibration",
+      "source_audio_sha256": "ac417788cf25126420d89d0ce5bd5a09ceacf4dfed7064588637b4da6b6950a5",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14223-clean.wav",
+      "sha256": "619fff769fd860ec26de67984401eaa5eaa7a90ee1a3e1f6c3cd0c323ac782c6",
+      "source_row": 14223,
+      "source_split": "calibration",
+      "source_audio_sha256": "a8afee25f4c685f8a039065e8b60e28875e70cb6d40e43eea7575dfe7eb4b0e9",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14223-quiet_last150ms.wav",
+      "sha256": "9c24c05302282be9d63753727c384422a05956b66b720e34e72740fa3a5e96fe",
+      "source_row": 14223,
+      "source_split": "calibration",
+      "source_audio_sha256": "a8afee25f4c685f8a039065e8b60e28875e70cb6d40e43eea7575dfe7eb4b0e9",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14528-clean.wav",
+      "sha256": "7c9dd8905dbf81908636799ae882d1bee6266295efccfd5b160a3bc93549c8c3",
+      "source_row": 14528,
+      "source_split": "calibration",
+      "source_audio_sha256": "8b5f958bc5f56090c3b0fd8d0f43fc2e3be3ecfca5995c3f664da26109f8b1a9",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14528-quiet_last150ms.wav",
+      "sha256": "a2ff5be7cd1cecc7f977bcaefaf1584e308ee2c81fa48bcba8773987bec9b013",
+      "source_row": 14528,
+      "source_split": "calibration",
+      "source_audio_sha256": "8b5f958bc5f56090c3b0fd8d0f43fc2e3be3ecfca5995c3f664da26109f8b1a9",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14533-clean.wav",
+      "sha256": "75d1f435b49633f44e31dea836a5fd3df56809a6776c2061fa351a3fea205e4b",
+      "source_row": 14533,
+      "source_split": "calibration",
+      "source_audio_sha256": "76ffda66e977ad6e01790f14e326baea1a676530b1b0aedaaa4d93f025a75729",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14533-quiet_last150ms.wav",
+      "sha256": "430815d734df27eb0df1236b5cafa21badb6fafe440fd8db657387f1ccde95f8",
+      "source_row": 14533,
+      "source_split": "calibration",
+      "source_audio_sha256": "76ffda66e977ad6e01790f14e326baea1a676530b1b0aedaaa4d93f025a75729",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14535-clean.wav",
+      "sha256": "6bbd3b80cd14f98c72f5731f52fbd376967d90c263344a6385caf34320f793b8",
+      "source_row": 14535,
+      "source_split": "calibration",
+      "source_audio_sha256": "1461f3e24256b6e8111651173e5a1f9e2877b20b1124590ed0d41e6f261d0c1e",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14535-quiet_last150ms.wav",
+      "sha256": "4dbd003fc15d120baf565aba5a495bf45416e983388e8f2f0388bdc29be4650a",
+      "source_row": 14535,
+      "source_split": "calibration",
+      "source_audio_sha256": "1461f3e24256b6e8111651173e5a1f9e2877b20b1124590ed0d41e6f261d0c1e",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14545-clean.wav",
+      "sha256": "89d9d398e0399a5fedacb4a30bb2825d7d7a716d54d1eb5b4e211b7345e460cc",
+      "source_row": 14545,
+      "source_split": "calibration",
+      "source_audio_sha256": "ddacfca2ad09bcf31477cbf54a83ada0cbf3214de73923f6ea397c642ad06bb0",
+      "word_id": "TA_WORD_0012",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14545-quiet_last150ms.wav",
+      "sha256": "59ecc791326502c680c040b3e148f5a024cd18fb601f0551e2192a69dbbac9af",
+      "source_row": 14545,
+      "source_split": "calibration",
+      "source_audio_sha256": "ddacfca2ad09bcf31477cbf54a83ada0cbf3214de73923f6ea397c642ad06bb0",
+      "word_id": "TA_WORD_0012",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14551-clean.wav",
+      "sha256": "611b4e9464c44dfbd9968076ec5a9b14aef98acc4ec0359ebbd6068c4417e9a1",
+      "source_row": 14551,
+      "source_split": "calibration",
+      "source_audio_sha256": "0300ee9cc9b4a7f2f3600818bd111f4844e22f6c5476573ed9d1365be1a1138b",
+      "word_id": "TA_WORD_0086",
+      "kind": "clean",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14551-quiet_last150ms.wav",
+      "sha256": "299c99936572424480d9213aee29db87f8c455d43f0728294f1938d05956c401",
+      "source_row": 14551,
+      "source_split": "calibration",
+      "source_audio_sha256": "0300ee9cc9b4a7f2f3600818bd111f4844e22f6c5476573ed9d1365be1a1138b",
+      "word_id": "TA_WORD_0086",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "t̪",
+        "a",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14953-clean.wav",
+      "sha256": "24456169c3274fa16f0f33172c2d6d2db7f3ab6adae4c6b18440745b0ecd28e2",
+      "source_row": 14953,
+      "source_split": "calibration",
+      "source_audio_sha256": "b3cc054b741731422ccb6925414fecf68b50d54a86dbda1d445ea683b1ba77db",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14953-quiet_last150ms.wav",
+      "sha256": "535df20e5ac53349e142e53e684bf8ff0c7e816f79cc2a4287a2f9d61685619a",
+      "source_row": 14953,
+      "source_split": "calibration",
+      "source_audio_sha256": "b3cc054b741731422ccb6925414fecf68b50d54a86dbda1d445ea683b1ba77db",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14959-clean.wav",
+      "sha256": "3b270c646fab1d4fde8eff52a5a14ac96bdbec00daafa2cb63e4d1f821c0a272",
+      "source_row": 14959,
+      "source_split": "calibration",
+      "source_audio_sha256": "288472b0ecba02fc75c4fe96e022419c291395263d22ea9fd5ed6ac373abd5fd",
+      "word_id": "TA_WORD_0099",
+      "kind": "clean",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14959-quiet_last150ms.wav",
+      "sha256": "5a9d209604405e4aea3f0e4dee6adb1bc753b360165868b340086391a4b9cad3",
+      "source_row": 14959,
+      "source_split": "calibration",
+      "source_audio_sha256": "288472b0ecba02fc75c4fe96e022419c291395263d22ea9fd5ed6ac373abd5fd",
+      "word_id": "TA_WORD_0099",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "a",
+        "ŋ",
+        "k",
+        "eː"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14964-clean.wav",
+      "sha256": "f6278b901b714d35401c05d4e7de8f2f09c368c32e2b7bde715b9e55b9323f4c",
+      "source_row": 14964,
+      "source_split": "calibration",
+      "source_audio_sha256": "bd868e8bbebcc9397a1ca458c5067be8c56ea04818a1517a0638475c4d64ea93",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14964-quiet_last150ms.wav",
+      "sha256": "7ccad32628fb7ca530f14a88a8106cccf7f366d39423056b7f0641ae83dd6a10",
+      "source_row": 14964,
+      "source_split": "calibration",
+      "source_audio_sha256": "bd868e8bbebcc9397a1ca458c5067be8c56ea04818a1517a0638475c4d64ea93",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14972-clean.wav",
+      "sha256": "22ae5c87d2c33e744f3554e9af6593b67a9173ac055b9e3ecfcde0137cdc596d",
+      "source_row": 14972,
+      "source_split": "calibration",
+      "source_audio_sha256": "519fd0f80d1d6099e1ff3206244ccb1ff52c9a073cfbbb54ae2da54f42c04bf4",
+      "word_id": "TA_WORD_0084",
+      "kind": "clean",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14972-quiet_last150ms.wav",
+      "sha256": "03239d905b3f9a8fed5bd58b57d063d43d158c54fec1d6841fecd1fccd912b9d",
+      "source_row": 14972,
+      "source_split": "calibration",
+      "source_audio_sha256": "519fd0f80d1d6099e1ff3206244ccb1ff52c9a073cfbbb54ae2da54f42c04bf4",
+      "word_id": "TA_WORD_0084",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14974-clean.wav",
+      "sha256": "fbf14057bcf06f8710d92ddebc28d52d0810cff2178132e3891aaccb2fb809f7",
+      "source_row": 14974,
+      "source_split": "calibration",
+      "source_audio_sha256": "4b00e963b1e30a1edff046763c81de7bcbe8cacf0f155d6586160ec535dcba87",
+      "word_id": "TA_WORD_0084",
+      "kind": "clean",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14974-quiet_last150ms.wav",
+      "sha256": "9e37e09cf9019047513c23329426bffffcc739f3ee92cdcea2986b3890eca3dc",
+      "source_row": 14974,
+      "source_split": "calibration",
+      "source_audio_sha256": "4b00e963b1e30a1edff046763c81de7bcbe8cacf0f155d6586160ec535dcba87",
+      "word_id": "TA_WORD_0084",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "k",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14981-clean.wav",
+      "sha256": "c75cb5f4165cddb66bf784e550b265e63244ffcab64447f095ef497c92de3f9a",
+      "source_row": 14981,
+      "source_split": "calibration",
+      "source_audio_sha256": "9187c38b9d1ba3ac1c06326a5c6f01efda3adae72d709218e854fdc0c68598f2",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14981-quiet_last150ms.wav",
+      "sha256": "d601196173cc6ba8efab32b7b8ef8cdafc99e43077f5ffd222329d7b97aeaaea",
+      "source_row": 14981,
+      "source_split": "calibration",
+      "source_audio_sha256": "9187c38b9d1ba3ac1c06326a5c6f01efda3adae72d709218e854fdc0c68598f2",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14985-clean.wav",
+      "sha256": "875c0145334a3df273e7a5551037f50a8598b95bc979b15f7943130a87778883",
+      "source_row": 14985,
+      "source_split": "calibration",
+      "source_audio_sha256": "fa138b53c72f624e3f5dc6b541f0d4f8065d755be9616e690af09cb7a1271813",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "14985-quiet_last150ms.wav",
+      "sha256": "984d31d744c6c650532fbc7853306b3b49d3d458dd28cfca466129a1a86340c4",
+      "source_row": 14985,
+      "source_split": "calibration",
+      "source_audio_sha256": "fa138b53c72f624e3f5dc6b541f0d4f8065d755be9616e690af09cb7a1271813",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15356-clean.wav",
+      "sha256": "b6980ec80448fc08cb984081f8fd248beb3ef77a09dfc5c7aaa89646c488bf26",
+      "source_row": 15356,
+      "source_split": "calibration",
+      "source_audio_sha256": "1ed08c536e841a7a34a7b9b863b3426b3d3cf7a9085b47d4b2af8eaf12c27d7e",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15356-quiet_last150ms.wav",
+      "sha256": "5d8c3e89a8ad5acd396f173574e3fa3d1620483d90f31f055a083ee5446175e4",
+      "source_row": 15356,
+      "source_split": "calibration",
+      "source_audio_sha256": "1ed08c536e841a7a34a7b9b863b3426b3d3cf7a9085b47d4b2af8eaf12c27d7e",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15367-clean.wav",
+      "sha256": "11dd7640720640a7d98fcac48a5d325caeaf3c6de241f034851ee22477a6a827",
+      "source_row": 15367,
+      "source_split": "calibration",
+      "source_audio_sha256": "545c8865dea63951342ba93f9f27dc91786f288aa6f3030acd8fac82d0906057",
+      "word_id": "TA_WORD_0016",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15367-quiet_last150ms.wav",
+      "sha256": "906e7063ee391b929381566b50a24809373577ba2e2ca1d22b93f0e5bea4b53b",
+      "source_row": 15367,
+      "source_split": "calibration",
+      "source_audio_sha256": "545c8865dea63951342ba93f9f27dc91786f288aa6f3030acd8fac82d0906057",
+      "word_id": "TA_WORD_0016",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "oː",
+        "t̪",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15370-clean.wav",
+      "sha256": "b28e967e35c45e53f9139e2478b064c042ea18168605dd8870e7754b4d60c9aa",
+      "source_row": 15370,
+      "source_split": "calibration",
+      "source_audio_sha256": "ef2956eb9a8dae53a4b24d09cf87a408cb1b462b5a1be912d8a1b3b1ee83d966",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15370-quiet_last150ms.wav",
+      "sha256": "81132869cf88ae87bb3c630e74799d2825b3618f6cc032693e21d0659864339f",
+      "source_row": 15370,
+      "source_split": "calibration",
+      "source_audio_sha256": "ef2956eb9a8dae53a4b24d09cf87a408cb1b462b5a1be912d8a1b3b1ee83d966",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15446-clean.wav",
+      "sha256": "3268957798533ca3ca1a23873d5e8dbafe5f4873611f7ab437a8aa1165769ce9",
+      "source_row": 15446,
+      "source_split": "calibration",
+      "source_audio_sha256": "f5999d0191180190105897e4220f61ba621f8a43016adda7a7b5738594714695",
+      "word_id": "TA_WORD_0104",
+      "kind": "clean",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15446-quiet_last150ms.wav",
+      "sha256": "4700c47f06f7facd0c5469f7c763e796f5a590557cd000854d3a9286b6aafb0c",
+      "source_row": 15446,
+      "source_split": "calibration",
+      "source_audio_sha256": "f5999d0191180190105897e4220f61ba621f8a43016adda7a7b5738594714695",
+      "word_id": "TA_WORD_0104",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "e",
+        "n",
+        "a",
+        "k",
+        "k",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15448-clean.wav",
+      "sha256": "7b7f3de08ecba4f402e9f6fcbc7c6bf86ba8630be2cb1e31a38eb9e4612344c1",
+      "source_row": 15448,
+      "source_split": "calibration",
+      "source_audio_sha256": "454b1030ee13c8d19e7fe097d8a49b7f40c6dc84fdc6ca4778dc127614c1fe03",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15448-quiet_last150ms.wav",
+      "sha256": "9d074eca454e4cd136eb1866fc6f918e7291e0a243b117ba5ec617422259bd53",
+      "source_row": 15448,
+      "source_split": "calibration",
+      "source_audio_sha256": "454b1030ee13c8d19e7fe097d8a49b7f40c6dc84fdc6ca4778dc127614c1fe03",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15451-clean.wav",
+      "sha256": "289845a47b0dabbaa593db58af62335c287c672022f029714fc7dd24685c4654",
+      "source_row": 15451,
+      "source_split": "calibration",
+      "source_audio_sha256": "d40c69efa0eb83017d4a099dfa9edd355a4e8f507234384fc818453554ed551b",
+      "word_id": "TA_WORD_0061",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15451-quiet_last150ms.wav",
+      "sha256": "dba3799eec6c93536be7a8897294e4f169e1f600aac9c09250c322564bca0147",
+      "source_row": 15451,
+      "source_split": "calibration",
+      "source_audio_sha256": "d40c69efa0eb83017d4a099dfa9edd355a4e8f507234384fc818453554ed551b",
+      "word_id": "TA_WORD_0061",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "iː",
+        "ʈ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15461-clean.wav",
+      "sha256": "7d941b6e7a327ac85046b74e6e2d58cedf0570122ef6db3f0ed64cfd520c0ab3",
+      "source_row": 15461,
+      "source_split": "calibration",
+      "source_audio_sha256": "a24a11319a3d0b4fe93d9d9bf2fe4bcb6194188eee76ea0145bbe1d6b3f14562",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15461-quiet_last150ms.wav",
+      "sha256": "644afc7cc9cce8f22a0046ca64cce0497e2e6afb04a7d79e8692f31a6b2e5100",
+      "source_row": 15461,
+      "source_split": "calibration",
+      "source_audio_sha256": "a24a11319a3d0b4fe93d9d9bf2fe4bcb6194188eee76ea0145bbe1d6b3f14562",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15467-clean.wav",
+      "sha256": "2805416941cc132334ae9fcea5ed08d48d5bd56da6bd5c7249142857cc3a5ca0",
+      "source_row": 15467,
+      "source_split": "calibration",
+      "source_audio_sha256": "00f8590dc5755b196e25f1b44871d49422a8070cdbceb5628008fca8047a2470",
+      "word_id": "TA_WORD_0082",
+      "kind": "clean",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15467-quiet_last150ms.wav",
+      "sha256": "fbdef5cb25a86656ac1972b4d0644c6315dd0884be40953735db687abffe2458",
+      "source_row": 15467,
+      "source_split": "calibration",
+      "source_audio_sha256": "00f8590dc5755b196e25f1b44871d49422a8070cdbceb5628008fca8047a2470",
+      "word_id": "TA_WORD_0082",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "i",
+        "l",
+        "l",
+        "a",
+        "j"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15469-clean.wav",
+      "sha256": "3050d98ad3784b152301a405c66c88a78585a6154ad9591c7bc424a4110b9314",
+      "source_row": 15469,
+      "source_split": "calibration",
+      "source_audio_sha256": "1c7057b0edf0cbd6fca61c530c8dc642b9f9f216a816903ff853345009756e4b",
+      "word_id": "TA_WORD_0096",
+      "kind": "clean",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15469-quiet_last150ms.wav",
+      "sha256": "ca2887c627c6a416585107b8b74c3cf767325723179d6b7b634a4465fb2f9d08",
+      "source_row": 15469,
+      "source_split": "calibration",
+      "source_audio_sha256": "1c7057b0edf0cbd6fca61c530c8dc642b9f9f216a816903ff853345009756e4b",
+      "word_id": "TA_WORD_0096",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "m",
+        "iː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15480-clean.wav",
+      "sha256": "1ec83bef77c887b8b23aec7bf81ffa7f0df28573bce2b54240fc593cead45f20",
+      "source_row": 15480,
+      "source_split": "calibration",
+      "source_audio_sha256": "a5d374856bb0b292071240e89096f6790b8756301f071f0b80d28f33c379657f",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15480-quiet_last150ms.wav",
+      "sha256": "7ed054e7e5a0b4be41a70f287ae36cb1e305b27fea7cdf356b8ecde01100caa4",
+      "source_row": 15480,
+      "source_split": "calibration",
+      "source_audio_sha256": "a5d374856bb0b292071240e89096f6790b8756301f071f0b80d28f33c379657f",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15496-clean.wav",
+      "sha256": "eba80f154679cde9ec5f9ea47299bdf4685c352d3d22a59d36d60c636559eb29",
+      "source_row": 15496,
+      "source_split": "calibration",
+      "source_audio_sha256": "1736e6839fbebbc9e058c958279bfb83048066e66888014c94f7e892c9f40e7a",
+      "word_id": "TA_WORD_0050",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15496-quiet_last150ms.wav",
+      "sha256": "fe0e1fb545ac1e25f009ca3ecbb7597e35713b2a07094bf60adc795fe62156a7",
+      "source_row": 15496,
+      "source_split": "calibration",
+      "source_audio_sha256": "1736e6839fbebbc9e058c958279bfb83048066e66888014c94f7e892c9f40e7a",
+      "word_id": "TA_WORD_0050",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "a",
+        "ʈ",
+        "i"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15504-clean.wav",
+      "sha256": "ee09b1e318c1e8f30b513a0851996896e0f00ef7ba6403f07dedfd6c3b11005e",
+      "source_row": 15504,
+      "source_split": "calibration",
+      "source_audio_sha256": "fb0c0ba13a52e84a7a6ca7df391b0b7b2ce6f3800ce2c2701ddfa9396a43e5a3",
+      "word_id": "TA_WORD_0012",
+      "kind": "clean",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15504-quiet_last150ms.wav",
+      "sha256": "c4773f9564aa9500386d6d50abd783032eceaa91068202444370a448a7ca81a4",
+      "source_row": 15504,
+      "source_split": "calibration",
+      "source_audio_sha256": "fb0c0ba13a52e84a7a6ca7df391b0b7b2ce6f3800ce2c2701ddfa9396a43e5a3",
+      "word_id": "TA_WORD_0012",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "u",
+        "ɳ",
+        "a",
+        "ʋ",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15860-clean.wav",
+      "sha256": "15cb393535d015ffeec95ddc9fec71492d856ffc8218ae6708994d1e53722906",
+      "source_row": 15860,
+      "source_split": "calibration",
+      "source_audio_sha256": "d4417c569109656634ab6eab8267cf0608a003f9b1976ea9c73d37e6c6911b04",
+      "word_id": "TA_WORD_0013",
+      "kind": "clean",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15860-quiet_last150ms.wav",
+      "sha256": "2a53c1825f36b4d38b2a7b68579e7541e0177d47539ed6d56ba45a01d9570854",
+      "source_row": 15860,
+      "source_split": "calibration",
+      "source_audio_sha256": "d4417c569109656634ab6eab8267cf0608a003f9b1976ea9c73d37e6c6911b04",
+      "word_id": "TA_WORD_0013",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "ʋ",
+        "eː",
+        "ɳ",
+        "ʈ",
+        "u",
+        "m"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15865-clean.wav",
+      "sha256": "e124d22a4aef6185cf9980386a9181b629d61a29d0ab9d82102d55aeae140f58",
+      "source_row": 15865,
+      "source_split": "calibration",
+      "source_audio_sha256": "593203e6e2cf25ffa00726ad2ee1bd078333060f7eedd35ba6b1d7a6a7a8a065",
+      "word_id": "TA_WORD_0090",
+      "kind": "clean",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    },
+    {
+      "file": "15865-quiet_last150ms.wav",
+      "sha256": "4d32f74d6d5f34ef884662a72acdff2c02a8424ef1acd5534f3f36c72a872acd",
+      "source_row": 15865,
+      "source_split": "calibration",
+      "source_audio_sha256": "593203e6e2cf25ffa00726ad2ee1bd078333060f7eedd35ba6b1d7a6a7a8a065",
+      "word_id": "TA_WORD_0090",
+      "kind": "quiet_last150ms",
+      "reference": [
+        "p",
+        "aː",
+        "t̪",
+        "u",
+        "k",
+        "aː",
+        "p",
+        "p",
+        "u"
+      ],
+      "samples": 48000,
+      "reference_provisional": true,
+      "source_preprocessing": "nonzero_trim_of_centered_cache"
+    }
+  ],
+  "private_audio": false,
+  "conditions": [
+    "clean",
+    "quiet_last150ms"
+  ],
+  "fixed_quiet_tail_samples": 2400,
+  "quiet_amplitude_factor": 0.03,
+  "qualification": "preserve all256rows; paired denominators/rejections explicit; clean edits/coverage nonregress; quiet edits improve",
+  "profiles": {
+    "legacy": {
+      "fraction": 0.08,
+      "floor": 64,
+      "margin_ms": 60,
+      "vad_context_ms": 100
+    },
+    "backbone_conservative_v1": {
+      "fraction": 0.02,
+      "floor": 16,
+      "margin_ms": 120,
+      "vad_context_ms": 250
+    }
+  }
+}

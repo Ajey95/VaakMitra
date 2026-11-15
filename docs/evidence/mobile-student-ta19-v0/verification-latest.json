@@ -1,0 +1,23 @@
+{
+  "schema_version": "vaakmitra-mobile-verification-1",
+  "requirements": [
+    "DEC-028",
+    "MST-005",
+    "MST-006",
+    "MST-008",
+    "MST-009",
+    "MST-010"
+  ],
+  "verified_at_utc": "2026-09-15T18:08:21.3823577+00:00",
+  "bundle_version": "vm-mobile-student-ta19-v0",
+  "official_child_scoring": false,
+  "arm64_apk": "D:\\VaakMitra-Integrated-Backend-Lab\\SpeakEasyAndroid\\app\\build\\outputs\\apk\\debug\\app-arm64-v8a-debug.apk",
+  "arm64_apk_bytes": 53623193,
+  "arm64_apk_sha256": "604aa1d817216841aecf2bd56581f8d540760ca74c1999968a67eda9562d72d3",
+  "device_checked": true,
+  "device_abi": "x86_64",
+  "device_sdk": 37,
+  "device_memory_kb": 4008496,
+  "wifi_status_during_test": "Wifi is disabled",
+  "mobile_data_during_test": "0"
+}

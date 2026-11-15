@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.1.0",
+  "title": "Tamil script-to-sound research reference",
+  "created_utc": "2026-09-14",
+  "language": "ta",
+  "status": "draft_unreviewed",
+  "production_scoring_enabled": false,
+  "ssot_boundary": ["NG-01", "DEC-003"],
+  "scope": "The 12 traditional independent vowel letters, 18 traditional consonant letters, aytham, and selected marginal loan spellings. This is an orthography-linked broad IPA inventory, not an exhaustive set of Tamil speech phones, a pronunciation lexicon, acoustic labels, or a clinical scoring key.",
+  "notation": {
+    "ipa": "Broad phonemic or citation-form target in slashes; surface variants in brackets. The slash values are provisional for an orthographic row, not a claim of one-to-one letter-to-phoneme mapping.",
+    "consonant_letter": "Tamil consonant letters have an inherent /a/ unless followed by a vowel sign or pulli (்). The letter field is the base letter, not an isolated consonant sound.",
+    "vowel_sign": "An empty sign means the inherent /a/ after a consonant. Other signs combine with a consonant in Unicode logical order.",
+    "diphthongs": "ஐ and ஔ are traditional vowel letters; the IPA sequences here are broad approximations and are not one steady-state vowel each."
+  },
+  "vowels": [
+    {"id":"ta_v_a","letter":"அ","sign":"","ipa":"a","length":"short"},
+    {"id":"ta_v_aa","letter":"ஆ","sign":"ா","ipa":"aː","length":"long"},
+    {"id":"ta_v_i","letter":"இ","sign":"ி","ipa":"i","length":"short"},
+    {"id":"ta_v_ii","letter":"ஈ","sign":"ீ","ipa":"iː","length":"long"},
+    {"id":"ta_v_u","letter":"உ","sign":"ு","ipa":"u","length":"short"},
+    {"id":"ta_v_uu","letter":"ஊ","sign":"ூ","ipa":"uː","length":"long"},
+    {"id":"ta_v_e","letter":"எ","sign":"ெ","ipa":"e","length":"short"},
+    {"id":"ta_v_ee","letter":"ஏ","sign":"ே","ipa":"eː","length":"long"},
+    {"id":"ta_v_ai","letter":"ஐ","sign":"ை","ipa":"aɪ","length":"diphthong"},
+    {"id":"ta_v_o","letter":"ஒ","sign":"ொ","ipa":"o","length":"short"},
+    {"id":"ta_v_oo","letter":"ஓ","sign":"ோ","ipa":"oː","length":"long"},
+    {"id":"ta_v_au","letter":"ஔ","sign":"ௌ","ipa":"aʊ","length":"diphthong"}
+  ],
+  "consonant_letters": [
+    {"id":"ta_c_ka","letter":"க","pulli":"க்","ipa":"k","place":"velar","manner":"stop","surface_examples":["ɡ","x","ɣ"],"caution":"Voicing and weakening are position/register dependent."},
+    {"id":"ta_c_nga","letter":"ங","pulli":"ங்","ipa":"ŋ","place":"velar","manner":"nasal","surface_examples":[],"caution":"Often context-limited; independent phonemic status is analysis-dependent."},
+    {"id":"ta_c_ca","letter":"ச","pulli":"ச்","ipa":"t͡ɕ","place":"alveolo-palatal","manner":"affricate","surface_examples":["d͡ʑ","s","ɕ"],"caution":"The realization varies substantially by context, dialect, and register."},
+    {"id":"ta_c_nya","letter":"ஞ","pulli":"ஞ்","ipa":"ɲ","place":"palatal","manner":"nasal","surface_examples":[],"caution":"Often context-limited; independent phonemic status is analysis-dependent."},
+    {"id":"ta_c_tta","letter":"ட","pulli":"ட்","ipa":"ʈ","place":"retroflex","manner":"stop","surface_examples":["ɖ","ɽ"],"caution":"Do not equate the written letter with one surface phone."},
+    {"id":"ta_c_nna","letter":"ண","pulli":"ண்","ipa":"ɳ","place":"retroflex","manner":"nasal","surface_examples":[],"caution":"Distinguish from other written nasal rows in lexicon review."},
+    {"id":"ta_c_ta","letter":"த","pulli":"த்","ipa":"t̪","place":"dental","manner":"stop","surface_examples":["d̪","ð"],"caution":"Not English alveolar /t/; surface voicing/weakening depends on context."},
+    {"id":"ta_c_na","letter":"ந","pulli":"ந்","ipa":"n̪","place":"dental","manner":"nasal","surface_examples":[],"caution":"Contrast with ன may neutralize in some speech varieties or positions."},
+    {"id":"ta_c_pa","letter":"ப","pulli":"ப்","ipa":"p","place":"bilabial","manner":"stop","surface_examples":["b","β"],"caution":"Do not infer English /f/ from this native row."},
+    {"id":"ta_c_ma","letter":"ம","pulli":"ம்","ipa":"m","place":"bilabial","manner":"nasal","surface_examples":[]},
+    {"id":"ta_c_ya","letter":"ய","pulli":"ய்","ipa":"j","place":"palatal","manner":"approximant","surface_examples":[]},
+    {"id":"ta_c_ra","letter":"ர","pulli":"ர்","ipa":"ɾ","place":"alveolar","manner":"tap","surface_examples":[],"caution":"Keep distinct from the ற row; actual contrast varies by variety/context."},
+    {"id":"ta_c_la","letter":"ல","pulli":"ல்","ipa":"l","place":"alveolar","manner":"lateral_approximant","surface_examples":[]},
+    {"id":"ta_c_va","letter":"வ","pulli":"வ்","ipa":"ʋ","place":"labiodental","manner":"approximant","surface_examples":[],"caution":"Not automatically English /v/ or /w/."},
+    {"id":"ta_c_zha","letter":"ழ","pulli":"ழ்","ipa":"ɻ","place":"retroflex","manner":"approximant","surface_examples":[],"caution":"Speaker and dialect variation requires review before any error feedback."},
+    {"id":"ta_c_lla","letter":"ள","pulli":"ள்","ipa":"ɭ","place":"retroflex","manner":"lateral_approximant","surface_examples":[]},
+    {"id":"ta_c_rra","letter":"ற","pulli":"ற்","ipa":"r","place":"alveolar","manner":"trill_or_contextual_stop","surface_examples":["t","d"],"caution":"Highly context-dependent; do not force every occurrence to /r/."},
+    {"id":"ta_c_nnn","letter":"ன","pulli":"ன்","ipa":"n","place":"alveolar","manner":"nasal","surface_examples":[],"caution":"Contrast with ந may neutralize in some speech varieties or positions."}
+  ],
+  "marginal_loan_spellings": [
+    {"id":"ta_loan_ja","spelling":"ஜ","broad_ipa":"d͡ʒ","status":"loan_or_grantha","caution":"Check the intended word and speaker variety."},
+    {"id":"ta_loan_sha","spelling":"ஷ","broad_ipa":"ʂ","status":"loan_or_grantha","caution":"Often realized differently by Tamil speakers; do not hard-code as a therapy target."},
+    {"id":"ta_loan_sa","spelling":"ஸ","broad_ipa":"s","status":"loan_or_grantha","caution":"Not identical to every realization of native ச."},
+    {"id":"ta_loan_ha","spelling":"ஹ","broad_ipa":"h","status":"loan_or_grantha","caution":"Borrowed-word spelling; not a core native consonant row."},
+    {"id":"ta_loan_sha_alt","spelling":"ஶ","broad_ipa":"ɕ","status":"loan_or_grantha","caution":"Rare in everyday Tamil; a provisional Sanskrit-derived target, not a claim about everyday Tamil realization."},
+    {"id":"ta_loan_fa","spelling":"ஃப","broad_ipa":"f","status":"loan_or_code_mixed","caution":"Aytham plus ப is a spelling convention for borrowed /f/. Fan vs pan is an English/code-mixed contrast; a Tamil-only inventory cannot validate it."}
+  ],
+  "special_orthography": [
+    {"id":"ta_aytham","spelling":"ஃ","kind":"aytham","ipa":null,"caution":"Do not assign a universal /h/ phoneme. It has historical uses and can modify following consonants in foreign-sound spellings."},
+    {"id":"ta_ksha_cluster","spelling":"க்ஷ","kind":"consonant_cluster","ipa":null,"caution":"Conventional conjunct/cluster (க + ் + ஷ), not an extra core Tamil consonant phoneme."}
+  ],
+  "cross_cutting_rules": [
+    {"id":"length","note":"Short versus long vowel duration matters; the same Tamil vowel letter has no automatic fixed millisecond target across children, rate, and context."},
+    {"id":"gemination","note":"Consonant length/gemination must be represented in word-level pronunciations; it is not another set of 18 single-letter phonemes."},
+    {"id":"allophony","note":"Stops can be voiced or weakened in context, so spelling alone cannot supply a single observed IPA sequence."},
+    {"id":"register_dialect","note":"Literary, colloquial, regional, and code-mixed pronunciations can differ. A word lexicon must store approved variants with dialect/register tags."}
+  ],
+  "before_model_use": [
+    "Select the target Tamil register/dialect and the actual approved word list.",
+    "Have qualified Tamil linguists and speech-language clinicians review each word's permitted pronunciations and age-appropriate feedback.",
+    "Create a versioned word-to-IPA lexicon with context-specific variants; do not derive clinical error labels by simple grapheme lookup.",
+    "Validate any phoneme recognizer and error localization on consented, child-separated data; an adult reference bank is insufficient.",
+    "Do not connect this file to V1 scoring without an SSOT change-control decision and fail-closed tests."
+  ],
+  "sources": [
+    {"id":"openlearn_tamil_script","url":"https://www.open.edu/openlearn/languages/beginners-tamil-taster-course/content-section-2","supports":"Traditional script inventory and broad consonant surface realizations."},
+    {"id":"phoible_tamil_keane_2004","url":"https://phoible.org/inventories/view/1058","supports":"Research IPA segment inventory derived from Keane's Tamil illustration; shows that orthographic rows and segment inventory are not identical."},
+    {"id":"unicode_tamil","url":"https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-12/","supports":"Tamil code points, vowel signs, pulli, aytham, Grantha letters, and க்ஷ as a conjunct."},
+    {"id":"schiffman_spoken_tamil","url":"https://assets.cambridge.org/97805210/27526/excerpt/9780521027526_excerpt.pdf","supports":"Spoken versus literary Tamil phonology and contextual stop variation."}
+  ]
+}

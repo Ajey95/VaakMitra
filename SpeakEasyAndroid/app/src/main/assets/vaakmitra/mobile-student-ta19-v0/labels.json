@@ -1,0 +1,142 @@
+{
+  "labels": [
+    {
+      "id": "TA_WORD_0001",
+      "index": 0,
+      "meaning": "Mother",
+      "tamil": "அம்மா",
+      "transliteration": "Amma"
+    },
+    {
+      "id": "TA_WORD_0002",
+      "index": 1,
+      "meaning": "Father",
+      "tamil": "அப்பா",
+      "transliteration": "Appa"
+    },
+    {
+      "id": "TA_WORD_0012",
+      "index": 2,
+      "meaning": "Food",
+      "tamil": "உணவு",
+      "transliteration": "Unavu"
+    },
+    {
+      "id": "TA_WORD_0013",
+      "index": 3,
+      "meaning": "Want / need",
+      "tamil": "வேண்டும்",
+      "transliteration": "Vendum"
+    },
+    {
+      "id": "TA_WORD_0014",
+      "index": 4,
+      "meaning": "Do not want",
+      "tamil": "வேண்டாம்",
+      "transliteration": "Vendaam"
+    },
+    {
+      "id": "TA_WORD_0015",
+      "index": 5,
+      "meaning": "More",
+      "tamil": "இன்னும்",
+      "transliteration": "Innum"
+    },
+    {
+      "id": "TA_WORD_0016",
+      "index": 6,
+      "meaning": "Enough",
+      "tamil": "போதும்",
+      "transliteration": "Podhum"
+    },
+    {
+      "id": "TA_WORD_0017",
+      "index": 7,
+      "meaning": "Help",
+      "tamil": "உதவி",
+      "transliteration": "Udhavi"
+    },
+    {
+      "id": "TA_WORD_0049",
+      "index": 8,
+      "meaning": "Say / tell",
+      "tamil": "சொல்",
+      "transliteration": "Sol"
+    },
+    {
+      "id": "TA_WORD_0050",
+      "index": 9,
+      "meaning": "Read",
+      "tamil": "படி",
+      "transliteration": "Padi"
+    },
+    {
+      "id": "TA_WORD_0072",
+      "index": 10,
+      "meaning": "Picture",
+      "tamil": "படம்",
+      "transliteration": "Padam"
+    },
+    {
+      "id": "TA_WORD_0082",
+      "index": 11,
+      "meaning": "No / not",
+      "tamil": "இல்லை",
+      "transliteration": "Illai"
+    },
+    {
+      "id": "TA_WORD_0083",
+      "index": 12,
+      "meaning": "Yes",
+      "tamil": "ஆம்",
+      "transliteration": "Aam"
+    },
+    {
+      "id": "TA_WORD_0086",
+      "index": 13,
+      "meaning": "Head",
+      "tamil": "தலை",
+      "transliteration": "Thalai"
+    },
+    {
+      "id": "TA_WORD_0090",
+      "index": 14,
+      "meaning": "Safety",
+      "tamil": "பாதுகாப்பு",
+      "transliteration": "Paadhukaappu"
+    },
+    {
+      "id": "TA_WORD_0096",
+      "index": 15,
+      "meaning": "Again",
+      "tamil": "மீண்டும்",
+      "transliteration": "Meendum"
+    },
+    {
+      "id": "TA_WORD_0098",
+      "index": 16,
+      "meaning": "Here",
+      "tamil": "இங்கே",
+      "transliteration": "Inge"
+    },
+    {
+      "id": "TA_WORD_0099",
+      "index": 17,
+      "meaning": "There",
+      "tamil": "அங்கே",
+      "transliteration": "Ange"
+    },
+    {
+      "id": "TA_WORD_0100",
+      "index": 18,
+      "meaning": "Together",
+      "tamil": "சேர்ந்து",
+      "transliteration": "Serndhu"
+    },
+    {
+      "id": "OTHER",
+      "index": 19
+    }
+  ],
+  "schema_version": "vaakmitra-mobile-labels-1"
+}

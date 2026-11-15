@@ -1,0 +1,5 @@
+# The Tamil checkpoint's model card requires AI4Bharat's NeMo nemo-v2 fork.
+# This immutable revision was the head of that branch on 2026-09-06. Install a
+# compatible CUDA-enabled PyTorch build first in the isolated edge environment.
+nemo_toolkit[asr] @ git+https://github.com/AI4Bharat/NeMo.git@8dce88cf8e94963e2033c3137f7b9993b51db88a
+

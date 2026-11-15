@@ -1,0 +1,260 @@
+{
+  "schema": "provisional-practice-phonemes-v1",
+  "tokens": [
+    "<blank>",
+    "a",
+    "ai",
+    "au",
+    "aɪ",
+    "aʊ",
+    "aː",
+    "b",
+    "c",
+    "cç",
+    "d",
+    "d̠ʒ",
+    "d̪",
+    "d͡ʒ",
+    "e",
+    "eː",
+    "f",
+    "h",
+    "i",
+    "iː",
+    "j",
+    "k",
+    "l",
+    "l̠˞",
+    "l̪",
+    "m",
+    "n",
+    "n̪",
+    "o",
+    "oː",
+    "p",
+    "r",
+    "r̪",
+    "s",
+    "t",
+    "t̠ʃ",
+    "t̪",
+    "t͡ʃ",
+    "u",
+    "uː",
+    "w",
+    "x",
+    "ð",
+    "ŋ",
+    "ɖ",
+    "ɟ",
+    "ɟʝ",
+    "ɡ",
+    "ɨ",
+    "ɭ",
+    "ɲ",
+    "ɳ",
+    "ɸ",
+    "ɻ",
+    "ɽ",
+    "ɾ",
+    "ʂ",
+    "ʈ",
+    "ʋ",
+    "ʐ",
+    "ஃ"
+  ],
+  "expected": {
+    "TA_WORD_0001": [
+      "a",
+      "m",
+      "m",
+      "aː"
+    ],
+    "TA_WORD_0002": [
+      "a",
+      "p",
+      "p",
+      "aː"
+    ],
+    "TA_WORD_0012": [
+      "u",
+      "ɳ",
+      "a",
+      "ʋ",
+      "u"
+    ],
+    "TA_WORD_0013": [
+      "ʋ",
+      "eː",
+      "ɳ",
+      "ʈ",
+      "u",
+      "m"
+    ],
+    "TA_WORD_0014": [
+      "ʋ",
+      "eː",
+      "ɳ",
+      "ʈ",
+      "aː",
+      "m"
+    ],
+    "TA_WORD_0015": [
+      "i",
+      "n",
+      "n",
+      "u",
+      "m"
+    ],
+    "TA_WORD_0016": [
+      "p",
+      "oː",
+      "t̪",
+      "u",
+      "m"
+    ],
+    "TA_WORD_0017": [
+      "u",
+      "t̪",
+      "a",
+      "ʋ",
+      "i"
+    ],
+    "TA_WORD_0049": [
+      "t͡ʃ",
+      "o",
+      "l"
+    ],
+    "TA_WORD_0050": [
+      "p",
+      "a",
+      "ʈ",
+      "i"
+    ],
+    "TA_WORD_0072": [
+      "p",
+      "a",
+      "ʈ",
+      "a",
+      "m"
+    ],
+    "TA_WORD_0082": [
+      "i",
+      "l",
+      "l",
+      "a",
+      "j"
+    ],
+    "TA_WORD_0083": [
+      "aː",
+      "m"
+    ],
+    "TA_WORD_0086": [
+      "t̪",
+      "a",
+      "l",
+      "a",
+      "j"
+    ],
+    "TA_WORD_0090": [
+      "p",
+      "aː",
+      "t̪",
+      "u",
+      "k",
+      "aː",
+      "p",
+      "p",
+      "u"
+    ],
+    "TA_WORD_0096": [
+      "m",
+      "iː",
+      "ɳ",
+      "ʈ",
+      "u",
+      "m"
+    ],
+    "TA_WORD_0098": [
+      "i",
+      "ŋ",
+      "k",
+      "eː"
+    ],
+    "TA_WORD_0099": [
+      "a",
+      "ŋ",
+      "k",
+      "eː"
+    ],
+    "TA_WORD_0100": [
+      "t͡ʃ",
+      "eː",
+      "ɾ",
+      "n̪",
+      "t̪",
+      "u"
+    ],
+    "TA_WORD_0101": [
+      "e",
+      "n",
+      "n",
+      "a"
+    ],
+    "TA_WORD_0102": [
+      "n̪",
+      "aː",
+      "n"
+    ],
+    "TA_WORD_0103": [
+      "i",
+      "t̪",
+      "u"
+    ],
+    "TA_WORD_0104": [
+      "e",
+      "n",
+      "a",
+      "k",
+      "k",
+      "u"
+    ],
+    "TA_WORD_0084": [
+      "k",
+      "a",
+      "j"
+    ],
+    "TA_WORD_0061": [
+      "ʋ",
+      "iː",
+      "ʈ",
+      "u"
+    ]
+  },
+  "focused_ids": [
+    "TA_WORD_0001",
+    "TA_WORD_0002",
+    "TA_WORD_0083",
+    "TA_WORD_0082",
+    "TA_WORD_0015",
+    "TA_WORD_0016",
+    "TA_WORD_0013",
+    "TA_WORD_0014",
+    "TA_WORD_0017",
+    "TA_WORD_0012",
+    "TA_WORD_0072",
+    "TA_WORD_0050",
+    "TA_WORD_0101",
+    "TA_WORD_0102",
+    "TA_WORD_0103",
+    "TA_WORD_0104",
+    "TA_WORD_0084",
+    "TA_WORD_0061"
+  ],
+  "source_focus_manifest_sha256": "a1ecb91cef98e026a6a039d43a3f752cdac6ebf991fb282bf64e8c3d8e06f981",
+  "source_token_inventory_sha256": "a503f4aebf63939b73ee85ec4adceab597a7516406d4af4dfc6acfd3806429af",
+  "expert_approved": false,
+  "production_ready": false,
+  "approved_for_child_scoring": false,
+  "usage": "Practice reference metadata only; never a decoder input or correctness label"
+}
